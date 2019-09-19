@@ -3,13 +3,14 @@ var sass         = require( 'gulp-sass' );
 var autoprefixer = require( 'gulp-autoprefixer' );
 var sourcemaps   = require( 'gulp-sourcemaps' );
 var plumber      = require( 'gulp-plumber' );
-var gutil        = require( 'gulp-util' );
+var colors       = require( 'ansi-colors' );
+var beeper       = require( 'beeper' );
 var jshint       = require( 'gulp-jshint' );
 var through2     = require( 'through2' );
 
 var onError = function (err) {
-  console.log( 'An error occurred:', gutil.colors.magenta(err.message) );
-  gutil.beep();
+  console.log( 'An error occurred:', colors.magenta(err.message) );
+  beeper();
   this.emit( 'end' );
 };
 

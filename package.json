@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ansi-colors": "^4.1.1",
+    "beeper": "^2.0.0",
     "gulp": "^4.0.2",
     "npm-check-updates": "^3.1.15"
   },
@@ -19,7 +21,6 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-touch": "^1.0.1",
-    "gulp-util": "^3.0.8",
     "jshint": "^2.10.2",
     "jslint": "^0.12.1",
     "node-sass": "^4.12.0",
