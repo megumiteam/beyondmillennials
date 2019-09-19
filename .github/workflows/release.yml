@@ -35,18 +35,18 @@ jobs:
     # remove this step if you want to update the version manually.
     # NOTICE: ref_type exists only for events of type create. see https://developer.github.com/v3/activity/events/types/#createevent
     - name: add version
-     run: |
-       # retrieve tag and replase version number in file.
-       export CREATE_EVENT_REF_TYPE=$(jq --raw-output .ref_type "$GITHUB_EVENT_PATH")
-       export TAGNAME=$(jq --raw-output .ref "$GITHUB_EVENT_PATH")
-       sed -i -e "s/{release version}/${TAGNAME}/g" style.css
+      run: |
+        # retrieve tag and replase version number in file.
+        export CREATE_EVENT_REF_TYPE=$(jq --raw-output .ref_type "$GITHUB_EVENT_PATH")
+        export TAGNAME=$(jq --raw-output .ref "$GITHUB_EVENT_PATH")
+        sed -i -e "s/{release version}/${TAGNAME}/g" style.css
 
     # create zip acrive for install to WordPress.
     # please edit FILES_TO_ARCIVE to suit your project.
     - name: create archive
       env:
         PACKAGE_NAME: "beyondmillennials"
-        FILES_TO_ARCIVE: "*.php *.md *.css *.txt *.png LICENSE phpcs.xml.dist inc/ js/ languages/ layouts/ template-parts/"
+        FILES_TO_ARCIVE: "*.php *.md *.css *.txt *.png LICENSE phpcs.xml.dist functions/ images/ js/ template-parts/"
       run: zip -r ${PACKAGE_NAME}.zip ${FILES_TO_ARCIVE}
 
     # upload zip arvive by ghr.
