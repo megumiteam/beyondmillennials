@@ -1,0 +1,563 @@
+.about-main {
+  position: relative;
+  z-index: 4;
+}
+
+.about-main .about-introduction {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1080px;
+}
+
+.about-main .about-introduction .about-speakers-01 {
+  padding-bottom: 112px;
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-introduction .about-speakers-01 {
+    padding-bottom: 105px;
+  }
+}
+
+.about-main .about-introduction .about-speakers-01 a, .about-main .about-introduction .about-speakers-01 img {
+  display: block;
+}
+
+.about-main .about-introduction .about-speakers-01 .speaker-01 {
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-introduction .about-speakers-01 .speaker-01 {
+    margin-right: 58px;
+  }
+}
+
+.about-main .about-introduction .about-speakers-01 .speaker-02 {
+  position: absolute;
+  top: 395px;
+  left: 540px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-introduction .about-speakers-01 .speaker-02 {
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    width: 30.666666667vw;
+  }
+}
+
+.about-main .about-introduction .about-textbox-01 {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.about-main .about-introduction .about-textbox-01::before, .about-main .about-introduction .about-textbox-01::after {
+  content: '';
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.about-main .about-introduction .about-textbox-01::before {
+  bottom: 48px;
+  left: 101px;
+  z-index: 1;
+  width: 746px;
+  height: 540px;
+  background-image: url(images/bg-about-textbox-01-a.png);
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-introduction .about-textbox-01::before {
+    bottom: -30px;
+    left: -101px;
+    width: 399px;
+    height: 289px;
+    background-size: 399px auto;
+  }
+}
+
+.about-main .about-introduction .about-textbox-01::after {
+  bottom: -13px;
+  left: 223px;
+  z-index: 2;
+  width: 219px;
+  height: 267px;
+  background-image: url(images/bg-about-textbox-01-b.png);
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-introduction .about-textbox-01::after {
+    bottom: -9px;
+    left: 29px;
+    width: 95px;
+    height: 116px;
+    background-size: 95px auto;
+  }
+}
+
+.about-main .about-introduction .about-textbox-01 .about-textbox-01-inner {
+  padding-bottom: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: calc(100%);
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-introduction .about-textbox-01 .about-textbox-01-inner {
+    margin-top: 17px;
+    padding-bottom: 50px;
+    display: block;
+  }
+}
+
+.about-main .about-introduction .about-textbox-01 .about-textbox-text {
+  padding-bottom: 88px;
+  width: 41.203703704%;
+  line-height: 2;
+  font-size: 16px;
+  position: relative;
+  z-index: 3;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-introduction .about-textbox-01 .about-textbox-text {
+    padding-bottom: 0;
+    max-width: none;
+    width: 100%;
+    line-height: 1.866666667;
+    font-size: 15px;
+  }
+}
+
+.about-main .about-introduction .about-textbox-01 .about-textbox-text p {
+  padding-bottom: 22px;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-introduction .about-textbox-01 .about-textbox-text p {
+    padding-bottom: 18px;
+  }
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-introduction .about-textbox-01 .about-textbox-text .text-en {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 400;
+  }
+}
+
+.about-main .about-introduction .about-textbox-01 .about-textbox-text .text-en p {
+  padding-bottom: 32px;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-introduction .about-textbox-01 .about-textbox-text .text-en p:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.about-main .about-introduction .about-textbox-01 .about-textbox-image {
+  width: 37.5%;
+  position: relative;
+  z-index: 3;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-introduction .about-textbox-01 .about-textbox-image {
+    margin-top: 4px;
+    width: 100%;
+  }
+}
+
+.about-main .about-introduction .about-textbox-01 .about-textbox-image img {
+  display: block;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-introduction .about-textbox-01 .about-textbox-image img {
+    margin-left: auto;
+    width: 43.47826087%;
+  }
+}
+
+.about-main .about-introduction .about-imagebox {
+  margin: 0 auto;
+  max-width: 945px;
+  position: relative;
+  z-index: 2;
+}
+
+.about-main .about-introduction .about-imagebox img {
+  display: block;
+}
+
+.about-main .about-reasons {
+  margin: 90px auto 0;
+  padding: 0 15px 55px;
+  max-width: 1080px;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-reasons {
+    margin-top: 43px;
+    padding-bottom: 5px;
+  }
+}
+
+.about-main .about-reasons ul {
+  margin: 0 -29px 0 -28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-reasons ul {
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+}
+
+.about-main .about-reasons li {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 29px 0 28px;
+  width: 25%;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-reasons li {
+    margin-bottom: 20px;
+    padding: 0 20px;
+    width: 50%;
+  }
+}
+
+.about-main .about-reasons li .image img {
+  display: block;
+}
+
+.about-main .about-reasons li .text {
+  padding-top: 15px;
+  line-height: 1;
+  text-align: center;
+}
+
+.about-main .about-conference {
+  padding-bottom: 90px;
+  background-image: url(images/bg-about-conference-pc.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-conference {
+    padding-bottom: 53px;
+    background-image: url(images/bg-about-conference-sp.jpg);
+  }
+}
+
+.about-main .about-conference .section-title {
+  padding-top: 82px;
+  font-size: 22px;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-conference .section-title {
+    padding-top: 37px;
+  }
+}
+
+.about-main .about-conference .section-title::after {
+  bottom: -15px;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-conference .section-title::after {
+    bottom: -8px;
+  }
+}
+
+.about-main .about-conference .about-lead {
+  margin-top: 24px;
+  padding: 0 15px;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-conference .about-lead {
+    margin-top: 9px;
+  }
+}
+
+.about-main .about-conference .about-lead .item {
+  line-height: 2;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-conference .about-lead .item {
+    line-height: 1.866666667;
+    font-size: 15px;
+    text-align: left;
+  }
+}
+
+.about-main .about-conference .about-lead .item[lang="en"] {
+  margin-top: 8px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-conference .about-lead .item[lang="en"] {
+    margin-top: 20px;
+    line-height: 2;
+    font-size: 14px;
+  }
+}
+
+.about-main .about-conference .about-genre {
+  margin: 78px auto 0;
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1080px;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-conference .about-genre {
+    margin-top: 52px;
+    display: block;
+  }
+}
+
+.about-main .about-conference .about-genre .item {
+  margin-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-conference .about-genre .item {
+    margin-bottom: 42px;
+    width: auto;
+  }
+}
+
+.about-main .about-conference .about-genre .item .image {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-right: 27px;
+  width: 42.592592593%;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-conference .about-genre .item .image {
+    padding-right: 13px;
+    width: 133px;
+  }
+}
+
+.about-main .about-conference .about-genre .item .image img {
+  display: block;
+}
+
+.about-main .about-conference .about-genre .item .text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-right: 35px;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-conference .about-genre .item .text {
+    padding-right: 0;
+  }
+}
+
+.about-main .about-conference .about-genre .item .text .genre {
+  font-weight: 700;
+  font-family: 'Heebo', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-conference .about-genre .item .text .genre {
+    line-height: 1;
+    font-size: 16px;
+  }
+}
+
+.about-main .about-conference .about-genre .item .text .content {
+  margin-top: 8px;
+  line-height: 2;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-conference .about-genre .item .text .content {
+    line-height: 1.615384615;
+    font-size: 13px;
+  }
+}
+
+.about-main .about-conference .about-genre .item .text .content[lang="en"] {
+  margin-top: 1px;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-conference .about-genre .item .text .content[lang="en"] {
+    margin-top: 4px;
+    line-height: 2;
+    font-size: 14px;
+  }
+}
+
+.about-main .about-conference .button-links {
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-conference .button-links {
+    display: block;
+  }
+}
+
+.about-main .about-conference .button-links .button-link {
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-conference .button-links .button-link {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-conference .button-links .button-link + .button-link {
+    margin-top: 30px;
+  }
+}
+
+.about-main .about-others {
+  padding: 0 15px 90px;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-others {
+    padding-bottom: 50px;
+  }
+}
+
+.about-main .about-others .section-title {
+  padding-top: 86px;
+  font-size: 22px;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-others .section-title {
+    padding-top: 32px;
+  }
+}
+
+.about-main .about-others .section-title::after {
+  bottom: -15px;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-others .section-title::after {
+    bottom: -8px;
+  }
+}
+
+.about-main .about-others .about-lead {
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-others .about-lead {
+    margin-top: 10px;
+  }
+}
+
+.about-main .about-others .about-lead .item {
+  line-height: 2;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-others .about-lead .item {
+    line-height: 1.866666667;
+    font-size: 15px;
+    text-align: left;
+  }
+}
+
+.about-main .about-others .about-lead .item[lang="en"] {
+  margin-top: 9px;
+  font-weight: 400;
+  font-family: 'Heebo', sans-serif;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-others .about-lead .item[lang="en"] {
+    margin-top: 20px;
+    line-height: 2;
+    font-size: 14px;
+  }
+}
+
+.about-main .about-others .button-link {
+  margin-top: 82px;
+}
+
+@media screen and (max-width: 782px) {
+  .about-main .about-others .button-link {
+    margin-top: 45px;
+  }
+}
+
+/*# sourceMappingURL=about.css.map */

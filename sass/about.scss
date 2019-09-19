@@ -1,0 +1,406 @@
+@charset "utf-8";
+
+.about-main {
+	position: relative;
+	z-index: 4;
+	.about-introduction {
+		margin: 0 auto;
+		padding: 0 15px;
+		max-width: 1080px;
+		.about-speakers-01 {
+			padding-bottom: 112px;
+			position: relative;
+			z-index: 1;
+			@media screen and ( max-width: 782px ) {
+				padding-bottom: 105px;
+			}
+			a, img {
+				display: block;
+			}
+			.speaker-01 {
+				position: relative;
+				z-index: 1;
+				@media screen and ( max-width: 782px ) {
+					margin-right: 58px;
+				}
+			}
+			.speaker-02 {
+				position: absolute;
+				top: 395px;
+				left: 540px;
+				z-index: 2;
+				@media screen and ( max-width: 782px ) {
+					top: auto;
+					right: 0;
+					bottom: 0;
+					left: auto;
+					width: 30.666666667vw;
+				}
+			}
+		}
+
+		.about-textbox-01 {
+			width: 100%;
+			position: relative;
+			z-index: 1;
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				background-repeat: no-repeat;
+			}
+			&::before {
+				bottom: 48px;
+				left: 101px;
+				z-index: 1;
+				width: 746px;
+				height: 540px;
+				background-image: url(images/bg-about-textbox-01-a.png);
+				@media screen and ( max-width: 782px ) {
+					bottom: -30px;
+					left: -101px;
+					width: 399px;
+					height: 289px;
+					background-size: 399px auto;
+				}
+			}
+			&::after {
+				bottom: -13px;
+				left: 223px;
+				z-index: 2;
+				width: 219px;
+				height: 267px;
+				background-image: url(images/bg-about-textbox-01-b.png);
+				@media screen and ( max-width: 782px ) {
+					bottom: -9px;
+					left: 29px;
+					width: 95px;
+					height: 116px;
+					background-size: 95px auto;
+				}
+			}
+			.about-textbox-01-inner {
+				padding-bottom: 120px;
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-end;
+				width: calc(100%);
+				@media screen and ( max-width: 782px ) {
+					margin-top: 17px;
+					padding-bottom: 50px;
+					display: block;
+				}
+			}
+			.about-textbox-text {
+				padding-bottom: 88px;
+				width: 41.203703704%;
+				line-height: 2;
+				font-size: 16px;
+				position: relative;
+				z-index: 3;
+				@media screen and ( max-width: 782px ) {
+					padding-bottom: 0;
+					max-width: none;
+					width: 100%;
+					line-height: 1.866666667;
+					font-size: 15px;
+				}
+				p {
+					padding-bottom: 22px;
+					@media screen and ( max-width: 782px ) {
+						padding-bottom: 18px;
+					}
+				}
+				.text-en {
+					@media screen and ( max-width: 782px ) {
+						font-family: 'Heebo', sans-serif;
+						font-weight: 400;
+					}
+					p {
+						padding-bottom: 32px;
+						&:last-child {
+							@media screen and ( max-width: 782px ) {
+								padding-bottom: 0;
+							}
+						}
+					}
+				}
+			}
+
+			.about-textbox-image {
+				width: 37.5%;
+				position: relative;
+				z-index: 3;
+				@media screen and ( max-width: 782px ) {
+					margin-top: 4px;
+					width: 100%;
+				}
+				img {
+					display: block;
+					@media screen and ( max-width: 782px ) {
+						margin-left: auto;
+						width: 43.47826087%;
+					}
+				}
+			}
+		}
+
+		.about-imagebox {
+			margin: 0 auto;
+			max-width: 945px;
+			position: relative;
+			z-index: 2;
+			img {
+				display: block;
+			}
+		}
+
+	}
+
+	.about-reasons {
+		margin: 90px auto 0;
+		padding: 0 15px 55px;
+		max-width: 1080px;
+		@media screen and ( max-width: 782px ) {
+			margin-top: 43px;
+			padding-bottom: 5px;
+		}
+		ul {
+			margin: 0 -29px 0 -28px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			@media screen and ( max-width: 782px ) {
+				margin-right: -10px;
+				margin-left: -10px;
+			}
+		}
+		li {
+			box-sizing: border-box;
+			padding: 0 29px 0 28px;
+			width: 25%;
+			font-family: 'Heebo', sans-serif;
+			font-weight: 500;
+			font-size: 16px;
+			position: relative;
+			z-index: 1;
+			@media screen and ( max-width: 782px ) {
+				margin-bottom: 20px;
+				padding: 0 20px;
+				width: 50%;
+			}
+			.image {
+				img {
+					display: block;
+				}
+			}
+			.text {
+				padding-top: 15px;
+				line-height: 1;
+				text-align: center;
+				@media screen and ( max-width: 782px ) {
+				}
+			}
+		}
+	}
+
+	.about-conference {
+		padding-bottom: 90px;
+		background-image: url(images/bg-about-conference-pc.jpg);
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		@media screen and ( max-width: 782px ) {
+			padding-bottom: 53px;
+			background-image: url(images/bg-about-conference-sp.jpg);
+		}
+
+		.section-title {
+			padding-top: 82px;
+			font-size: 22px;
+			@media screen and ( max-width: 782px ) {
+				padding-top: 37px;
+			}
+			&::after {
+				bottom: -15px;
+				@media screen and ( max-width: 782px ) {
+					bottom: -8px;
+				}
+			}
+		}
+
+		.about-lead {
+			margin-top: 24px;
+			padding: 0 15px;
+			@media screen and ( max-width: 782px ) {
+				margin-top: 9px;
+			}
+			.item {
+				line-height: 2;
+				font-weight: bold;
+				font-size: 16px;
+				text-align: center;
+				@media screen and ( max-width: 782px ) {
+					line-height: 1.866666667;
+					font-size: 15px;
+					text-align: left;
+				}
+				&[lang="en"] {
+					margin-top: 8px;
+					font-family: 'Heebo', sans-serif;
+					font-weight: 400;
+					@media screen and ( max-width: 782px ) {
+						margin-top: 20px;
+						line-height: 2;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+
+		.about-genre {
+			margin: 78px auto 0;
+			padding: 0 15px;
+			display: flex;
+			flex-wrap: wrap;
+			max-width: 1080px;
+			@media screen and ( max-width: 782px ) {
+				margin-top: 52px;
+				display: block;
+			}
+			.item {
+				margin-bottom: 60px;
+				display: flex;
+				width: 50%;
+				@media screen and ( max-width: 782px ) {
+					margin-bottom: 42px;
+					width: auto;
+				}
+				.image {
+					box-sizing: border-box;
+					padding-right: 27px;
+					width: 42.592592593%;
+					@media screen and ( max-width: 782px ) {
+						padding-right: 13px;
+						width: 133px;
+					}
+					img {
+						display: block;
+					}
+				}
+
+				.text {
+					flex: 1;
+					padding-right: 35px;
+					@media screen and ( max-width: 782px ) {
+						padding-right: 0;
+					}
+					.genre {
+						font-weight: 700;
+						font-family: 'Heebo', sans-serif;
+						font-size: 18px;
+						text-transform: uppercase;
+						@media screen and ( max-width: 782px ) {
+							line-height: 1;
+							font-size: 16px;
+						}
+					}
+					.content {
+						margin-top: 8px;
+						line-height: 2;
+						font-size: 16px;
+						@media screen and ( max-width: 782px ) {
+							line-height: 1.615384615;
+							font-size: 13px;
+						}
+						&[lang="en"] {
+							margin-top: 1px;
+							@media screen and ( max-width: 782px ) {
+								margin-top: 4px;
+								line-height: 2;
+								font-size: 14px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.button-links {
+			margin-top: 16px;
+			display: flex;
+			justify-content: center;
+			@media screen and ( max-width: 782px ) {
+				display: block;
+			}
+			.button-link {
+				margin: 0 10px;
+				@media screen and ( max-width: 782px ) {
+					margin-right: 0;
+					margin-left: 0;
+				}
+				& + .button-link {
+					@media screen and ( max-width: 782px ) {
+						margin-top: 30px;
+					}
+				}
+			}
+		}
+	}
+
+	.about-others {
+		padding: 0 15px 90px;
+		@media screen and ( max-width: 782px ) {
+			padding-bottom: 50px;
+		}
+		.section-title {
+			padding-top: 86px;
+			font-size: 22px;
+			@media screen and ( max-width: 782px ) {
+				padding-top: 32px;
+			}
+			&::after {
+				bottom: -15px;
+				@media screen and ( max-width: 782px ) {
+					bottom: -8px;
+				}
+			}
+		}
+
+		.about-lead {
+			margin-top: 24px;
+			@media screen and ( max-width: 782px ) {
+				margin-top: 10px;
+			}
+			.item {
+				line-height: 2;
+				font-weight: bold;
+				font-size: 16px;
+				text-align: center;
+				@media screen and ( max-width: 782px ) {
+					line-height: 1.866666667;
+					font-size: 15px;
+					text-align: left;
+				}
+				&[lang="en"] {
+					margin-top: 9px;
+					font-weight: 400;
+					font-family: 'Heebo', sans-serif;
+					@media screen and ( max-width: 782px ) {
+						margin-top: 20px;
+						line-height: 2;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+
+		.button-link {
+			margin-top: 82px;
+			@media screen and ( max-width: 782px ) {
+				margin-top: 45px;
+			}
+		}
+	}
+
+}

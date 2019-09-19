@@ -1,0 +1,15 @@
+.ui_tpicker_second_label,
+.ui_tpicker_second {
+	display: none !important;
+}
+
+.ui_tpicker_minute_slider option[value$="1"],
+.ui_tpicker_minute_slider option[value$="2"],
+.ui_tpicker_minute_slider option[value$="3"],
+.ui_tpicker_minute_slider option[value$="4"],
+.ui_tpicker_minute_slider option[value$="6"],
+.ui_tpicker_minute_slider option[value$="7"],
+.ui_tpicker_minute_slider option[value$="8"],
+.ui_tpicker_minute_slider option[value$="9"] {
+	display: none;
+}

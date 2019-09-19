@@ -1,0 +1,26 @@
+@charset "utf-8";
+/*
+Theme Name: MASHING UP
+Description: This is the theme for MASHING UP.
+Author: MASHING UP
+Author URI:
+Version: 1.0
+*/
+
+
+@import '_reset.scss';
+
+@import '_frame.scss';
+@import '_component.scss';
+
+@import '_page.scss';
+
+.article-main {
+	font-size: 15px;
+	line-height: 2;
+	@import '_post.scss';
+}
+
+@import '_archive.scss';
+@import '_single.scss';
+@import '_top.scss';

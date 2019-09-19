@@ -1,0 +1,12 @@
+.htaccess
+.listing
+.DS_Store
+*.bak
+*.back
+*.bk*
+.sass-cache
+*.command
+/nbproject/
+fabfile*
+vendor/
+*.zip
