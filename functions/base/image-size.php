@@ -18,9 +18,10 @@ function mashing_up_image_size() {
 	//update_option( 'medium_large_size_w', 968 );
 	update_option( 'large_size_w', 1080 );
 	update_option( 'large_size_h', 1080 );
-	add_image_size( 'speakers_type_2_pc', '252', '252', true );
-	add_image_size( 'speakers_type_1_sp', '190', '190', true );
-	add_image_size( 'speakers_type_2_sp', '120', '120', true );
+	add_image_size( 'speakers_thumb', '304', '171', true );
+	add_image_size( 'speakers_detail', '760', '325', true );
+	// add_image_size( 'speakers_type_1_sp', '190', '190', true );
+	// add_image_size( 'speakers_type_2_sp', '120', '120', true );
 	/*
 	add_image_size( 'speakers-type-1-pc-@1', '318', '318', true );
 	add_image_size( 'speakers-type-2-pc-@2', '504', '504', true );

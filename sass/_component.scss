@@ -1,27 +1,9 @@
+.ofi {
+	object-fit: cover;
+	font-family: 'object-fit: cover;'
+}
+
 .section-title {
-	padding-top: 104px;
-	font-family: 'Heebo', sans-serif;
-	font-weight: 500;
-	font-size: 30px;
-	text-transform: uppercase;
-	text-align: center;
-	position: relative;
-	z-index: 1;
-	@media screen and ( max-width: 782px ) {
-		font-size: 22px;
-	}
-	&::after {
-		content: '';
-		position: absolute;
-		bottom: -9px;
-		left: 50%;
-		width: 1px;
-		height: 15px;
-		background-color: #000;
-		@media screen and ( max-width: 782px ) {
-			bottom: -12px;
-		}
-	}
 }
 
 .button-link {
@@ -298,7 +280,7 @@ body.is-popup {
 	bottom: 0;
 	left: 0;
 	z-index: 2;
-	background: linear-gradient(#bf91cd 0%, #3ddaf0 100%);
+	background-color: rgba(60,140,180,.9);
 	opacity: 0;
 	pointer-events: none;
 	transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
@@ -335,9 +317,8 @@ body .a2a_kit {
 }
 
 .speakers-list {
-	margin: 30px auto 0;
-	padding: 0 15px;
-	max-width: 1080px;
+	margin: 0 auto;
+	max-width: 1063px;
 	overflow: hidden;
 	position: relative;
 	z-index: 2;
@@ -351,7 +332,7 @@ body .a2a_kit {
 		justify-content: center;
 	}
 	li {
-		margin-bottom: 90px;
+		margin-bottom: 80px;
 		box-sizing: border-box;
 		&:hover {
 			.text {
@@ -363,19 +344,27 @@ body .a2a_kit {
 		}
 	}
 	&.large {
+		margin-bottom: 0;
+		padding-top: 18px;
+		padding-bottom: 9px;
+		padding-right: 25px;
+		@media screen and ( max-width: 782px ) {
+			margin-top: 0;
+			padding-top: 0;
+		}
 		ul {
-			margin: 0 -30px;
+			margin: 0 -38px;
 			@media screen and ( max-width: 782px ) {
 				margin: 0;
 			}
 		}
 		li {
-			padding: 0 30px;
+			padding: 0 38px;
 			width: 33.3333%;
 			@media screen and ( max-width: 782px ) {
-				margin-bottom: 25px;
-				padding: 0;
-				width: 100%;
+				margin-bottom: 16px;
+				padding: 0 0 0 25px;
+				width: 50%;
 			}
 			&:last-child {
 				@media screen and ( max-width: 782px ) {
@@ -388,7 +377,6 @@ body .a2a_kit {
 			@media screen and ( max-width: 782px ) {
 				margin: 0 auto;
 				padding: 0;
-				width: 190px;
 			}
 		}
 		.text {
@@ -396,34 +384,46 @@ body .a2a_kit {
 			@media screen and ( max-width: 782px ) {
 				margin-top: 15px;
 			}
+			.name-ja {
+				@media screen and ( max-width: 782px ) {
+					line-height: 1.142857;
+					font-size: 15px;
+				}
+				span {
+					@media screen and ( max-width: 782px ) {
+						padding: 1px 0;
+						display: inline;
+					}
+				}
+			}
 		}
 	}
 	&.medium {
 		@media screen and ( max-width: 782px ) {
-			margin-bottom: 15px;
+			margin-bottom: 0;
 		}
 		ul {
-			margin: 0 -12px 0 -13px;
+			margin: 0 -13px;
+			padding-bottom: 25px;
 			@media screen and ( max-width: 782px ) {
 				margin: 0;
-				padding: 0 10px;
+				padding: 0 25px 45px 0;
 			}
 		}
 		li {
-			margin-bottom: 78px;
-			padding: 0 12px 0 13px;
+			margin-bottom: 75px;
+			padding: 0 0 0 25px;
 			width: 25%;
 			@media screen and ( max-width: 782px ) {
-				margin-bottom: 35px;
+				margin-bottom: 12px;
 				padding: 0 11px;
 				width: 50%;
 			}
 			.image {
 				margin: 0 5px 0 6px;
 				@media screen and ( max-width: 782px ) {
-					margin: 0 auto;
+					margin: 0;
 					padding: 0;
-					max-width: 120px;
 				}
 			}
 			.text {
@@ -436,7 +436,10 @@ body .a2a_kit {
 					margin-top: 6px;
 					@media screen and ( max-width: 782px ) {
 						margin-top: 2px;
-						font-size: 11px;
+						font-size: 14px;
+					}
+					span {
+						background-color: transparent;
 					}
 				}
 				.name-en {
@@ -448,7 +451,7 @@ body .a2a_kit {
 				}
 				.job {
 					@media screen and ( max-width: 782px ) {
-						font-size: 10px;
+						font-size: 12px;
 					}
 					&::before {
 						margin-top: 13px;
@@ -517,7 +520,6 @@ body .a2a_kit {
 	}
 
 	.image {
-		border-radius: 100%;
 		overflow: hidden;
 		img {
 			display: block;
@@ -526,9 +528,7 @@ body .a2a_kit {
 
 	.text {
 		margin: 29px auto 0;
-		max-width: 250px;
 		line-height: 1.5;
-		text-align: center;
 		transition: all 250ms cubic-bezier(0.42, 0, 0.58, 1);
 		.name-en {
 			line-height: 1.375;
@@ -540,6 +540,11 @@ body .a2a_kit {
 			margin-top: 5px;
 			font-weight: bold;
 			font-size: 18px;
+			span {
+				display: inline-block;
+				vertical-align: top;
+				background-color: #fff;
+			}
 		}
 		.job {
 			font-weight: bold;
@@ -548,7 +553,7 @@ body .a2a_kit {
 			z-index: 1;
 			&::before {
 				content: '';
-				margin: 12px auto 10px;
+				margin: 12px 0 10px;
 				display: block;
 				width: 15px;
 				height: 1px;

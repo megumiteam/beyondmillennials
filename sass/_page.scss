@@ -225,38 +225,18 @@
 		display: none;
 	}
 	.speakers-header {
-		padding-top: 50px;
-		padding-bottom: 52px;
+		padding-bottom: 20px;
 		position: relative;
 		z-index: 1;
-		background-image: url(images/bg-speakers-modal-pc.jpg);
-		background-repeat: no-repeat;
 		@media screen and ( max-width: 782px ) {
 			padding-top: 40px;
 			padding-bottom: 25px;
-			background-image: none;
-		}
-		&::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			right: 0;
-			left: 0;
-			height: 150px;
-			background-image: url(images/bg-speakers-modal-sp.jpg);
-			background-size: cover;
 		}
 		.image {
-			margin: 0 auto;
-			width: 240px;
-			height: 240px;
-			border-radius: 100%;
-			overflow: hidden;
+			margin-bottom: 25px;
 			position: relative;
 			z-index: 2;
 			@media screen and ( max-width: 782px ) {
-				width: 140px;
-				height: 140px;
 			}
 			img {
 				display: block;
@@ -296,7 +276,7 @@
 	}
 
 	.speakers-profile {
-		padding: 0 60px 28px;
+		padding: 0 76px 28px;
 		display: flex;
 		justify-content: space-between;
 		@media screen and ( max-width: 782px ) {
@@ -327,77 +307,21 @@
 			}
 		}
 	}
-
-	.speakers-related {
-		padding: 25px 60px 9px;
-		background-color: #ebebeb;
-		@media screen and ( max-width: 782px ) {
-			padding: 14px 15px;
-		}
-		.speakers-related-title {
-			margin-bottom: 10px;
-			font-weight: bold;
-			font-size: 16px;
-			@media screen and ( max-width: 782px ) {
-				font-size: 13px;
-				text-align: center;
-			}
-		}
-		.related-session {
-		}
-		.related-item {
-			margin-bottom: 15px;
-			padding: 14px 30px;
-			background-color: #fff;
-			@media screen and ( max-width: 782px ) {
-				padding-right: 15px;
-				padding-left: 15px;
-			}
-			a {
-				display: block;
-				text-decoration: none;
-			}
-			.related-title {
-				font-weight: bold;
-				font-size: 16px;
-				@media screen and ( max-width: 782px ) {
-					line-height: 1.615384615;
-					font-size: 13px;
-				}
-				&[lang="en"] {
-					margin-top: 4px;
-					line-height: 1.571428571;
-					font-family: 'Heebo', sans-serif;
-					font-weight: 500;
-					font-size: 14px;
-					@media screen and ( max-width: 782px ) {
-						line-height: 1.75;
-						font-size: 12px;
-					}
-				}
-			}
-		}
-	}
-
 }
 
 .popup-inner {
 	.footer-shares {
-		padding: 28px 0;
+		padding: 0 0 76px;
 		display: flex;
-		background-color: #ebebeb;
 		justify-content: center;
 		align-items: center;
 		.shares-title {
-			margin-right: 6px;
+			margin-right: 14px;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 600;
+			font-size: 26px;
 			@media screen and ( max-width: 782px ) {
 				margin-right: 7px;
-			}
-			svg {
-				width: 113px;
-				@media screen and ( max-width: 782px ) {
-					width: 73px;
-				}
 			}
 		}
 		ul {
