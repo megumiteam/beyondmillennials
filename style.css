@@ -2205,7 +2205,6 @@ body .a2a_kit {
 
 @media screen and (max-width: 782px) {
   .speakers-detail .speakers-header {
-    padding-top: 40px;
     padding-bottom: 25px;
   }
 }
@@ -2315,6 +2314,12 @@ body .a2a_kit {
           align-items: center;
 }
 
+@media screen and (max-width: 782px) {
+  .popup-inner .footer-shares {
+    padding-bottom: 30px;
+  }
+}
+
 .popup-inner .footer-shares .shares-title {
   margin-right: 14px;
   font-family: 'Montserrat', sans-serif;
@@ -2325,6 +2330,7 @@ body .a2a_kit {
 @media screen and (max-width: 782px) {
   .popup-inner .footer-shares .shares-title {
     margin-right: 7px;
+    font-size: 20px;
   }
 }
 
