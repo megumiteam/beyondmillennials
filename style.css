@@ -5736,6 +5736,10 @@ body .a2a_kit {
   }
 }
 
+.comments {
+  overflow: hidden;
+}
+
 .comments .comments-inner {
   padding-top: 50px;
   padding-bottom: 76px;
