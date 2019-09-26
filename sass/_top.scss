@@ -603,11 +603,12 @@
 		}
 	}
 	.top-buy-body {
-		padding: 0 76px;
+		margin: 0 76px;
+		background-color: #fff;
 		position: relative;
 		z-index: 3;
 		@media screen and ( max-width: 782px ) {
-			padding: 0 25px;
+			margin: 0 25px;
 		}
 		iframe {
 			width: 100%;
