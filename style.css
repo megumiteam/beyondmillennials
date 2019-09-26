@@ -5613,6 +5613,7 @@ body .a2a_kit {
 
 .top-buy .top-buy-body iframe {
   width: 100%;
+  max-width: 100%;
 }
 
 .top-outline {
@@ -5864,6 +5865,7 @@ body .a2a_kit {
 
 .mailmagazine .mailmagazine-form {
   margin-top: 30px;
+  padding: 0 25px;
 }
 
 .top-sponsors {
