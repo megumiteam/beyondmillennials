@@ -209,9 +209,12 @@
 		<section class="block top-outline" id="outline">
 			<h2 class="section-title">Map</h2>
 
-			<div class="outline-map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.5101349414185!2d139.70178066525827!3d35.66443903019826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca6f5ba36b3%3A0xff9a3ac635a94891!2z44CSMTUwLTAwMDEg5p2x5Lqs6YO95riL6LC35Yy656We5a6u5YmN77yV5LiB55uu77yT77yR!5e0!3m2!1sja!2sjp!4v1562325246448!5m2!1sja!2sjp" width="1080" height="470" frameborder="0" style="border:0" allowfullscreen></iframe>
-			</div>
+			<?php
+				$map = get_field( 'mashing-up_outline--map', 'option' );
+				if ( $map ) :
+			?>
+			<div class="outline-map"><?php echo $map; ?></div>
+			<?php endif; ?>
 
 			<?php
 				$map_ja = get_field( 'mashing-up_outline--content_ja', 'option' );
