@@ -7,9 +7,13 @@
 			if ( $hashtag && $f_logo ) :
 		?>
 		<div class="footer-hashtag">
-			<div class="footer-hashtag-inner">
-				<div class="footer-hashtag-logo"><img src="<?php echo $f_logo; ?>" alt=""></div>
-				<div class="footer-hashtag-hashtag">#<?php echo $hashtag; ?></div>
+			<div class="footer-hashtag-inner curtain-action">
+				<div class="curtain-content">
+					<div class="footer-hashtag-logo"><img src="<?php echo $f_logo; ?>" alt=""></div>
+					<div class="footer-hashtag-hashtag">#<?php echo $hashtag; ?></div>
+				</div>
+				<span></span>
+				<span></span>
 			</div>
 		</div>
 		<?php endif; ?>

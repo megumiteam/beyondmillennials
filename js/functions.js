@@ -93,14 +93,8 @@ jQuery(function($) {
 
 	var tickets = $( '.get-tickets' );
 	if ( tickets.length > 0 ) {
-		var third  = 2000;
-		if ( winW > 782 ) {
-			third  = 3100;
-		}
 		$( window ).on('load', function(){
-			setTimeout(function(){
-				tickets.addClass( 'is-show' );
-			}, third);
+			tickets.addClass( 'is-inview' );
 		});
 	}
 
@@ -185,6 +179,23 @@ jQuery(function($) {
 				}
 
 			});
+
+		});
+
+	}
+
+
+	var shrink = $( '.is-shrink' );
+	if ( shrink.length > 0 ) {
+		$( window ).on('load scroll', function(){
+			var shrink_top;
+			scroll = $(window).scrollTop();
+			shrink.each( function(){
+				shrink_top = $(this).offset().top - $( window ).height()/2 - 200;
+				if ( shrink_top < scroll ) {
+					$(this).addClass( 'is-inview' );
+				}
+			});
 		});
 	}
 
@@ -247,6 +258,18 @@ jQuery(function($) {
 			setTimeout( function(){
 				location.href = url;
 			}, 800 );
+		});
+	}
+
+	var curtain = $( '.curtain-action' );
+	if ( curtain.length > 0 ) {
+		$( window ).on('load scroll', function(){
+			var scrolled =  $(window).scrollTop() + $( window ).height()/2;
+			curtain.each(function(){
+				if( scrolled >= $(this).offset().top ) {
+					$(this).addClass( 'is-inview' );
+				}
+			});
 		});
 	}
 
@@ -319,7 +342,12 @@ jQuery(function($) {
 		var mySwiper = new Swiper ( '.swiper-container', {
 			loop: true,
 			spaceBetween: 25,
-			centeredSlides: true,
+			speed: 10000,
+			autoplay: {
+				delay: 0,
+			},
+			disableOnInteraction: false,
+			allowTouchMove: false,
 			breakpoints: {
 				783: {
 					spaceBetween: 76

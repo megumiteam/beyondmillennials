@@ -469,10 +469,14 @@ iframe, video, object{
 		max-width: 1063px;
 		.footer-hashtag-inner {
 			margin: 0 -76px;
+			@media screen and ( max-width: 782px ) {
+				margin: 0;
+			}
+		}
+		.curtain-content {
 			padding: 54px 54px 88px;
 			background-color: #fff;
 			@media screen and ( max-width: 782px ) {
-				margin: 0;
 				padding: 50px 0;
 			}
 		}
@@ -504,19 +508,35 @@ iframe, video, object{
 
 .get-tickets {
 	position: fixed;
-	right: -100%;
-	bottom: 100px;
+	right: 20%;
+	bottom: 50px;
 	z-index: 2;
-	transition: all 1000ms cubic-bezier(0.42, 0, 0.58, 1);
-	&.is-show {
-		right: 20px;
+	transition: all 400ms cubic-bezier(0.42, 0, 0.58, 1);
+	@media screen and ( max-width: 782px ) {
+		right: 30px;
+		bottom: 0;
+	}
+	&.is-inview {
+		bottom: 100px;
+		@media screen and ( max-width: 782px ) {
+			bottom: 55px;
+		}
+		a {
+			line-height: 1.1290;
+			opacity: 1;
+		}
 	}
 	a {
 		color: #000;
-		line-height: 1.1290;
+		line-height: 0;
 		font-family: 'Heebo', sans-serif;
 		font-weight: 700;
 		font-size: 62px;
+		opacity: 0;
+		transition: all 550ms cubic-bezier(0.42, 0, 0.58, 1);
+		@media screen and ( max-width: 782px ) {
+			font-size: 36px;
+		}
 		&:hover, &:active {
 			text-decoration: none;
 		}

@@ -1,8 +1,12 @@
-<div class="image"><?php
-	if ( has_post_thumbnail() ) {
-		the_post_thumbnail( 'speakers_thumb' );
-	}
-?></div>
+<div class="image curtain-action brick is-shrink">
+	<div class="curtain-content"><?php
+		if ( has_post_thumbnail() ) {
+			the_post_thumbnail( 'speakers_thumb' );
+		}
+	?></div>
+	<span></span>
+	<span></span>
+</div>
 <div class="text">
 	<div class="name-ja" lang="ja"><span><?php the_title(); ?></span></div>
 	<div class="job"><?php the_field( 'mu_ja_title', $post->ID ); ?></div>
