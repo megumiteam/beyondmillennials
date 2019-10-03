@@ -147,6 +147,15 @@ jQuery(function($) {
 		});
 	}
 
+
+	var top_hero = $( '.top-hero-image' );
+	if ( top_hero.length > 0 ) {
+		$( window ).on('load', function(){
+			top_hero.removeClass( 'loading' );
+		});
+	}
+
+
 	var toppage = $( '.blocks' );
 	if ( toppage.length > 0 ) {
 		var blocks  = toppage.find( '.block' );
