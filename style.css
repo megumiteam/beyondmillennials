@@ -428,6 +428,7 @@ iframe, video, object {
   border-top: 1px solid #000;
   color: #fff;
   background-color: #185f7d;
+  overflow-x: hidden;
   position: relative;
   z-index: 1;
 }
@@ -5150,6 +5151,10 @@ body .a2a_kit {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
+}
+
+.block {
+  overflow-x: hidden;
 }
 
 .block .section-title {
