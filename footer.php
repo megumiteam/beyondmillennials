@@ -32,7 +32,6 @@
 		</div>
 		<div class="footer-copyright"><p><small><?php the_field( 'mashing-up_footer--copyright', 'option' ); ?></small></p></div>
 	</div>
-
 	<?php
 		$ticket_anchor = get_field( 'ticket-banner-url', 'option' );
 		$ticket_text   = get_field( 'ticket-banner-text', 'option' );
