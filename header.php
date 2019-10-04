@@ -10,7 +10,6 @@
 ?>
 <?php if ( $favicon ) : ?><link rel="icon" type="image/x-icon" href="<?php echo $favicon; ?>"><?php echo "\n"; endif; ?>
 <?php if ( $appTouch ) : ?><link rel="apple-touch-icon" href="<?php echo $appTouch; ?>?v=<?php echo date( 'Ymdhis' ) ?>"><?php echo "\n"; endif; ?>
-<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/bg-about-textbox-01-a.png">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|Montserrat:600&display=swap" rel="stylesheet">
 <?php wp_head(); ?>
