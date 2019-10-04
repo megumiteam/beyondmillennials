@@ -1276,7 +1276,7 @@ body .a2a_kit {
 
 .speakers-list {
   margin: 0 auto;
-  max-width: 1063px;
+  max-width: 1064px;
   overflow: hidden;
   position: relative;
   z-index: 2;
@@ -5814,10 +5814,23 @@ body .a2a_kit {
   }
 }
 
+.top-award .speakers-list {
+  width: 1115px;
+}
+
 .top-award .speakers-list.medium ul {
+  margin: 0 0 0 -51px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.top-award .speakers-list.medium li {
+  padding-left: 51px;
+}
+
+.top-award .speakers-list.medium li .image {
+  margin: 0;
 }
 
 .top-buy {

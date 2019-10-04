@@ -627,9 +627,17 @@
 		}
 	}
 	.speakers-list {
+		width: 1115px;
 		&.medium {
 			ul {
+				margin: 0 0 0 -51px;
 				justify-content: flex-start;
+			}
+			li {
+				padding-left: 51px;
+				.image {
+					margin: 0;
+				}
 			}
 		}
 	}
