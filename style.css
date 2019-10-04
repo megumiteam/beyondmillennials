@@ -864,12 +864,6 @@ body.is-nav-show {
   background-color: #000;
 }
 
-.ofi {
-  -o-object-fit: cover;
-     object-fit: cover;
-  font-family: 'object-fit: cover;';
-}
-
 .button-link {
   line-height: 1;
   font-family: 'Heebo', sans-serif;
@@ -2340,6 +2334,7 @@ body .a2a_kit {
 
 .speakers-detail .speakers-header .image img {
   display: block;
+  width: 100%;
 }
 
 .speakers-detail .name-en {
@@ -5818,6 +5813,12 @@ body .a2a_kit {
   width: 1115px;
 }
 
+@media screen and (max-width: 782px) {
+  .top-award .speakers-list {
+    width: auto;
+  }
+}
+
 .top-award .speakers-list.medium ul {
   margin: 0 0 0 -51px;
   -webkit-box-pack: start;
@@ -5825,8 +5826,21 @@ body .a2a_kit {
           justify-content: flex-start;
 }
 
+@media screen and (max-width: 782px) {
+  .top-award .speakers-list.medium ul {
+    margin-left: 0;
+    padding: 0 13px;
+  }
+}
+
 .top-award .speakers-list.medium li {
   padding-left: 51px;
+}
+
+@media screen and (max-width: 782px) {
+  .top-award .speakers-list.medium li {
+    padding: 0 12px;
+  }
 }
 
 .top-award .speakers-list.medium li .image {

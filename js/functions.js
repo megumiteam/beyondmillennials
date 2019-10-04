@@ -89,8 +89,13 @@ jQuery(function($) {
 
 	var tickets = $( '.get-tickets' );
 	if ( tickets.length > 0 ) {
-		$( window ).on('load', function(){
-			tickets.addClass( 'is-inview' );
+		$( window ).on('load scroll', function(){
+			var win_scroll = $(window).scrollTop();
+				if ( scroll >= $( window ).height() ) {
+					tickets.addClass( 'is-inview' );
+				} else {
+					tickets.removeClass( 'is-inview' );
+				}
 		});
 	}
 
