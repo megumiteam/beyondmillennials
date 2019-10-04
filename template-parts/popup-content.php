@@ -33,6 +33,7 @@
 		</div>
 		<?php endif; ?>
 
+		<?php /*
 		<div class="footer-shares">
 			<div class="shares-title">Share</div>
 			<ul class="a2a_kit" data-a2a-url="<?php echo home_url( '/'); ?>" data-a2a-title="<?php bloginfo( 'name' ); ?>">
@@ -48,6 +49,7 @@
 				</li>
 			</ul>
 		</div>
+		*/ ?>
 
 	</div>
 </div>
