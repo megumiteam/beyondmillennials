@@ -694,7 +694,8 @@ iframe, video, object {
 
 @media screen and (max-width: 782px) {
   .get-tickets.is-inview {
-    bottom: 55px;
+    bottom: 35px;
+    left: 24px;
   }
 }
 

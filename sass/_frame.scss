@@ -521,7 +521,8 @@ iframe, video, object{
 	&.is-inview {
 		bottom: 100px;
 		@media screen and ( max-width: 782px ) {
-			bottom: 55px;
+			bottom: 35px;
+			left: 24px
 		}
 		a {
 			line-height: 1.1290;
