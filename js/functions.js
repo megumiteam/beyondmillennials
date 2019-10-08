@@ -323,6 +323,27 @@ jQuery(function($) {
 		});
 	}
 
+	// topでスピーカーを開く 12月ローンチではコメントアウト
+	var top_speakers = $( '.top-speakers' );
+	if ( top_speakers.length > 0 ) {
+		var url_hash = location.hash;
+		var top_speaker_diff = 94;
+		if ( $( window ).width() < 793 ) {
+			top_speaker_diff = 59;
+		}
+
+		if ( url_hash.length > 0 ) {
+			$( window ).on('load', function(){
+				var top_speaker_pos = $( url_hash ).offset().top - top_speaker_diff;
+				$( 'body, html' ).animate({ scrollTop : top_speaker_diff }, 1, 'swing' ).promise().done(function(){
+					$( url_hash ).trigger( 'click' );
+					$( 'body' ).css({ 'top' : -top_speaker_pos });
+				});
+			});
+		}
+	}
+	// topでスピーカーを開く 12月ローンチではコメントアウト ここまで
+
 	var speakers = $( '.speakers-content' );
 	if ( speakers.length > 0 ) {
 		var url_hash = location.hash;

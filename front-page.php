@@ -140,7 +140,7 @@
 					<ul>
 						<?php foreach ( $speaker as $post ) : setup_postdata( $post ); ?>
 						<li>
-							<div class="popup">
+							<div class="popup" id="<?php echo $post->post_name; ?>">
 								<?php include( 'template-parts/popup-content.php' ); ?>
 							</div>
 						</li>
@@ -198,7 +198,7 @@
 					<ul>
 						<?php foreach ( $speaker as $post ) : setup_postdata( $post ); ?>
 						<li>
-							<div class="popup">
+							<div class="popup" id="<?php echo $post->post_name; ?>">
 								<?php include( 'template-parts/popup-content.php' ); ?>
 							</div>
 						</li>
