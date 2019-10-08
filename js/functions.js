@@ -161,8 +161,12 @@ jQuery(function($) {
 	if ( toppage.length > 0 ) {
 		var blocks  = toppage.find( '.block' );
 		var pagetop = $( '.scrolltop' );
-
+		var windowWidth;
 		var current_url = location.pathname;
+
+		$( window ).on('load resize', function() {
+			windowWidth = window.innerWidth;
+		});
 
 		$( window ).on('load scroll', function(){
 			blocks.each(function () {
@@ -181,13 +185,18 @@ jQuery(function($) {
 						}
 					}
 				}
-
-				if ( pagetop.length > 0 && scroll >= $( window ).height() ) {
+				// MGBM-18
+				if ( windowWidth > 782 ) {
+					// PCの処理
 					pagetop.addClass( 'is-show' );
 				} else {
-					pagetop.removeClass( 'is-show' );
+					// SPの処理
+					if ( pagetop.length > 0 && scroll >= $( window ).height() ) {
+						pagetop.addClass( 'is-show' );
+					} else {
+						pagetop.removeClass( 'is-show' );
+					}
 				}
-
 			});
 
 		});
