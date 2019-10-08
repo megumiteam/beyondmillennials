@@ -1,16 +1,19 @@
 jQuery(function($) {
+	var windowWidth;
+	$( window ).on('load resize', function() {
+		windowWidth = window.innerWidth;
+	});
+
 	var scroll = $(window).scrollTop();
 
 	var header = $( '.header' );
-	var winW = $( window ).width();
 	var fixed_flag = false;
 
 	if ( header.length > 0 ) {
 		var second = 500;
 
 		$( window ).on('load scroll', function(){
-			winW = $( window ).width();
-			if ( winW > 782 ) {
+			if ( windowWidth > 782 ) {
 				second = 1800;
 			}
 
@@ -90,12 +93,15 @@ jQuery(function($) {
 	var tickets = $( '.get-tickets' );
 	if ( tickets.length > 0 ) {
 		$( window ).on('load scroll', function(){
-			var win_scroll = $(window).scrollTop();
-				if ( scroll >= $( window ).height() ) {
-					tickets.addClass( 'is-inview' );
-				} else {
+			var win_scroll = tickets.offset().top;
+			if ( scroll >= $( window ).height() ) {
+				tickets.addClass( 'is-inview' );
+				if ( ( windowWidth <= 782 ) && ( win_scroll >= $( '.footer-hashtag' ). offset().top ) ) {
 					tickets.removeClass( 'is-inview' );
 				}
+			} else {
+				tickets.removeClass( 'is-inview' );
+			}
 		});
 	}
 
@@ -161,12 +167,7 @@ jQuery(function($) {
 	if ( toppage.length > 0 ) {
 		var blocks  = toppage.find( '.block' );
 		var pagetop = $( '.scrolltop' );
-		var windowWidth;
 		var current_url = location.pathname;
-
-		$( window ).on('load resize', function() {
-			windowWidth = window.innerWidth;
-		});
 
 		$( window ).on('load scroll', function(){
 			blocks.each(function () {
