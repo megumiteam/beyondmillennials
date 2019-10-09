@@ -94,13 +94,19 @@ jQuery(function($) {
 	if ( tickets.length > 0 ) {
 		$( window ).on('load scroll', function(){
 			var win_scroll = tickets.offset().top;
-			if ( scroll >= $( window ).height() ) {
+			if ( windowWidth > 782 ) {
+				// PCの処理
 				tickets.addClass( 'is-inview' );
-				if ( ( windowWidth <= 782 ) && ( win_scroll >= $( '.footer-hashtag' ). offset().top ) ) {
+			} else {
+				// SPの処理
+				if ( scroll >= $( window ).height() ) {
+					tickets.addClass( 'is-inview' );
+					if ( win_scroll >= $( '.footer-hashtag' ).offset().top ) {
+						tickets.removeClass( 'is-inview' );
+					}
+				} else {
 					tickets.removeClass( 'is-inview' );
 				}
-			} else {
-				tickets.removeClass( 'is-inview' );
 			}
 		});
 	}
@@ -186,17 +192,10 @@ jQuery(function($) {
 						}
 					}
 				}
-				// MGBM-18
-				if ( windowWidth > 782 ) {
-					// PCの処理
+				if ( pagetop.length > 0 && scroll >= $( window ).height() ) {
 					pagetop.addClass( 'is-show' );
 				} else {
-					// SPの処理
-					if ( pagetop.length > 0 && scroll >= $( window ).height() ) {
-						pagetop.addClass( 'is-show' );
-					} else {
-						pagetop.removeClass( 'is-show' );
-					}
+					pagetop.removeClass( 'is-show' );
 				}
 			});
 
