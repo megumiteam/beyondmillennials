@@ -257,6 +257,8 @@
 
 		<?php
 			$sponsor_list = get_field( 'mu_timetable_sponsor_types' );
+			if ( ! empty( $sponsor_list ) ) :
+
 			$sponsor_types = get_terms( 'sponsor_type', array(
 					'include' => $sponsor_list,
 					'orderby' => 'menu_order'
@@ -310,6 +312,7 @@
 			</ul>
 		</section>
 		<?php endif; ?>
+		<?php endif; //  ! empty( $sponsor_list ) ?>
 
 	</div>
 <?php endwhile; endif; ?>
