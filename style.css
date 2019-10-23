@@ -5058,6 +5058,7 @@ body .a2a_kit {
   .top-hero .top-hero-logo {
     padding-top: 15px;
     width: 117px;
+    margin-left: 25px;
   }
 }
 
@@ -5073,14 +5074,16 @@ body .a2a_kit {
   line-height: 1.125;
   font-family: 'Heebo', sans-serif;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 @media screen and (max-width: 782px) {
   .top-hero .top-hero-date {
-    top: 170px;
-    left: 15px;
-    font-size: 28px;
+    top: 20px;
+    left: auto;
+    right: 25px;
+    font-size: 19px;
+    text-align: right;
   }
 }
 
