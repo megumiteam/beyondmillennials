@@ -24,8 +24,8 @@
 				<?php endif; ?>
 				<?php
 					$date = get_field( 'mashing-up_event--date', 'option' );
-					if ( $date ) {
-						// echo '<div class="top-hero-date">' . $date . '</div>';
+					if ( ! empty( $date ) ) {
+						echo '<div class="top-hero-date">' . $date . '</div>';
 					}
 				?>
 			</div>
