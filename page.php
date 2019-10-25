@@ -2,17 +2,19 @@
 	<main class="content page-content">
 	<?php if ( have_posts() ) : ?>
 		<?php if ( is_page( 'about' ) ) : ?>
-			<?php include( 'template-parts/about.php' ); ?>
+			<?php get_template_part( 'template-parts/about' ); ?>
 		<?php elseif ( is_page( 'speakers' ) ) : ?>
-			<?php include( 'template-parts/speakers.php' ); ?>
+			<?php get_template_part( 'template-parts/speakers' ); ?>
+		<?php elseif ( is_page( 'award' ) ) : ?>
+			<?php get_template_part( 'template-parts/award' ); ?>
 		<?php elseif ( is_page( 'timetable' ) ) : ?>
-			<?php include( 'template-parts/timetable.php' ); ?>
+			<?php get_template_part( 'template-parts/timetable' ); ?>
 		<?php elseif ( is_page( 'session' ) ) : ?>
-			<?php include( 'template-parts/session.php' ); ?>
+			<?php get_template_part( 'template-parts/session' ); ?>
 		<?php elseif ( is_page( 'supporters' ) ) : ?>
-			<?php include( 'template-parts/supporters.php' ); ?>
+			<?php get_template_part( 'template-parts/supporters' ); ?>
 		<?php elseif ( is_page( 'tickets' ) ) : ?>
-			<?php include( 'template-parts/tickets.php' ); ?>
+			<?php get_template_part( 'template-parts/tickets' ); ?>
 		<?php else : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 			<?php endwhile; ?>

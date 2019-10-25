@@ -96,7 +96,7 @@
 	</div>
 	<?php endif; ?>
 
-	<?php if ( is_front_page() || is_page( 'about' ) || is_page( 'speakers' ) || is_singular( 'session' ) ) :  ?>
+	<?php if ( is_front_page() || is_page( array( 'about', 'speakers', 'award' ) ) || is_singular( 'session' ) ) :  ?>
 	<div class="popup-container">
 		<div class="popup-inner">
 		</div>
