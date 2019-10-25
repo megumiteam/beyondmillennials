@@ -137,7 +137,7 @@
 				<h3 class="speakers-subtitle">KEYNOTE SPEAKERS</h3>
 				<div class="speakers-list large">
 					<ul>
-						<?php foreach ( $speaker as $post ) : setup_postdata( $post ); ?>
+						<?php foreach ( $keynotes as $post ) : setup_postdata( $post ); ?>
 						<li>
 							<div class="popup" id="<?php echo $post->post_name; ?>">
 								<?php include( 'template-parts/popup-content.php' ); ?>
