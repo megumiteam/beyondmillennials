@@ -33,20 +33,6 @@ add_filter( 'manage_edit-session_sortable_columns', 'my_manage_edit_session_disp
 add_action( 'pre_get_posts', 'my_manage_edit_session_display_sortable_columns_order', 1 );
 
 
-function my_manage_posts_columns_sponsor_type($columns) {
-	$columns['sponsor_type'] = "スポンサー種別";
-	return $columns;
-}
-function my_add_column_sponsor_type($column_name, $post_id) {
-	if( $column_name == 'sponsor_type' ) {
-		$tax = wp_get_object_terms( $post_id, 'sponsor_type' );
-		$stitle = $tax[0]->name;
-	}
-
-	if ( isset($stitle) && $stitle ) {
-		echo esc_attr($stitle);
-	}
-}
 function my_add_post_taxonomy_restrict_filter() {
 	global $post_type;
 	if ( 'sponsor' == $post_type ) :
@@ -63,8 +49,6 @@ function my_add_post_taxonomy_restrict_filter() {
 <?php
 	endif;
 }
-add_filter( 'manage_edit-sponsor_columns', 'my_manage_posts_columns_sponsor_type' );
-add_action( 'manage_sponsor_posts_custom_column', 'my_add_column_sponsor_type', 10, 2 );
 add_action( 'restrict_manage_posts', 'my_add_post_taxonomy_restrict_filter' );
 
 
