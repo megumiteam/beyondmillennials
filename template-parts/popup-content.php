@@ -35,38 +35,51 @@
 		</div>
 		<?php endif; ?>
 
-		<?php
-			$mu_ja_comment = get_field( 'mu_ja_editor_comment', $post->ID );
-			if ( $mu_ja_comment ) :
-		?>
-		<div class="speakers-editor-comments no-en">
-			<div class="item" lang="ja"><?php echo $mu_ja_comment; ?></div>
-		</div>
-		<?php endif; ?>
-
-		<?php
-			$related = get_field( 'mu_relation_session', $post->ID );
-			if ( $related ) :
-		?>
-		<div class="speakers-related">
-			<div class="speakers-related-title">登壇セッション</div>
-			<div class="related-session">
-			<?php foreach ( $related as $r ) : ?>
-				<?php if ( 'publish' == $r->post_status ) : ?>
-				<div class="related-item">
-					<a href="<?php echo get_permalink( $r->ID ); ?>">
-						<div class="related-title" lang="ja"><?php echo get_the_title( $r->ID ); ?></div>
-						<div class="related-title" lang="en"><?php
-							$related_en = get_field( 'mu_session_title_en', $r->ID );
-							echo $related_en;
-						?></div>
-					</a>
-				</div>
-				<?php endif; ?>
-			<?php endforeach; ?>
+		<?php if ( has_term( array( 'keynote-speakers', 'speakers' ), 'speaker_type' ) ) : // キーノートまたはスピーカー ?>
+			<?php
+				$mu_ja_comment = get_field( 'mu_ja_editor_comment', $post->ID );
+				if ( $mu_ja_comment ) :
+			?>
+			<div class="speakers-editor-comments no-en">
+				<div class="item" lang="ja"><?php echo $mu_ja_comment; ?></div>
 			</div>
-		</div>
-		<?php endif; ?>
+			<?php endif; ?>
+
+			<?php
+				$related = get_field( 'mu_relation_session', $post->ID );
+				if ( $related ) :
+			?>
+			<div class="speakers-related">
+				<div class="speakers-related-title">登壇セッション</div>
+				<div class="related-session">
+				<?php foreach ( $related as $r ) : ?>
+					<?php if ( 'publish' == $r->post_status ) : ?>
+					<div class="related-item">
+						<a href="<?php echo get_permalink( $r->ID ); ?>">
+							<div class="related-title" lang="ja"><?php echo get_the_title( $r->ID ); ?></div>
+							<div class="related-title" lang="en"><?php
+								$related_en = get_field( 'mu_session_title_en', $r->ID );
+								echo $related_en;
+							?></div>
+						</a>
+					</div>
+					<?php endif; ?>
+				<?php endforeach; ?>
+				</div>
+			</div>
+			<?php endif; ?>
+		<?php endif; // キーノートまたはスピーカー ?>
+
+		<?php if ( has_term( array( 'game-changer', 'readers' ), 'speaker_type' ) ) : // ゲームチェンジャーまたはリーダー ?>
+			<?php
+				$mu_ja_editor_link = get_field( 'mu_ja_editor_link', $post->ID );
+				if ( $mu_ja_editor_link ) :
+			?>
+			<div class="speakers-editor-link no-en">
+				<div class="item" lang="ja"><?php echo $mu_ja_editor_link; ?></div>
+			</div>
+			<?php endif; ?>
+		<?php endif; // ゲームチェンジャーまたはリーダー ?>
 
 		<div class="footer-shares">
 			<div class="shares-title">Share</div>
