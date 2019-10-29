@@ -70,7 +70,7 @@
 			<?php endif; ?>
 		<?php endif; // キーノートまたはスピーカー ?>
 
-		<?php if ( has_term( array( 'game-changer', 'readers' ), 'speaker_type' ) ) : // ゲームチェンジャーまたはリーダー ?>
+		<?php if ( has_term( array( 'game-changer', 'readers', 'advisory-board-members' ), 'speaker_type' ) ) : // ゲームチェンジャーまたはリーダーまたはアドバイザリーボード ?>
 			<?php
 				$mu_ja_editor_link = get_field( 'mu_ja_editor_link', $post->ID );
 				if ( $mu_ja_editor_link ) :
@@ -79,7 +79,7 @@
 				<div class="item" lang="ja"><?php echo $mu_ja_editor_link; ?></div>
 			</div>
 			<?php endif; ?>
-		<?php endif; // ゲームチェンジャーまたはリーダー ?>
+		<?php endif; // ゲームチェンジャーまたはリーダーまたはアドバイザリーボード ?>
 
 		<?php
 			$shares_path = '/';
