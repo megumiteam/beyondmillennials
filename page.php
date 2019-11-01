@@ -11,8 +11,8 @@
 			<?php get_template_part( 'template-parts/timetable' ); ?>
 		<?php elseif ( is_page( 'session' ) ) : ?>
 			<?php get_template_part( 'template-parts/session' ); ?>
-		<?php elseif ( is_page( 'sponsores' ) ) : ?>
-			<?php get_template_part( 'template-parts/sponsores' ); ?>
+		<?php elseif ( is_page( 'sponsors' ) ) : ?>
+			<?php get_template_part( 'template-parts/sponsors' ); ?>
 		<?php elseif ( is_page( 'tickets' ) ) : ?>
 			<?php get_template_part( 'template-parts/tickets' ); ?>
 		<?php else : ?>
