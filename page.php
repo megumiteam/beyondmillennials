@@ -9,8 +9,8 @@
 			<?php include( 'template-parts/timetable.php' ); ?>
 		<?php elseif ( is_page( 'session' ) ) : ?>
 			<?php include( 'template-parts/session.php' ); ?>
-		<?php elseif ( is_page( 'supporters' ) ) : ?>
-			<?php include( 'template-parts/supporters.php' ); ?>
+		<?php elseif ( is_page( 'sponsors' ) ) : ?>
+			<?php include( 'template-parts/sponsors.php' ); ?>
 		<?php elseif ( is_page( 'tickets' ) ) : ?>
 			<?php include( 'template-parts/tickets.php' ); ?>
 		<?php else : ?>
