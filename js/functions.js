@@ -10,46 +10,23 @@ jQuery(function($) {
 	var fixed_flag = false;
 
 	if ( header.length > 0 ) {
-		var second = 500;
+		var startPos = 0;
 
 		$( window ).on('load scroll', function(){
 			if ( windowWidth > 782 ) {
-				second = 1800;
+				scroll = window.scrollY;
+				if ( scroll > startPos ) {
+					$( '.header' ).removeClass( 'is-show' );
+				} else {
+					$( '.header' ).addClass( 'is-show' );
+				}
+				startPos = scroll;
 			}
 
-			scroll = $(window).scrollTop();
-
-			if ( scroll < 20 ) {
+			if ( scroll < 50 ) {
 				header.addClass( 'is-top' );
 			} else {
 				header.removeClass( 'is-top' );
-			}
-
-			if ( scroll > 200 ) {
-				if ( fixed_flag === false ) {
-					header.css({ 'top' : '-100px' });
-					setTimeout(function(){
-						header.addClass( 'is-fixed' );
-						setTimeout(function(){
-							header.removeAttr( 'style' );
-						}, 400);
-					}, 400);
-					fixed_flag = true;
-				}
-			} else {
-				header.removeClass( 'is-fixed' );
-				fixed_flag = false;
-			}
-
-			var waiting = $( '.is-wait' );
-			if ( waiting.length > 0 ) {
-				setTimeout(function(){
-					$( '.header-logo' ).removeClass( 'is-wait' );
-					$( '.header-nav' ).removeClass( 'is-wait' );
-				}, 500);
-				setTimeout(function(){
-					$( '.header-misc' ).removeClass( 'is-wait' );
-				}, second);
 			}
 
 		});
@@ -90,7 +67,7 @@ jQuery(function($) {
 
 	}
 
-	var tickets = $( '.get-tickets' );
+	var tickets = $( '.js-fadein' );
 	if ( tickets.length > 0 ) {
 		$( window ).on('load scroll', function(){
 			var win_scroll = tickets.offset().top;
@@ -114,42 +91,78 @@ jQuery(function($) {
 	var nav_toggle = $( '.header-nav-toggle' );
 	if ( nav_toggle.length > 0 ) {
 
-		var drawer = $( '.drawer' );
-		var nav_close = $( '.drawer-close' );
-
 		if ( nav_toggle.css( 'display' ) === 'block' ) {
+			var reset_pos = 0;
 			nav_toggle.stop().on('click', function(){
-				var scrolled = $( window ).scrollTop();
-				$( 'body' ).css({ 'top' : -scrolled }).addClass( 'is-nav-show' );
+				nav_toggle.toggleClass( 'is-show' );
 
-				drawer.addClass( 'is-show' );
+				if ( nav_toggle.hasClass( 'is-show' ) ) {
+					var scrolled = $( window ).scrollTop();
+					$( 'body' ).css({ 'top' : -scrolled }).addClass( 'is-nav-show' );
+
+					openMenu();
+				} else {
+					reset_pos = parseInt( $( 'body' ).css( 'top' ), 10 );
+					$( 'body, html' ).animate({ scrollTop : -1*reset_pos }, 1, 'linear' );
+					$( 'body' ).removeClass( 'is-nav-show' ).removeAttr( 'style' );
+
+					closeMenu();
+				}
 			});
-
-			nav_close.on('click', function(){
-				drawer.stop().removeClass( 'is-show' );
-
-				var reset_pos = parseInt( $( 'body' ).css( 'top' ), 10 );
-				$( 'body, html' ).animate({ scrollTop : -1*reset_pos }, 1, 'linear' );
-				$( 'body' ).removeClass( 'is-nav-show' ).removeAttr( 'style' );
-
-			});
-
-		} else {
-			drawer.stop().removeClass( 'is-show' );
 		}
 
+		$( '.header-nav a' ).on('click', function(){
+			reset_pos = $( 'body' ).css( 'top' );
+			$( 'body' ).removeClass( 'is-nav-show' ).removeAttr( 'style' );
+			nav_toggle.removeClass( 'is-show' );
+
+			closeMenu();
+
+			return true;
+		});
 	}
 
+	function openMenu() {
+		$( '.circle' ).addClass( 'expand' );
+
+		$( '.header-nav-toggle' ).addClass( 'open' );
+		$( '.nav-01, .nav-02, .nav-03' ).addClass( 'collapse' );
+		$( '.menu li' ).addClass( 'animate' );
+
+		setTimeout(function(){
+			$( '.nav-02' ).hide();
+			$( '.nav-01' ).addClass( 'rotate30' );
+			$( '.nav-03' ).addClass( 'rotate150' );
+		}, 70);
+		setTimeout(function(){
+			$( '.nav-01' ).addClass( 'rotate45' );
+			$( '.nav-03' ).addClass( 'rotate135' );
+		}, 120);
+	}
+
+	function closeMenu() {
+		$( '.header-nav-toggle' ).removeClass( 'open' );
+		$( '.nav-01' ).removeClass( 'rotate45' ).addClass( 'rotate30' );
+		$( '.nav-03' ).removeClass( 'rotate135' ).addClass( 'rotate150' );
+		$( '.circle' ).removeClass( 'expand' );
+		$( '.menu li' ).removeClass( 'animate' );
+
+		setTimeout(function(){
+			$( '.nav-01' ).removeClass( 'rotate30' );
+			$( '.nav-03' ).removeClass( 'rotate150' );
+		}, 50);
+		setTimeout(function(){
+			$( '.nav-02' ).show();
+			$( '.nav-01, .nav-02, .nav-03' ).removeClass( 'collapse' );
+		}, 70);
+	}
 
 	var scroller = $( 'a[href^="#"]' );
 	if ( scroller.length > 0 ) {
 		var diff = 0;
 		scroller.on('click', function(){
-			if ( $(this).hasClass( 'inpage' ) ) {
-				diff = 94;
-				if ( $( window ).width() < 793 ) {
-					diff = 59;
-				}
+			if ( $( window ).width() < 793 ) {
+				diff = 60;
 			}
 			var speed = 400;
 			var href= $(this).attr( "href" );
