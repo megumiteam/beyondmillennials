@@ -41,13 +41,6 @@
 		</div>
 		<?php endif; // $days ?>
 
-		<?php
-			$floormaps = get_field( 'mu_timetable_floormaps', $post->ID );
-			if ( $floormaps ) :
-		?>
-		<div class="floormap-scroller"><a class="inpage" href="#session-floormap">Floor map</a></div>
-		<?php endif; ?>
-
 		<?php if ( $days && $rooms ) : ?>
 		<section class="session-lists">
 			<?php foreach ( $days as $day ) : ?>
@@ -229,31 +222,6 @@
 			<?php endforeach; // $days ?>
 		</section>
 		<?php endif; // $days && $rooms  ?>
-
-		<?php if ( $floormaps ) : ?>
-		<section class="session-floormap" id="session-floormap">
-			<h2 class="section-title">Floor map</h2>
-
-			<div class="floormaps">
-				<?php foreach ( $floormaps as $floormap ) : ?>
-				<?php $path = $floormap[ 'mu_timetable_floormap' ]; ?>
-				<div class="item">
-					<a href="<?php echo $path; ?>" target="_blank"><img src="<?php echo $path; ?>" alt=""></a>
-				</div>
-			<?php endforeach; ?>
-			</div>
-
-			<div class="floormap-note">
-				<?php
-					$floormap_ja = get_field( 'mu_floormap_note_ja', $post->ID );
-					$floormap_en = get_field( 'mu_floormap_note_en', $post->ID );
-				?>
-				<?php if ( $floormap_ja ) : ?><span lang="ja"><?php echo $floormap_ja; ?></span><?php endif; ?>
-				<?php if ( $floormap_en ) : ?><span lang="en"><?php echo $floormap_en; ?></span><?php endif; ?>
-			</div>
-
-		</section>
-		<?php endif; ?>
 
 		<?php
 			$sponsor_list = get_field( 'mu_timetable_sponsor_types' );
