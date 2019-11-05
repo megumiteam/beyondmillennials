@@ -1,5 +1,6 @@
 html {
 	overflow: auto;
+	overflow-y: scroll;
 }
 
 body{
@@ -85,7 +86,7 @@ iframe, video, object{
 					justify-content: center;
 				}
 			}
-			.header-nav-logo {
+			.header-logo {
 				display: none;
 			}
 			&.is-show {
@@ -118,6 +119,7 @@ iframe, video, object{
 		max-width: 1064px;
 		@media screen and ( max-width: 782px ) {
 			height: 50px;
+			background-color: transparent;
 		}
 	}
 
@@ -126,6 +128,7 @@ iframe, video, object{
 		width: 100%;
 		@media screen and ( max-width: 782px ) {
 			padding-top: 13px;
+			background-color: transparent;
 		}
 		a, img {
 			display: block;
@@ -177,7 +180,7 @@ iframe, video, object{
 				margin: 0;
 				padding-top: 15px;
 				width: 100%;
-				background-color: #fff;
+				background-color: transparent;
 				a, img {
 					display: block;
 				}
@@ -216,6 +219,8 @@ iframe, video, object{
 				border-bottom: 1px solid #eee;
 				font-size: 18px;
 				opacity: 0;
+				position: relative;
+				top: -30px;
 				&:last-child {
 					border-bottom: 0;
 				}
@@ -351,14 +356,12 @@ iframe, video, object{
 			width: 0;
 			height: 0;
 			background: #fff;
-			opacity: 0;
-			transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+			transition: all 500ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
 			&.expand {
-				top: -560px;
-				right: -560px;
-				width: 1200px;
-				height: 1200px;
-				opacity: 1;
+				top: -784px;
+				right: -791px;
+				width: 1680px;
+				height: 1680px;
 			}
 		}
 	}
@@ -369,6 +372,8 @@ body.is-nav-show {
 	.header {
 		@media screen and ( max-width: 782px ) {
 			height: 100%;
+			background-color: transparent;
+			transition: none;
 		}
 		.header-inner {
 			@media screen and ( max-width: 782px ) {
@@ -402,49 +407,49 @@ body.is-nav-show {
 			li {
 				@media screen and ( max-width: 782px ) {
 					&:nth-child(1) {
-						animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 100ms 1 forwards;
+						animation: nav_fade .5s cubic-bezier(0.42, 0, 0.58, 1) 50ms 1 forwards;
 					}
 					&:nth-child(2) {
-						animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 200ms 1 forwards;
+						animation: nav_fade .5s cubic-bezier(0.42, 0, 0.58, 1) 100ms 1 forwards;
 					}
 					&:nth-child(3) {
-						animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 300ms 1 forwards;
+						animation: nav_fade .5s cubic-bezier(0.42, 0, 0.58, 1) 150ms 1 forwards;
 					}
 					&:nth-child(4) {
-						animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 400ms 1 forwards;
+						animation: nav_fade .5s cubic-bezier(0.42, 0, 0.58, 1) 200ms 1 forwards;
 					}
 					&:nth-child(5) {
-						animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 500ms 1 forwards;
+						animation: nav_fade .5s cubic-bezier(0.42, 0, 0.58, 1) 250ms 1 forwards;
 					}
 					&:nth-child(6) {
-						animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 600ms 1 forwards;
+						animation: nav_fade .5s cubic-bezier(0.42, 0, 0.58, 1) 300ms 1 forwards;
 					}
 					&:nth-child(7) {
-						animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 700ms 1 forwards;
+						animation: nav_fade .5s cubic-bezier(0.42, 0, 0.58, 1) 350ms 1 forwards;
 					}
 					&:nth-child(8) {
-						animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 800ms 1 forwards;
+						animation: nav_fade .5s cubic-bezier(0.42, 0, 0.58, 1) 400ms 1 forwards;
 					}
 					&:nth-child(9) {
-						animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 900ms 1 forwards;
+						animation: nav_fade .5s cubic-bezier(0.42, 0, 0.58, 1) 450ms 1 forwards;
 					}
 					&:nth-child(10) {
-						animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 1000ms 1 forwards;
+						animation: nav_fade .5s cubic-bezier(0.42, 0, 0.58, 1) 500ms 1 forwards;
 					}
 					&:nth-child(11) {
-						animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 1100ms 1 forwards;
+						animation: nav_fade .5s cubic-bezier(0.42, 0, 0.58, 1) 550ms 1 forwards;
 					}
 					&:nth-child(12) {
-						animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 1200ms 1 forwards;
+						animation: nav_fade .5s cubic-bezier(0.42, 0, 0.58, 1) 600ms 1 forwards;
 					}
 					&:nth-child(13) {
-						animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 1300ms 1 forwards;
+						animation: nav_fade .5s cubic-bezier(0.42, 0, 0.58, 1) 650ms 1 forwards;
 					}
 					&:nth-child(14) {
-						animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 1400ms 1 forwards;
+						animation: nav_fade .5s cubic-bezier(0.42, 0, 0.58, 1) 700ms 1 forwards;
 					}
 					&:nth-child(15) {
-						animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 1500ms 1 forwards;
+						animation: nav_fade .5s cubic-bezier(0.42, 0, 0.58, 1) 750ms 1 forwards;
 					}
 				}
 			}
@@ -455,6 +460,7 @@ body.is-nav-show {
 @keyframes nav_fade {
 	100% {
 		opacity: 1;
+		top: 0;
 	}
 }
 
