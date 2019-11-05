@@ -239,9 +239,9 @@
 		z-index: 2;
 		@media screen and ( max-width: 782px ) {
 			margin: 0 auto;
-			padding: 0;
+			padding: 0 25px;
 			display: block;
-			width: 319px;
+			width: auto;
 		}
 		&::before {
 			content: '';
@@ -263,8 +263,8 @@
 			position: relative;
 			z-index: 2;
 			@media screen and ( max-width: 782px ) {
-				width: 319px;
-				height: 73px;
+				max-width: 100%;
+				height: auto;
 			}
 		}
 	}
@@ -328,12 +328,14 @@
 	}
 	.name-en {
 		margin-top: 16px;
+		padding: 0 18px;
 		font-family: 'Heebo', sans-serif;
 		font-weight: 500;
 		font-size: 16px;
 		text-align: center;
 	}
 	.name-ja {
+		padding: 0 18px;
 		line-height: 1.5;
 		font-weight: bold;
 		font-size: 18px;
@@ -341,7 +343,7 @@
 	}
 	.job {
 		margin: 0 auto;
-		max-width: 250px;
+		padding: 0 18px;
 		line-height: 1.5;
 		font-weight: bold;
 		font-size: 12px;
@@ -360,11 +362,8 @@
 
 	.speakers-profile {
 		padding: 0 76px 28px;
-		display: flex;
-		justify-content: space-between;
 		@media screen and ( max-width: 782px ) {
-			padding: 0 15px 28px;
-			display: block;
+			padding: 0 25px;
 		}
 		&.no-en {
 			.item {
@@ -372,7 +371,6 @@
 			}
 		}
 		.item {
-			width: 46.575342466%;
 			line-height: 2;
 			font-size: 16px;
 			@media screen and ( max-width: 782px ) {
@@ -381,11 +379,124 @@
 				font-size: 15px;
 			}
 			&[lang="en"] {
+				margin-top: 2em;
 				font-family: 'Heebo', sans-serif;
 				font-weight: 300;
 				@media screen and ( max-width: 782px ) {
-					margin-top: 2em;
 					font-size: 14px;
+				}
+			}
+		}
+	}
+
+	.speakers-recommend {
+		margin-top: 32px;
+		padding: 0 76px;
+		@media screen and ( max-width: 782px ) {
+			padding: 0 25px;
+		}
+		.speakers-recommend-title {
+			margin-bottom: 12px;
+			font-weight: bold;
+			font-size: 22px;
+			@media screen and ( max-width: 782px ) {
+				font-size: 18px;
+			}
+		}
+		.speakers-recommend-text {
+			font-size: 16px;
+			@media screen and ( max-width: 782px ) {
+				line-height: 1.866666667;
+				font-size: 15px;
+			}
+		}
+	}
+
+	.speakers-session {
+		margin-top: 65px;
+		padding: 0 76px 76px;
+		position: relative;
+		z-index: 1;
+		@media screen and ( max-width: 782px ) {
+			margin-top: 25px;
+			padding: 0 25px 25px;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			top: 85px;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: #f2ac5a;
+			@media screen and ( max-width: 782px ) {
+				top: 40px;
+			}
+		}
+		.speakers-session-title {
+			margin-left: 13px;
+			position: relative;
+			z-index: 2;
+			@media screen and ( max-width: 782px ) {
+				margin-left: 4px;
+			}
+			svg {
+				display: block;
+				width: 555px;
+				height: 105px;
+				@media screen and ( max-width: 782px ) {
+					width: 271px;
+					height: auto;
+				}
+			}
+		}
+		ul {
+			padding-top: 30px;
+			position: relative;
+			z-index: 2;
+			@media screen and ( max-width: 782px ) {
+				padding-top: 5px;
+			}
+		}
+		li {
+			margin-top: 30px;
+			@media screen and ( max-width: 782px ) {
+				margin-top: 25px;
+			}
+			a {
+				padding: 16px 76px;
+				display: block;
+				line-height: 1.5;
+				color: #fff;
+				background-color: #000;
+				font-family: 'Heebo', sans-serif;
+				font-weight: 700;
+				text-decoration: none;
+				@media screen and ( max-width: 782px ) {
+					padding: 25px;
+				}
+				&:hover, &:active {
+					background-color: #0148c6;
+				}
+			}
+			.session-title {
+				font-size: 20px;
+				@media screen and ( max-width: 782px ) {
+					font-size: 16px;
+				}
+			}
+			.session-info {
+				padding-top: 2px;
+				display: flex;
+				font-size: 16px;
+				@media screen and ( max-width: 782px ) {
+					padding-top: 8px;
+					font-size: 12px;
+				}
+				.session-date {
+				}
+				.session-time {
+					padding-left: .5em;
 				}
 			}
 		}
@@ -394,12 +505,13 @@
 
 .popup-inner {
 	.footer-shares {
-		padding: 0 0 76px;
+		padding: 85px 0 76px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		@media screen and ( max-width: 782px ) {
-			padding-bottom: 30px;
+			padding-top: 26px;
+			padding-bottom: 26px;
 		}
 		.shares-title {
 			margin-right: 14px;
@@ -416,26 +528,26 @@
 		}
 		li {
 			@media screen and ( max-width: 782px ) {
-				width: 33px;
+				width: 48px;
 			}
 		}
 		a {
 			@media screen and ( max-width: 782px ) {
-				width: 31px;
-				height: 31px;
+				width: 46px;
+				height: 46px;
 			}
 		}
 		.facebook {
 			svg {
 				@media screen and ( max-width: 782px ) {
-					width: 11px;
+					width: 16px;
 				}
 			}
 		}
 		.twitter {
 			svg {
 				@media screen and ( max-width: 782px ) {
-					width: 11px;
+					width: 17px;
 				}
 			}
 		}

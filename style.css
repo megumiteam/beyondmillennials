@@ -43,6 +43,7 @@ table {
 
 html {
   overflow: auto;
+  overflow-y: scroll;
 }
 
 body {
@@ -135,7 +136,7 @@ iframe, video, object {
   }
 }
 
-.home .header.is-top .header-nav-logo {
+.home .header.is-top .header-logo {
   display: none;
 }
 
@@ -183,6 +184,7 @@ iframe, video, object {
 @media screen and (max-width: 782px) {
   .header .header-inner {
     height: 50px;
+    background-color: transparent;
   }
 }
 
@@ -194,6 +196,7 @@ iframe, video, object {
 @media screen and (max-width: 782px) {
   .header .header-logo {
     padding-top: 13px;
+    background-color: transparent;
   }
 }
 
@@ -271,7 +274,7 @@ iframe, video, object {
     margin: 0;
     padding-top: 15px;
     width: 100%;
-    background-color: #fff;
+    background-color: transparent;
   }
   .header .header-nav .header-nav-logo a, .header .header-nav .header-nav-logo img {
     display: block;
@@ -331,6 +334,8 @@ iframe, video, object {
     border-bottom: 1px solid #eee;
     font-size: 18px;
     opacity: 0;
+    position: relative;
+    top: -30px;
   }
   .header .header-nav li:last-child {
     border-bottom: 0;
@@ -498,16 +503,14 @@ iframe, video, object {
     width: 0;
     height: 0;
     background: #fff;
-    opacity: 0;
-    -webkit-transition: all 300ms cubic-bezier(0, 0.995, 0.99, 1);
-    transition: all 300ms cubic-bezier(0, 0.995, 0.99, 1);
+    -webkit-transition: all 500ms cubic-bezier(0, 0.995, 0.99, 1);
+    transition: all 500ms cubic-bezier(0, 0.995, 0.99, 1);
   }
   .header .circle.expand {
-    top: -560px;
-    right: -560px;
-    width: 1200px;
-    height: 1200px;
-    opacity: 1;
+    top: -784px;
+    right: -791px;
+    width: 1680px;
+    height: 1680px;
   }
 }
 
@@ -518,6 +521,9 @@ body.is-nav-show {
 @media screen and (max-width: 782px) {
   body.is-nav-show .header {
     height: 100%;
+    background-color: transparent;
+    -webkit-transition: none;
+    transition: none;
   }
 }
 
@@ -555,76 +561,78 @@ body.is-nav-show {
 
 @media screen and (max-width: 782px) {
   body.is-nav-show .header .header-nav li:nth-child(1) {
+    -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 50ms 1 forwards;
+            animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 50ms 1 forwards;
+  }
+  body.is-nav-show .header .header-nav li:nth-child(2) {
     -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 100ms 1 forwards;
             animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 100ms 1 forwards;
   }
-  body.is-nav-show .header .header-nav li:nth-child(2) {
+  body.is-nav-show .header .header-nav li:nth-child(3) {
+    -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 150ms 1 forwards;
+            animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 150ms 1 forwards;
+  }
+  body.is-nav-show .header .header-nav li:nth-child(4) {
     -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 200ms 1 forwards;
             animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 200ms 1 forwards;
   }
-  body.is-nav-show .header .header-nav li:nth-child(3) {
+  body.is-nav-show .header .header-nav li:nth-child(5) {
+    -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 250ms 1 forwards;
+            animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 250ms 1 forwards;
+  }
+  body.is-nav-show .header .header-nav li:nth-child(6) {
     -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 300ms 1 forwards;
             animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 300ms 1 forwards;
   }
-  body.is-nav-show .header .header-nav li:nth-child(4) {
+  body.is-nav-show .header .header-nav li:nth-child(7) {
+    -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 350ms 1 forwards;
+            animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 350ms 1 forwards;
+  }
+  body.is-nav-show .header .header-nav li:nth-child(8) {
     -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 400ms 1 forwards;
             animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 400ms 1 forwards;
   }
-  body.is-nav-show .header .header-nav li:nth-child(5) {
+  body.is-nav-show .header .header-nav li:nth-child(9) {
+    -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 450ms 1 forwards;
+            animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 450ms 1 forwards;
+  }
+  body.is-nav-show .header .header-nav li:nth-child(10) {
     -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 500ms 1 forwards;
             animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 500ms 1 forwards;
   }
-  body.is-nav-show .header .header-nav li:nth-child(6) {
+  body.is-nav-show .header .header-nav li:nth-child(11) {
+    -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 550ms 1 forwards;
+            animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 550ms 1 forwards;
+  }
+  body.is-nav-show .header .header-nav li:nth-child(12) {
     -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 600ms 1 forwards;
             animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 600ms 1 forwards;
   }
-  body.is-nav-show .header .header-nav li:nth-child(7) {
+  body.is-nav-show .header .header-nav li:nth-child(13) {
+    -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 650ms 1 forwards;
+            animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 650ms 1 forwards;
+  }
+  body.is-nav-show .header .header-nav li:nth-child(14) {
     -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 700ms 1 forwards;
             animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 700ms 1 forwards;
   }
-  body.is-nav-show .header .header-nav li:nth-child(8) {
-    -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 800ms 1 forwards;
-            animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 800ms 1 forwards;
-  }
-  body.is-nav-show .header .header-nav li:nth-child(9) {
-    -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 900ms 1 forwards;
-            animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 900ms 1 forwards;
-  }
-  body.is-nav-show .header .header-nav li:nth-child(10) {
-    -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 1000ms 1 forwards;
-            animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 1000ms 1 forwards;
-  }
-  body.is-nav-show .header .header-nav li:nth-child(11) {
-    -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 1100ms 1 forwards;
-            animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 1100ms 1 forwards;
-  }
-  body.is-nav-show .header .header-nav li:nth-child(12) {
-    -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 1200ms 1 forwards;
-            animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 1200ms 1 forwards;
-  }
-  body.is-nav-show .header .header-nav li:nth-child(13) {
-    -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 1300ms 1 forwards;
-            animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 1300ms 1 forwards;
-  }
-  body.is-nav-show .header .header-nav li:nth-child(14) {
-    -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 1400ms 1 forwards;
-            animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 1400ms 1 forwards;
-  }
   body.is-nav-show .header .header-nav li:nth-child(15) {
-    -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 1500ms 1 forwards;
-            animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 1500ms 1 forwards;
+    -webkit-animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 750ms 1 forwards;
+            animation: nav_fade 0.5s cubic-bezier(0.42, 0, 0.58, 1) 750ms 1 forwards;
   }
 }
 
 @-webkit-keyframes nav_fade {
   100% {
     opacity: 1;
+    top: 0;
   }
 }
 
 @keyframes nav_fade {
   100% {
     opacity: 1;
+    top: 0;
   }
 }
 
@@ -1246,7 +1254,7 @@ body.is-popup {
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: 3;
+  z-index: 5;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0 56px;
@@ -2272,9 +2280,9 @@ body .a2a_kit {
 @media screen and (max-width: 782px) {
   .sponsor-content .page-title {
     margin: 0 auto;
-    padding: 0;
+    padding: 0 25px;
     display: block;
-    width: 319px;
+    width: auto;
   }
 }
 
@@ -2305,8 +2313,8 @@ body .a2a_kit {
 
 @media screen and (max-width: 782px) {
   .sponsor-content .page-title svg {
-    width: 319px;
-    height: 73px;
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -2381,6 +2389,7 @@ body .a2a_kit {
 
 .speakers-detail .name-en {
   margin-top: 16px;
+  padding: 0 18px;
   font-family: 'Heebo', sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -2388,6 +2397,7 @@ body .a2a_kit {
 }
 
 .speakers-detail .name-ja {
+  padding: 0 18px;
   line-height: 1.5;
   font-weight: bold;
   font-size: 18px;
@@ -2396,7 +2406,7 @@ body .a2a_kit {
 
 .speakers-detail .job {
   margin: 0 auto;
-  max-width: 250px;
+  padding: 0 18px;
   line-height: 1.5;
   font-weight: bold;
   font-size: 12px;
@@ -2416,18 +2426,11 @@ body .a2a_kit {
 
 .speakers-detail .speakers-profile {
   padding: 0 76px 28px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 @media screen and (max-width: 782px) {
   .speakers-detail .speakers-profile {
-    padding: 0 15px 28px;
-    display: block;
+    padding: 0 25px;
   }
 }
 
@@ -2436,7 +2439,6 @@ body .a2a_kit {
 }
 
 .speakers-detail .speakers-profile .item {
-  width: 46.575342466%;
   line-height: 2;
   font-size: 16px;
 }
@@ -2450,19 +2452,180 @@ body .a2a_kit {
 }
 
 .speakers-detail .speakers-profile .item[lang="en"] {
+  margin-top: 2em;
   font-family: 'Heebo', sans-serif;
   font-weight: 300;
 }
 
 @media screen and (max-width: 782px) {
   .speakers-detail .speakers-profile .item[lang="en"] {
-    margin-top: 2em;
     font-size: 14px;
   }
 }
 
+.speakers-detail .speakers-recommend {
+  margin-top: 32px;
+  padding: 0 76px;
+}
+
+@media screen and (max-width: 782px) {
+  .speakers-detail .speakers-recommend {
+    padding: 0 25px;
+  }
+}
+
+.speakers-detail .speakers-recommend .speakers-recommend-title {
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+@media screen and (max-width: 782px) {
+  .speakers-detail .speakers-recommend .speakers-recommend-title {
+    font-size: 18px;
+  }
+}
+
+.speakers-detail .speakers-recommend .speakers-recommend-text {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 782px) {
+  .speakers-detail .speakers-recommend .speakers-recommend-text {
+    line-height: 1.866666667;
+    font-size: 15px;
+  }
+}
+
+.speakers-detail .speakers-session {
+  margin-top: 65px;
+  padding: 0 76px 76px;
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (max-width: 782px) {
+  .speakers-detail .speakers-session {
+    margin-top: 25px;
+    padding: 0 25px 25px;
+  }
+}
+
+.speakers-detail .speakers-session::before {
+  content: '';
+  position: absolute;
+  top: 85px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f2ac5a;
+}
+
+@media screen and (max-width: 782px) {
+  .speakers-detail .speakers-session::before {
+    top: 40px;
+  }
+}
+
+.speakers-detail .speakers-session .speakers-session-title {
+  margin-left: 13px;
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (max-width: 782px) {
+  .speakers-detail .speakers-session .speakers-session-title {
+    margin-left: 4px;
+  }
+}
+
+.speakers-detail .speakers-session .speakers-session-title svg {
+  display: block;
+  width: 555px;
+  height: 105px;
+}
+
+@media screen and (max-width: 782px) {
+  .speakers-detail .speakers-session .speakers-session-title svg {
+    width: 271px;
+    height: auto;
+  }
+}
+
+.speakers-detail .speakers-session ul {
+  padding-top: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (max-width: 782px) {
+  .speakers-detail .speakers-session ul {
+    padding-top: 5px;
+  }
+}
+
+.speakers-detail .speakers-session li {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 782px) {
+  .speakers-detail .speakers-session li {
+    margin-top: 25px;
+  }
+}
+
+.speakers-detail .speakers-session li a {
+  padding: 16px 76px;
+  display: block;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #000;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 782px) {
+  .speakers-detail .speakers-session li a {
+    padding: 25px;
+  }
+}
+
+.speakers-detail .speakers-session li a:hover, .speakers-detail .speakers-session li a:active {
+  background-color: #0148c6;
+}
+
+.speakers-detail .speakers-session li .session-title {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 782px) {
+  .speakers-detail .speakers-session li .session-title {
+    font-size: 16px;
+  }
+}
+
+.speakers-detail .speakers-session li .session-info {
+  padding-top: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 782px) {
+  .speakers-detail .speakers-session li .session-info {
+    padding-top: 8px;
+    font-size: 12px;
+  }
+}
+
+.speakers-detail .speakers-session li .session-info .session-time {
+  padding-left: .5em;
+}
+
 .popup-inner .footer-shares {
-  padding: 0 0 76px;
+  padding: 85px 0 76px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2476,7 +2639,8 @@ body .a2a_kit {
 
 @media screen and (max-width: 782px) {
   .popup-inner .footer-shares {
-    padding-bottom: 30px;
+    padding-top: 26px;
+    padding-bottom: 26px;
   }
 }
 
@@ -2500,26 +2664,26 @@ body .a2a_kit {
 
 @media screen and (max-width: 782px) {
   .popup-inner .footer-shares li {
-    width: 33px;
+    width: 48px;
   }
 }
 
 @media screen and (max-width: 782px) {
   .popup-inner .footer-shares a {
-    width: 31px;
-    height: 31px;
+    width: 46px;
+    height: 46px;
   }
 }
 
 @media screen and (max-width: 782px) {
   .popup-inner .footer-shares .facebook svg {
-    width: 11px;
+    width: 16px;
   }
 }
 
 @media screen and (max-width: 782px) {
   .popup-inner .footer-shares .twitter svg {
-    width: 11px;
+    width: 17px;
   }
 }
 
@@ -4549,7 +4713,7 @@ body .a2a_kit {
   position: absolute;
   left: 0;
   right: 2px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .session-table .session-items .card .card-inner {
@@ -5259,7 +5423,7 @@ body .a2a_kit {
 @media screen and (max-width: 782px) {
   .top-theme {
     margin-top: 134.88%;
-    padding-bottom: 75px;
+    padding-bottom: 50px;
   }
 }
 
