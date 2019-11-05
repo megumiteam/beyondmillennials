@@ -7,7 +7,6 @@ jQuery(function($) {
 	var scroll = $(window).scrollTop();
 
 	var header = $( '.header' );
-	var fixed_flag = false;
 
 	if ( header.length > 0 ) {
 		var startPos = 0;
@@ -337,8 +336,8 @@ jQuery(function($) {
 
 	// topでスピーカーを開く 12月ローンチではコメントアウト
 	var top_speakers = $( '.top-speakers' );
+	var url_hash = location.hash;
 	if ( top_speakers.length > 0 ) {
-		var url_hash = location.hash;
 		var top_speaker_diff = 94;
 		if ( $( window ).width() < 793 ) {
 			top_speaker_diff = 59;
@@ -358,8 +357,6 @@ jQuery(function($) {
 
 	var speakers = $( '.speakers-content' );
 	if ( speakers.length > 0 ) {
-		var url_hash = location.hash;
-
 		var speaker_diff = 94;
 		if ( $( window ).width() < 793 ) {
 			speaker_diff = 59;
