@@ -34,7 +34,7 @@
 		<?php endif; ?>
 
 		<?php
-			$mu_recommend = get_field( 'mu_recommend', $post->ID );
+			$mu_recommend = get_field( 'mu_ja_editor_comment', $post->ID );
 			if ( $mu_recommend ) :
 		?>
 		<div class="speakers-recommend">
@@ -42,6 +42,16 @@
 			<div class="speakers-recommend-text"><?php echo $mu_recommend; ?></div>
 		</div>
 		<?php endif; ?>
+
+		<?php
+			$mu_editor_link = get_field( 'mu_ja_editor_link', $post->ID );
+			if ( $mu_editor_link ) :
+		?>
+		<div class="speakers-editor-link no-en">
+			<div class="speakers-editor-link-text" lang="ja"><?php echo $mu_editor_link; ?></div>
+		</div>
+		<?php endif; ?>
+
 		<?php
 			$mu_session = get_field( 'mu_relation_session', $post->ID );
 			$week = array( '[SUN]', '[MON]', '[TUE]', '[WED]', '[THU]', '[FRI]', '[SAT]' );
@@ -68,10 +78,17 @@
 		<?php
 			$post_name  = $post->post_name;
 			$title = get_the_title();
+			$shares_path = '/';
+			if ( has_term( array( 'game-changer', 'advisory-board-members' ), 'speaker_type' ) ) {
+				// ゲームチェンジャーまたはアドバイザリーボード
+				$shares_path = '/award/';
+			} else {
+				$shares_path = '/speaker/';
+			}
 		?>
 		<div class="footer-shares">
 			<div class="shares-title">Share</div>
-			<ul class="a2a_kit" data-a2a-url="<?php echo home_url( '/speakers/' ); ?>#<?php echo $post_name; ?>" data-a2a-title="<?php echo $title; ?> - <?php bloginfo( 'name' ); ?>">
+			<ul class="a2a_kit" data-a2a-url="<?php echo home_url( $shares_path ); ?>#<?php echo $post_name; ?>" data-a2a-title="<?php echo $title; ?> - <?php bloginfo( 'name' ); ?>">
 				<li class="facebook">
 					<a href="/#facebook" class="a2a_button_facebook">
 						<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 18 18"><path d="M17.007 0H.993A.993.993 0 0 0 0 .993v16.014A.993.993 0 0 0 .993 18h8.628v-6.961H7.278V8.314h2.343v-2a3.274 3.274 0 0 1 3.494-3.591 19.925 19.925 0 0 1 2.092.106v2.43h-1.428c-1.13 0-1.35.534-1.35 1.322v1.73h2.7l-.351 2.725h-2.364V18h4.593a.993.993 0 0 0 .993-.993V.993A.993.993 0 0 0 17.007 0z"/></svg>
