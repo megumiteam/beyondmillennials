@@ -175,19 +175,19 @@
 											if ( $speakers ) :
 										?>
 										<div class="speakers">
-											<?php foreach ( $speakers as $post ) : setup_postdata( $post ); ?>
+											<?php foreach ( $speakers as $speaker ) : ?>
 											<div class="speaker">
 												<div class="image"><?php
-													if ( has_post_thumbnail() ) {
-														the_post_thumbnail( 'post-thumbnail' );
+													if ( has_post_thumbnail( $speaker->ID ) ) {
+														echo get_the_post_thumbnail( $speaker->ID, 'post-thumbnail' );
 													}
 												?></div>
 												<div class="text">
-													<div class="name"><?php the_title(); ?></div>
+													<div class="name"><?php echo get_the_title( $speaker->ID ); ?></div>
 													<?php
-														$job = get_field( 'mu_title_abbr', $post->ID );
+														$job = get_field( 'mu_title_abbr', $speaker->ID );
 														if ( empty ( $job ) ) {
-															$job = get_field( 'mu_ja_title', $post->ID );
+															$job = get_field( 'mu_ja_title', $speaker->ID );
 														}
 														if ( $job ) :
 													?>
@@ -198,9 +198,33 @@
 											<?php endforeach; ?>
 										</div>
 										<?php endif; ?>
+
+										<?php
+											$session_sponsors = get_field( 'mu_session_sponsor' );
+											if ( $session_sponsors ) :
+										?>
+										<div class="sponsor">
+											<div class="sponsors">
+												<div class="sponsor-pfrefix">Sponsored by</div>
+												<?php foreach ( $session_sponsors as $session_sponsor ) : ?>
+												<?php
+													$link = get_field( 'mu_sponsor_link_url', $session_sponsor->ID );
+													$img  = get_the_post_thumbnail( $session_sponsor->ID, 'post-thumbnail' );
+												?>
+												<a href="<?php echo $link; ?>" target="_blank"><?php
+													if ( $img ) {
+														echo $img;
+													} else {
+														echo get_the_title( $session_sponsor->ID );
+													}
+												?></a>
+												<?php endforeach; ?>
+											</div>
+										</div>
+										<?php endif; ?>
 									</div>
 								</div>
-								<?php endforeach; wp_reset_postdata(); ?>
+								<?php endforeach; ?>
 							</div>
 							<?php endforeach; ?>
 						</div>
