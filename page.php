@@ -47,12 +47,4 @@
 
 	</main>
 
-	<?php if ( is_page( 'about' ) ) : ?>
-	<?php
-		$show_flag = get_field( 'mashing-up_about--contact' );
-		if ( $show_flag ) :
-	?>
-	<?php include( 'template-parts/contact.php' ); ?>
-	<?php endif; endif; ?>
-
 <?php get_footer(); ?>
