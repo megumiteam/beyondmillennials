@@ -66,7 +66,7 @@ jQuery(function($) {
 
 	}
 
-	var tickets = $( '.js-fadein' );
+	var tickets = $( '.get-tickets' );
 	if ( tickets.length > 0 ) {
 		$( window ).on('load scroll', function(){
 			var win_scroll = tickets.offset().top;
