@@ -343,7 +343,7 @@ jQuery(function($) {
 			top_speaker_diff = 59;
 		}
 
-		if ( url_hash.length > 0 ) {
+		if ( url_hash.length > 0  && url_hash !== '#outline' ) {
 			$( window ).on('load', function(){
 				var top_speaker_pos = $( url_hash ).offset().top - top_speaker_diff;
 				$( 'body, html' ).animate({ scrollTop : top_speaker_diff }, 1, 'swing' ).promise().done(function(){
