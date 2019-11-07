@@ -81,7 +81,7 @@
 			$post_name  = $post->post_name;
 			$title = get_the_title();
 			$shares_path = '/';
-			if ( has_term( array( 'game-changer', 'advisory-board-members' ), 'speaker_type' ) ) {
+			if ( has_term( array( 'game-changer', 'advisory-board-members', 'readers' ), 'speaker_type' ) ) {
 				// ゲームチェンジャーまたはアドバイザリーボード
 				$shares_path = '/award/';
 			} else {
