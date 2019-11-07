@@ -91,6 +91,12 @@ iframe, video, object{
 			}
 			&.is-show {
 				background-color: transparent;
+				.header-logo {
+					display: block;
+				}
+				.header-nav-logo {
+					display: none;
+				}
 			}
 		}
 		&.is-show {
@@ -130,7 +136,7 @@ iframe, video, object{
 			padding-top: 13px;
 			background-color: transparent;
 		}
-		a, img {
+		a, svg {
 			display: block;
 		}
 		a {

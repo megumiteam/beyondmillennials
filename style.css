@@ -144,6 +144,14 @@ iframe, video, object {
   background-color: transparent;
 }
 
+.home .header.is-top.is-show .header-logo {
+  display: block;
+}
+
+.home .header.is-top.is-show .header-nav-logo {
+  display: none;
+}
+
 @media screen and (min-width: 783px) {
   .home .header.is-show {
     -webkit-transform: translateY(-155px);
@@ -200,7 +208,7 @@ iframe, video, object {
   }
 }
 
-.header .header-logo a, .header .header-logo img {
+.header .header-logo a, .header .header-logo svg {
   display: block;
 }
 
