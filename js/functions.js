@@ -181,10 +181,19 @@ jQuery(function($) {
 	}
 
 
+	var pagetop = $( '.scrolltop' );
+	$( window ).on('load scroll', function(){
+		if ( pagetop.length > 0 && scroll >= $( window ).height() ) {
+			pagetop.addClass( 'is-show' );
+		} else {
+			pagetop.removeClass( 'is-show' );
+		}
+});
+
+
 	var toppage = $( '.blocks' );
 	if ( toppage.length > 0 ) {
 		var blocks  = toppage.find( '.block' );
-		var pagetop = $( '.scrolltop' );
 		var current_url = location.pathname;
 
 		$( window ).on('load scroll', function(){
@@ -203,11 +212,6 @@ jQuery(function($) {
 							$(this).addClass( 'is-inview' );
 						}
 					}
-				}
-				if ( pagetop.length > 0 && scroll >= $( window ).height() ) {
-					pagetop.addClass( 'is-show' );
-				} else {
-					pagetop.removeClass( 'is-show' );
 				}
 			});
 
