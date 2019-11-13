@@ -66,7 +66,7 @@ jQuery(function($) {
 
 	}
 
-	var tickets = $( '.get-tickets' );
+	var tickets = $( '.js-fadein' );
 	if ( tickets.length > 0 ) {
 		$( window ).on('load scroll', function(){
 			var win_scroll = tickets.offset().top;
@@ -243,6 +243,9 @@ jQuery(function($) {
 			$(this).on('click', function(){
 				var scrolled = $( window ).scrollTop();
 				$( 'body' ).css({ 'top' : -scrolled }).addClass( 'is-popup' );
+				if ( $(this).hasClass( 'is-game-changer' ) ) {
+					$( 'body' ).addClass( 'is-game-changer' );
+				}
 				var popup_clone = $(this).find( '.popup-content' ).clone();
 				popup_container.append( popup_clone );
 				a2a.init_all();
@@ -278,7 +281,7 @@ jQuery(function($) {
 		var reset_pos = parseInt( $( 'body' ).css( 'top' ), 10 );
 		$( 'body, html' ).animate({ scrollTop : -1*reset_pos }, 1, 'linear' );
 
-		$( 'body' ).removeClass( 'is-popup' ).removeAttr( 'style' );
+		$( 'body' ).removeClass( 'is-popup is-game-changer' ).removeAttr( 'style' );
 		$( '.popups' ).find( '.is-show' ).removeClass( 'is-show' );
 		popup_container.empty();
 	}
@@ -305,15 +308,6 @@ jQuery(function($) {
 					$(this).addClass( 'is-inview' );
 				}
 			});
-		});
-	}
-
-
-	var en_toggle = $( '.lead-en-toggle' );
-	if ( en_toggle.length > 0 ) {
-		en_toggle.on('click', function(){
-			$(this).toggleClass( 'is-show' );
-			$(this).next().slideToggle();
 		});
 	}
 

@@ -154,23 +154,6 @@
   }
 }
 
-@media screen and (max-width: 782px) {
-  .about-main .about-introduction .about-textbox-01 .about-textbox-text .text-en {
-    font-family: 'Heebo', sans-serif;
-    font-weight: 400;
-  }
-}
-
-.about-main .about-introduction .about-textbox-01 .about-textbox-text .text-en p {
-  padding-bottom: 32px;
-}
-
-@media screen and (max-width: 782px) {
-  .about-main .about-introduction .about-textbox-01 .about-textbox-text .text-en p:last-child {
-    padding-bottom: 0;
-  }
-}
-
 .about-main .about-introduction .about-textbox-01 .about-textbox-image {
   width: 37.5%;
   position: relative;

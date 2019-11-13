@@ -8,12 +8,10 @@
 
 		<?php
 			$lead_ja = get_field( 'mu_speakers_lead_ja' );
-			$lead_en = get_field( 'mu_speakers_lead_en' );
-			if ( $lead_ja || $lead_en ) :
+			if ( $lead_ja ) :
 		?>
-		<section class="speaker-lead<?php if ( empty( $lead_en) ) { echo ' no-en'; } ?>">
-			<?php if ( $lead_ja ) : ?> <div class="item" lang="ja"><?php echo $lead_ja; ?></div><?php endif; ?>
-			<?php if ( $lead_en ) : ?> <div class="item" lang="en"><?php echo $lead_en; ?></div><?php endif; ?>
+		<section class="speaker-lead">
+			<?php if ( $lead_ja ) : ?> <div class="item"><?php echo $lead_ja; ?></div><?php endif; ?>
 		</section>
 		<?php endif; ?>
 

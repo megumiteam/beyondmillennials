@@ -9,20 +9,14 @@
 		<?php
 			$title = get_field( 'title' );
 			$subtitle_ja = get_field( 'subt-title-ja' );
-			$subtitle_en = get_field( 'subt-title-en' );
 			$lead_ja = get_field( 'lead-ja' );
-			$lead_en = get_field( 'lead-en' );
 		?>
 		<h1 class="page-title"><?php echo $title; ?></h1>
 
-		<h2 class="about-subtitle">
-			<span lang="ja"><?php echo $subtitle_ja; ?></span>
-			<span lang="en"><?php echo $subtitle_en; ?></span>
-		</h2>
+		<h2 class="about-subtitle"><?php echo $subtitle_ja; ?></h2>
 
 		<div class="about-lead">
-			<div class="item" lang="ja"><?php echo $lead_ja; ?></div>
-			<div class="item" lang="en"><?php echo $lead_en; ?></div>
+			<div class="item"><?php echo $lead_ja; ?></div>
 		</div>
 
 	</section>
@@ -51,10 +45,8 @@
 		<div class="member-lead">
 			<?php
 				$advisory_lead_ja = get_field( 'mashing-up_about--advisory-ja' );
-				$advisory_lead_en = get_field( 'mashing-up_about--advisory-en' );
 			?>
-			<?php if ( $advisory_lead_ja ) : ?><div class="item" lang="ja"><?php echo $advisory_lead_ja; ?></div><?php endif; ?>
-			<?php if ( $advisory_lead_en ) : ?><div class="item" lang="en"><?php echo $advisory_lead_en; ?></div><?php endif; ?>
+			<?php if ( $advisory_lead_ja ) : ?><div class="item"><?php echo $advisory_lead_ja; ?></div><?php endif; ?>
 		</div>
 		<div class="speakers-list medium">
 			<ul>
@@ -88,10 +80,8 @@
 		<div class="member-lead">
 			<?php
 				$committee_lead_ja = get_field( 'mashing-up_about--committee-ja' );
-				$committee_lead_en = get_field( 'mashing-up_about--committee-en' );
 			?>
-			<?php if ( $committee_lead_ja ) : ?><div class="item" lang="ja"><?php echo $committee_lead_ja; ?></div><?php endif; ?>
-			<?php if ( $committee_lead_en ) : ?><div class="item" lang="en"><?php echo $committee_lead_en; ?></div><?php endif; ?>
+			<?php if ( $committee_lead_ja ) : ?><div class="item"><?php echo $committee_lead_ja; ?></div><?php endif; ?>
 		</div>
 		<div class="speakers-list small">
 			<ul>
