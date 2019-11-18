@@ -554,7 +554,6 @@ body .a2a_kit {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			min-height: 280px;
 			background-color: #fff;
 			@media screen and ( max-width: 782px ) {
 				margin: 0 auto;
@@ -579,8 +578,17 @@ body .a2a_kit {
 				padding: 0 50px;
 				width: 100%;
 			}
+			a {
+				min-height: 280px;
+				@media screen and ( max-width: 782px ) {
+					min-height: 155px;
+				}
+			}
 			img {
 				max-width: 320px;
+				@media screen and ( max-width: 782px ) {
+					max-width: 178px;
+				}
 			}
 		}
 	}
@@ -614,9 +622,15 @@ body .a2a_kit {
 			}
 			a {
 				min-height: 170px;
+				@media screen and ( max-width: 782px ) {
+					min-height: 85px;
+				}
 			}
 			img {
 				max-width: 190px;
+				@media screen and ( max-width: 782px ) {
+					max-width: 98px;
+				}
 			}
 		}
 	}
@@ -650,9 +664,15 @@ body .a2a_kit {
 			}
 			a {
 				min-height: 118px;
+				@media screen and ( max-width: 782px ) {
+					min-height: 85px;
+				}
 			}
 			img {
 				max-width: 113px;
+				@media screen and ( max-width: 782px ) {
+					min-width: 98px;
+				}
 			}
 		}
 	}
