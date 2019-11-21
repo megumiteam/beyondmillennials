@@ -19,9 +19,10 @@
 			<?php
 			// スポンサーロゴ
 				$image = get_field( 'mu_award_logo' );
+				$link  = get_field( 'mu_award_logo_link' );
 				$size = 'full'; // (thumbnail, medium, large, full or custom size)
-				if ( $image ) {
-					echo '<div class="award-logo"><span>Sponsored By</span>' . wp_get_attachment_image( $image, $size ) . '</div>';
+				if ( $image && $link ) {
+					echo '<div class="award-logo"><span>Sponsored By</span><a href="' . $link . '" target="_blank" rel="noopener">' . wp_get_attachment_image( $image, $size ) . '</a></div>';
 				}
 			?>
 		</div>
