@@ -4109,12 +4109,12 @@ body .a2a_kit {
   }
 }
 
-.award-content .award-lead-wrapper .award-logo img {
+.award-content .award-lead-wrapper .award-logo a, .award-content .award-lead-wrapper .award-logo img {
   display: block;
 }
 
 @media screen and (max-width: 782px) {
-  .award-content .award-lead-wrapper .award-logo img {
+  .award-content .award-lead-wrapper .award-logo a, .award-content .award-lead-wrapper .award-logo img {
     max-width: 175px;
   }
 }
