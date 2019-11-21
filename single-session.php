@@ -77,7 +77,7 @@
 									$link = get_field( 'mu_sponsor_link_url', $sponsor->ID );
 									$img  = get_the_post_thumbnail( $sponsor->ID, 'post-thumbnail' );
 								?>
-								<a href="<?php echo $link; ?>" target="_blank"><?php
+								<a href="<?php echo $link; ?>" target="_blank" rel="noopener"><?php
 									if ( $img ) {
 										echo $img;
 									} else {

@@ -42,7 +42,7 @@
 			<ul>
 				<?php foreach ( $sponsor_item as $post ) : setup_postdata( $post ); ?>
 				<li>
-					<a href="<?php the_field( 'mu_sponsor_link_url' ); ?>" target="_blank"><?php the_post_thumbnail( 'full' ); ?></a>
+					<a href="<?php the_field( 'mu_sponsor_link_url' ); ?>" target="_blank" rel="noopener"><?php the_post_thumbnail( 'full' ); ?></a>
 				</li>
 				<?php endforeach; wp_reset_postdata(); ?>
 			</ul>

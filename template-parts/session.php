@@ -116,7 +116,7 @@
 										$image = get_the_title( $sponsor->ID );
 									}
 								?>
-								<a href="<?php echo $link; ?>" target="_blank"><?php echo $image; ?></a>
+								<a href="<?php echo $link; ?>" target="_blank" rel="noopener"><?php echo $image; ?></a>
 							<?php endforeach; ?>
 						</div>
 					</div>

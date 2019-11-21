@@ -51,7 +51,7 @@
 			?>
 			<div class="speakers-editor-link">
 				<div class="speakers-editor-link-title">編集記事へ</div>
-				<div class="speakers-editor-link-text"><a href="<?php echo $mu_editor_link; ?>" target="_blank"><span><?php echo $mu_editor_link_text; ?></span></a></div>
+				<div class="speakers-editor-link-text"><a href="<?php echo $mu_editor_link; ?>" target="_blank" rel="noopener"><span><?php echo $mu_editor_link_text; ?></span></a></div>
 			</div>
 			<?php endif; ?>
 		<?php endif; // 編集記事リンクのみ掲出 ?>
