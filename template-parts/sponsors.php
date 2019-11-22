@@ -70,7 +70,7 @@
 		<?php
 			$contact_url  = get_field( 'mashing-up_sponsored--anchor' );
 			$contact_text = get_field( 'mashing-up_sponsored--text' );
-			if ( $contact_mail && $contact_text ) :
+			if ( $contact_url && $contact_text ) :
 		?>
 		<div class="contact-link js-bubble"><a href="<?php echo esc_url( $contact_url ); ?>"><?php echo $contact_text; ?></a></div>
 		<?php endif; ?>
