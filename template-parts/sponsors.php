@@ -68,11 +68,11 @@
 		</div>
 
 		<?php
-			$contact_mail = get_field( 'mashing-up_sponsored--email' );
+			$contact_url  = get_field( 'mashing-up_sponsored--anchor' );
 			$contact_text = get_field( 'mashing-up_sponsored--text' );
 			if ( $contact_mail && $contact_text ) :
 		?>
-		<div class="contact-link js-bubble"><a href="mailto:<?php echo $contact_mail; ?>"><?php echo $contact_text; ?></a></div>
+		<div class="contact-link js-bubble"><a href="<?php echo esc_url( $contact_url ); ?>"><?php echo $contact_text; ?></a></div>
 		<?php endif; ?>
 	</div>
 </section>
