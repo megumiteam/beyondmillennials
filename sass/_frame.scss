@@ -172,6 +172,7 @@ iframe, video, object{
 			z-index: 1;
 			@media screen and ( max-width: 782px ) {
 				padding-top: 75px;
+				padding-bottom: 75px;
 				display: none;
 			}
 		}
@@ -197,7 +198,7 @@ iframe, video, object{
 				margin: 0;
 				padding-top: 15px;
 				width: 100%;
-				background-color: transparent;
+				background-color: #fff;
 				a, img {
 					display: block;
 				}
