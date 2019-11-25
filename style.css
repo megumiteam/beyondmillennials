@@ -88,7 +88,7 @@ iframe, video, object {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 3;
+  z-index: 20;
   background-color: #fff;
   -webkit-transition: all 400ms cubic-bezier(0.42, 0, 0.58, 1);
   transition: all 400ms cubic-bezier(0.42, 0, 0.58, 1);
@@ -220,6 +220,26 @@ iframe, video, object {
 @media screen and (max-width: 782px) {
   .header .header-logo a {
     width: 59px;
+  }
+}
+
+.header .header-logo svg {
+  display: block;
+}
+
+@media screen and (max-width: 782px) {
+  .header .header-logo svg {
+    display: none;
+  }
+}
+
+.header .header-logo svg + svg {
+  display: none;
+}
+
+@media screen and (max-width: 782px) {
+  .header .header-logo svg + svg {
+    display: block;
   }
 }
 
@@ -5355,7 +5375,7 @@ body .a2a_kit {
   max-width: 1064px;
   height: 100%;
   position: relative;
-  z-index: 3;
+  z-index: 5;
 }
 
 .top-hero .top-hero-image-pc {
