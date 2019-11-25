@@ -1132,6 +1132,8 @@ body.is-nav-show {
 
 @media screen and (max-width: 782px) {
   .contact-block .contact-link a {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding-top: 9px;
     padding-bottom: 8px;
     width: 100%;
@@ -4054,7 +4056,7 @@ body .a2a_kit {
   }
 }
 
-.award-content .award-lead-wrapper .award-logo span {
+.award-content .award-lead-wrapper .award-logo .logo-prefix {
   margin-bottom: 8px;
   display: block;
   font-family: 'Heebo', sans-serif;
@@ -4064,20 +4066,43 @@ body .a2a_kit {
 }
 
 @media screen and (max-width: 782px) {
-  .award-content .award-lead-wrapper .award-logo span {
+  .award-content .award-lead-wrapper .award-logo .logo-prefix {
     width: 100%;
     text-align: center;
   }
 }
 
-.award-content .award-lead-wrapper .award-logo a, .award-content .award-lead-wrapper .award-logo img {
-  display: block;
+.award-content .award-lead-wrapper .award-logo a {
+  padding: 27px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 265px;
+  background-color: #fff;
 }
 
 @media screen and (max-width: 782px) {
-  .award-content .award-lead-wrapper .award-logo a, .award-content .award-lead-wrapper .award-logo img {
-    max-width: 175px;
+  .award-content .award-lead-wrapper .award-logo a {
+    width: 173px;
   }
+}
+
+.award-content .award-lead-wrapper .award-logo .logo-wrap {
+  display: block;
+  max-width: 130px;
+}
+
+@media screen and (max-width: 782px) {
+  .award-content .award-lead-wrapper .award-logo .logo-wrap {
+    max-width: 105px;
+  }
+}
+
+.award-content .award-lead-wrapper .award-logo .logo-wrap img {
+  display: block;
 }
 
 .award-content .speakers-subtitle {

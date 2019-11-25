@@ -1591,7 +1591,7 @@
 				flex-wrap: wrap;
 				justify-content: center;
 			}
-			span {
+			.logo-prefix {
 				margin-bottom: 8px;
 				display: block;
 				font-family: 'Heebo', sans-serif;
@@ -1603,10 +1603,24 @@
 					text-align: center;
 				}
 			}
-			a, img {
-				display: block;
+			a {
+				padding: 27px 0;
+				display: flex;
+				justify-content: center;
+				width: 265px;
+				background-color: #fff;
 				@media screen and ( max-width: 782px ) {
-					max-width: 175px;
+					width: 173px;
+				}
+			}
+			.logo-wrap {
+				display: block;
+				max-width: 130px;
+				@media screen and ( max-width: 782px ) {
+					max-width: 105px;
+				}
+				img {
+					display: block;
 				}
 			}
 		}

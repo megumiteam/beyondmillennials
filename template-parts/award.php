@@ -22,7 +22,7 @@
 				$link  = get_field( 'mu_award_logo_link' );
 				$size = 'full'; // (thumbnail, medium, large, full or custom size)
 				if ( $image && $link ) {
-					echo '<div class="award-logo"><span>Sponsored By</span><a href="' . $link . '" target="_blank" rel="noopener">' . wp_get_attachment_image( $image, $size ) . '</a></div>';
+					echo '<div class="award-logo"><span class="logo-prefix">Sponsored By</span><a href="' . $link . '" target="_blank" rel="noopener"><span class="logo-wrap">' . wp_get_attachment_image( $image, $size ) . '</span></a></div>';
 				}
 			?>
 		</div>
