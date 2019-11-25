@@ -4359,6 +4359,7 @@ body .a2a_kit {
 
 .session-detail-content .session-header {
   margin: 0 auto;
+  padding-bottom: 2px;
   max-width: 912px;
   position: relative;
   z-index: 1;
@@ -4367,6 +4368,7 @@ body .a2a_kit {
 @media screen and (max-width: 782px) {
   .session-detail-content .session-header {
     margin: 0 25px;
+    padding-bottom: 6px;
   }
 }
 
@@ -4428,10 +4430,13 @@ body .a2a_kit {
 
 .session-detail-content .session-misc {
   margin: 0 auto;
-  padding: 2px 76px 0;
+  padding: 0 76px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 760px;
   background-color: #fff;
   font-weight: bold;
@@ -4443,25 +4448,25 @@ body .a2a_kit {
 @media screen and (max-width: 782px) {
   .session-detail-content .session-misc {
     margin: 0 25px;
-    padding: 6px 25px 0;
+    padding: 0 25px;
     font-size: 12px;
   }
 }
 
-.session-detail-content .session-misc .session-place {
-  padding-left: 37px;
+.session-detail-content .session-misc .session-date {
+  padding-right: 37px;
+  line-height: 1.4;
   position: relative;
   z-index: 1;
 }
 
-.session-detail-content .session-misc .session-place::before {
+.session-detail-content .session-misc .session-date::before {
   content: '';
   position: absolute;
-  top: 50%;
-  left: 16px;
-  margin-top: -12px;
+  top: 0;
+  right: 21px;
+  bottom: 0;
   width: 1px;
-  height: 25px;
   background-color: #000;
 }
 
