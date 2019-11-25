@@ -43,7 +43,7 @@
 			$target = '_self';
 		}
 
-		if ( $ticket_anchor && $ticket_text ) :
+		if ( $ticket_anchor && $ticket_text && !is_page( 'tickets' ) ) :
 	?>
 	<div class="get-tickets js-fadein">
 		<a href="<?php echo $ticket_anchor; ?>" target="<?php echo $target; ?>"><?php echo $ticket_text; ?></a>
