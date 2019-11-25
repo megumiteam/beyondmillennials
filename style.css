@@ -1465,7 +1465,7 @@ body .a2a_kit {
 }
 
 .speakers-list .text .name-ja span {
-  padding: 3px 0;
+  padding: 3px 2px;
   display: inline-block;
   vertical-align: top;
   background-color: #fff;
@@ -1475,7 +1475,7 @@ body .a2a_kit {
 
 @media screen and (max-width: 782px) {
   .speakers-list .text .name-ja span {
-    padding-top: 1px;
+    padding: 1px 2px;
     line-height: 1.3;
     font-size: 18px;
   }
@@ -1518,6 +1518,7 @@ body .a2a_kit {
 @media screen and (max-width: 782px) {
   .speakers-list.large li {
     margin-top: 25px;
+    padding: 0 50px;
     width: 100%;
   }
 }
@@ -2206,7 +2207,6 @@ body .a2a_kit {
   .speakers-content .speaker-lead .item {
     line-height: 1.857142857;
     width: auto;
-    color: #fff;
     font-size: 14px;
   }
 }
@@ -2237,6 +2237,10 @@ body .a2a_kit {
     text-align: center;
     text-transform: none;
   }
+}
+
+.speakers-content .speakers-list.medium li {
+  margin-top: 25px;
 }
 
 .sponsor-content {
@@ -5481,6 +5485,12 @@ body .a2a_kit {
   }
 }
 
+@media screen and (max-width: 320px) {
+  .top-hero .top-hero-date {
+    font-size: 17px;
+  }
+}
+
 .top-hero .top-hero-date.is-inview {
   opacity: 1;
 }
@@ -6227,7 +6237,7 @@ body .a2a_kit {
 
 @media screen and (max-width: 782px) {
   .top-award .speakers-list ul {
-    margin-left: 0;
+    margin: 0;
     padding: 0;
   }
 }
@@ -6795,7 +6805,7 @@ body .a2a_kit {
 @media screen and (max-width: 782px) {
   .mailmagazine .mailmagazine-inner {
     padding-top: 40px;
-    padding-bottom: 75px;
+    padding-bottom: 60px;
   }
 }
 
@@ -6852,12 +6862,122 @@ body .a2a_kit {
 }
 
 .mailmagazine .mailmagazine-form {
-  margin-top: 30px;
+  margin-top: 70px;
   padding: 0 25px;
 }
 
+@media screen and (max-width: 782px) {
+  .mailmagazine .mailmagazine-form {
+    margin-top: 32px;
+  }
+}
+
+.mailmagazine #mc_embed_signup form {
+  padding: 0;
+}
+
+.mailmagazine #mc_embed_signup #mc_embed_signup_scroll {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 8px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #000;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 608px;
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (max-width: 782px) {
+  .mailmagazine #mc_embed_signup #mc_embed_signup_scroll {
+    padding-bottom: 0;
+    border-bottom: 0;
+    display: block;
+    width: auto;
+  }
+}
+
+.mailmagazine #mc_embed_signup #mc_embed_signup_scroll::before {
+  content: 'Your Email';
+  position: absolute;
+  top: 11px;
+  left: 4px;
+  z-index: 1;
+  font-weight: 600;
+  font-size: 22px;
+  opacity: .2;
+}
+
+.mailmagazine #mc_embed_signup input[type="email"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin-bottom: 0;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  border: 0;
+  border-radius: 0;
+  display: block;
+  width: 480px;
+  height: 44px;
+  background-color: transparent;
+  font-size: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (max-width: 782px) {
+  .mailmagazine #mc_embed_signup input[type="email"] {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #000;
+    width: 100%;
+  }
+}
+
+.mailmagazine #mc_embed_signup input[type="email"]::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.mailmagazine #mc_embed_signup input[type="email"]::-moz-placeholder {
+  color: transparent;
+}
+
+.mailmagazine #mc_embed_signup input[type="email"]:-ms-input-placeholder {
+  color: transparent;
+}
+
+.mailmagazine #mc_embed_signup input[type="email"]::-ms-input-placeholder {
+  color: transparent;
+}
+
+.mailmagazine #mc_embed_signup input[type="email"]::placeholder {
+  color: transparent;
+}
+
 .mailmagazine #mc_embed_signup .button {
+  padding: 0;
+  border-radius: 0;
+  display: block;
+  width: 120px;
+  height: 44px;
+  line-height: 44px;
   background-color: #000;
+  font-size: 16px;
+  text-align: center;
+}
+
+@media screen and (max-width: 782px) {
+  .mailmagazine #mc_embed_signup .button {
+    margin: 0 auto;
+    width: 125px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+  }
 }
 
 .top-sponsors {

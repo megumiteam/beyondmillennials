@@ -1086,7 +1086,7 @@
 		padding-bottom: 152px;
 		@media screen and ( max-width: 782px ) {
 			padding-top: 40px;
-			padding-bottom: 75px;
+			padding-bottom: 60px;
 		}
 	}
 	.section-title {
@@ -1128,11 +1128,85 @@
 	}
 
 	.mailmagazine-form {
-		margin-top: 30px;
+		margin-top: 70px;
 		padding: 0 25px;
+		@media screen and ( max-width: 782px ) {
+			margin-top: 32px;
+		}
 	}
-	#mc_embed_signup .button {
-		background-color: #000;
+
+	#mc_embed_signup {
+		form {
+			padding: 0;
+		}
+		#mc_embed_signup_scroll {
+			margin: 0 auto;
+			display: flex;
+			padding-right: 8px;
+			padding-bottom: 15px;
+			border-bottom: 1px solid #000;
+			align-items: center;
+			width: 608px;
+			position: relative;
+			z-index: 1;
+			@media screen and ( max-width: 782px ) {
+				padding-bottom: 0;
+				border-bottom: 0;
+				display: block;
+				width: auto;
+			}
+			&::before {
+				content: 'Your Email';
+				position: absolute;
+				top: 11px;
+				left: 4px;
+				z-index: 1;
+				font-weight: 600;
+				font-size: 22px;
+				opacity: .2;
+			}
+		}
+		input[type="email"] {
+			appearance: none;
+			margin-bottom: 0;
+			padding-top: 11px;
+			padding-bottom: 11px;
+			border: 0;
+			border-radius: 0;
+			display: block;
+			width: 480px;
+			height: 44px;
+			background-color: transparent;
+			font-size: 16px;
+			position: relative;
+			z-index: 2;
+			@media screen and ( max-width: 782px ) {
+				margin-bottom: 25px;
+				border-bottom: 1px solid #000;
+				width: 100%;
+			}
+			&::placeholder {
+				color: transparent;
+			}
+		}
+		.button {
+			padding: 0;
+			border-radius: 0;
+			display: block;
+			width: 120px;
+			height: 44px;
+			line-height: 44px;
+			background-color: #000;
+			font-size: 16px;
+			text-align: center;
+			@media screen and ( max-width: 782px ) {
+				margin: 0 auto;
+				width: 125px;
+				height: 50px;
+				line-height: 50px;
+				font-size: 15px;
+			}
+		}
 	}
 }
 
