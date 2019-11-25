@@ -507,7 +507,6 @@
 				line-height: 1.5;
 				color: #fff;
 				background-color: #000;
-				font-family: 'Heebo', sans-serif;
 				font-weight: 700;
 				text-decoration: none;
 				@media screen and ( max-width: 782px ) {
@@ -518,6 +517,7 @@
 				}
 			}
 			.session-title {
+				font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
 				font-size: 20px;
 				@media screen and ( max-width: 782px ) {
 					font-size: 16px;
@@ -526,6 +526,7 @@
 			.session-info {
 				padding-top: 2px;
 				display: flex;
+				font-family: 'Heebo', sans-serif;
 				font-size: 16px;
 				@media screen and ( max-width: 782px ) {
 					padding-top: 8px;

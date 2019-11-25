@@ -3,6 +3,16 @@
 	position: relative;
 	z-index: 3;
 	overflow: hidden;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		z-index: 1;
+		left: 50%;
+		width: 50vw;
+		background-color: #f2ad5c;
+	}
 	.session-content-inner {
 		margin: 0 auto;
 		padding-top: 74px;
@@ -51,7 +61,7 @@
 
 	.session-header {
 		margin: 0 auto;
-		padding-bottom: 2px;
+		padding-bottom: 10px;
 		max-width: 912px;
 		position: relative;
 		z-index: 1;
@@ -91,8 +101,9 @@
 			}
 		}
 		.session-title {
-			margin-top: 16px;
+			margin-top: 32px;
 			padding: 0 76px;
+			line-height: 1.5;
 			font-weight: bold;
 			font-size: 35px;
 			position: relative;
