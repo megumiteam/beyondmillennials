@@ -1121,40 +1121,27 @@
 
 	.tickets-embed {
 		margin: 76px auto 0;
-		padding-top: 597px;
+		padding-top: 405px;
 		max-width: 912px;
 		position: relative;
 		z-index: 1;
-		@media screen and ( max-width: 1110px ) {
-			margin: 50px 25px 0;
-			padding-top: 617px;
-		}
 		@media screen and ( max-width: 670px ) {
-			padding-top: 617px;
 		}
 		@media screen and ( max-width: 640px ) {
-			padding-top: 637px;
 		}
 		@media screen and ( max-width: 630px ) {
-			padding-top: 657px;
 		}
 		@media screen and ( max-width: 600px ) {
-			padding-top: 727px;
 		}
 		@media screen and ( max-width: 542px ) {
-			padding-top: 739px;
 		}
 		@media screen and ( max-width: 462px ) {
-			padding-top: 747px;
 		}
 		@media screen and ( max-width: 434px ) {
-			padding-top: 770px;
 		}
 		@media screen and ( max-width: 418px ) {
-			padding-top: 780px;
 		}
 		@media screen and ( max-width: 396px ) {
-			padding-top: 790px;
 		}
 		iframe {
 			position: absolute;

@@ -268,6 +268,7 @@ iframe, video, object {
 @media screen and (max-width: 782px) {
   .header .header-nav .header-nav-inner {
     padding-top: 75px;
+    padding-bottom: 50px;
     display: none;
   }
 }
@@ -301,7 +302,7 @@ iframe, video, object {
     margin: 0;
     padding-top: 15px;
     width: 100%;
-    background-color: transparent;
+    background-color: #fff;
   }
   .header .header-nav .header-nav-logo a, .header .header-nav .header-nav-logo img {
     display: block;
@@ -3473,71 +3474,10 @@ body .a2a_kit {
 
 .tickets-content .tickets-embed {
   margin: 76px auto 0;
-  padding-top: 597px;
+  padding-top: 405px;
   max-width: 912px;
   position: relative;
   z-index: 1;
-}
-
-@media screen and (max-width: 1110px) {
-  .tickets-content .tickets-embed {
-    margin: 50px 25px 0;
-    padding-top: 617px;
-  }
-}
-
-@media screen and (max-width: 670px) {
-  .tickets-content .tickets-embed {
-    padding-top: 617px;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .tickets-content .tickets-embed {
-    padding-top: 637px;
-  }
-}
-
-@media screen and (max-width: 630px) {
-  .tickets-content .tickets-embed {
-    padding-top: 657px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .tickets-content .tickets-embed {
-    padding-top: 727px;
-  }
-}
-
-@media screen and (max-width: 542px) {
-  .tickets-content .tickets-embed {
-    padding-top: 739px;
-  }
-}
-
-@media screen and (max-width: 462px) {
-  .tickets-content .tickets-embed {
-    padding-top: 747px;
-  }
-}
-
-@media screen and (max-width: 434px) {
-  .tickets-content .tickets-embed {
-    padding-top: 770px;
-  }
-}
-
-@media screen and (max-width: 418px) {
-  .tickets-content .tickets-embed {
-    padding-top: 780px;
-  }
-}
-
-@media screen and (max-width: 396px) {
-  .tickets-content .tickets-embed {
-    padding-top: 790px;
-  }
 }
 
 .tickets-content .tickets-embed iframe {
