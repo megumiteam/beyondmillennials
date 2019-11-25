@@ -595,7 +595,7 @@ body .a2a_kit {
 		padding-bottom: 42px;
 		@media screen and ( max-width: 782px ) {
 			margin-top: 0;
-			padding: 0 25px 20px;
+			padding: 0 13px 20px 12px;
 		}
 		li {
 			width: 33.3333%;
@@ -605,8 +605,10 @@ body .a2a_kit {
 				width: 50%;
 				&:nth-child(odd) {
 					padding-right: 12px;
+					padding-left: 13px;
 				}
 				&:nth-child(even) {
+					padding-right: 12px;
 					padding-left: 13px;
 				}
 				&:nth-child(1),
@@ -636,7 +638,7 @@ body .a2a_kit {
 	&.small {
 		@media screen and ( max-width: 782px ) {
 			margin-top: 0;
-			padding: 0 25px 20px;
+			padding: 0 13px 20px 12px;
 		}
 		li {
 			width: 25%;
@@ -652,8 +654,10 @@ body .a2a_kit {
 				width: 50%;
 				&:nth-child(odd) {
 					padding-right: 12px;
+					padding-left: 13px;
 				}
 				&:nth-child(even) {
+					padding-right: 12px;
 					padding-left: 13px;
 				}
 				&:nth-child(1),

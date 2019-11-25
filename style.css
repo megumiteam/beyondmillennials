@@ -1738,7 +1738,7 @@ body .a2a_kit {
 @media screen and (max-width: 782px) {
   .sponsor-list.medium {
     margin-top: 0;
-    padding: 0 25px 20px;
+    padding: 0 13px 20px 12px;
   }
 }
 
@@ -1754,8 +1754,10 @@ body .a2a_kit {
   }
   .sponsor-list.medium li:nth-child(odd) {
     padding-right: 12px;
+    padding-left: 13px;
   }
   .sponsor-list.medium li:nth-child(even) {
+    padding-right: 12px;
     padding-left: 13px;
   }
   .sponsor-list.medium li:nth-child(1), .sponsor-list.medium li:nth-child(2) {
@@ -1792,7 +1794,7 @@ body .a2a_kit {
 @media screen and (max-width: 782px) {
   .sponsor-list.small {
     margin-top: 0;
-    padding: 0 25px 20px;
+    padding: 0 13px 20px 12px;
   }
 }
 
@@ -1814,8 +1816,10 @@ body .a2a_kit {
   }
   .sponsor-list.small li:nth-child(odd) {
     padding-right: 12px;
+    padding-left: 13px;
   }
   .sponsor-list.small li:nth-child(even) {
+    padding-right: 12px;
     padding-left: 13px;
   }
   .sponsor-list.small li:nth-child(1), .sponsor-list.small li:nth-child(2) {
