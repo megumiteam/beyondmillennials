@@ -666,6 +666,16 @@
 	position: relative;
 	z-index: 3;
 	overflow: hidden;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		z-index: 1;
+		left: 50%;
+		width: 50vw;
+		background-color: #f2ad5c;
+	}
 	.timetable-content-inner {
 		margin: 0 auto;
 		padding-top: 198px;
