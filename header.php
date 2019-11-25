@@ -59,7 +59,7 @@
 <div class="container">
 	<header class="header is-top">
 		<div class="header-inner">
-			<div class="header-logo"><a href="<?php echo home_url( '/' ); ?>"><?php echo $front_logo_data; ?></a></div>
+			<div class="header-logo"><a href="<?php echo home_url( '/' ); ?>"><?php echo $front_logo_data; ?><?php echo $logo_data; ?></a></div>
 			<div class="circle"></div>
 			<div class="header-nav-toggle">
 				<span class="nav-01"></span>
