@@ -376,11 +376,9 @@
 
 	.timeline-header {
 		margin-top: 32px;
-		padding-bottom: 13px;
 		display: flex;
 		@media screen and ( max-width: 782px ) {
 			margin-top: 20px;
-			padding-bottom: 12px;
 			width: 150vw;
 		}
 		.room {
@@ -396,20 +394,19 @@
 			}
 			.room-inner {
 				margin-right: 2px;
-				padding: 30px 10px;
+				padding: 22px 76px 23px;
 				line-height: 1.2;
 				background-color: #ebebeb;
 				font-family: 'Montserrat', sans-serif;
 				font-weight: 600;
 				font-size: 26px;
+				text-align: left;
 				@media screen and ( max-width: 782px ) {
 					padding: 14px 25px 15px;
 					font-size: 18px;
-					text-align: left;
 				}
 				span {
 					display: block;
-					font-size: 18px;
 					@media screen and ( max-width: 782px ) {
 						display: inline;
 					}
