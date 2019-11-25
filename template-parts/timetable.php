@@ -201,13 +201,13 @@
 													$link = get_field( 'mu_sponsor_link_url', $session_sponsor->ID );
 													$img  = get_the_post_thumbnail( $session_sponsor->ID, 'post-thumbnail' );
 												?>
-												<a href="<?php echo $link; ?>" target="_blank" rel="noopener"><?php
+												<a href="<?php echo $link; ?>" target="_blank" rel="noopener"><span><?php
 													if ( $img ) {
 														echo $img;
 													} else {
 														echo get_the_title( $session_sponsor->ID );
 													}
-												?></a>
+												?></span></a>
 												<?php endforeach; ?>
 											</div>
 										</div>

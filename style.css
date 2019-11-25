@@ -2875,6 +2875,12 @@ body .a2a_kit {
   z-index: 1;
 }
 
+@media screen and (max-width: 782px) {
+  .timetable-content .timetable-content-inner {
+    padding-top: 93px;
+  }
+}
+
 .timetable-content .timetable-content-inner::before, .timetable-content .timetable-content-inner::after {
   content: '';
   position: absolute;
@@ -2929,7 +2935,7 @@ body .a2a_kit {
 @media screen and (max-width: 782px) {
   .timetable-content .page-title {
     margin: 0 auto;
-    padding: 0;
+    padding: 0 0 0 25px;
     display: block;
   }
 }
@@ -2947,8 +2953,8 @@ body .a2a_kit {
 
 @media screen and (max-width: 782px) {
   .timetable-content .page-title::before {
-    right: 90px;
-    bottom: 25px;
+    right: 114px;
+    bottom: 9px;
     height: 50px;
   }
 }
@@ -2962,7 +2968,7 @@ body .a2a_kit {
 
 @media screen and (max-width: 782px) {
   .timetable-content .page-title svg {
-    width: 216px;
+    width: 261px;
     height: auto;
   }
 }
@@ -2976,7 +2982,7 @@ body .a2a_kit {
 
 @media screen and (max-width: 782px) {
   .timetable-content .session-lead {
-    padding-top: 42px;
+    padding: 32px 25px 0;
     max-width: none;
   }
 }
@@ -3010,13 +3016,15 @@ body .a2a_kit {
 
 @media screen and (max-width: 782px) {
   .timetable-content .timetable-scroller {
+    margin-top: 20px;
+    padding: 0 25px;
     display: block;
   }
 }
 
 @media screen and (max-width: 782px) {
   .timetable-content .timetable-scroller .scroll-link + .scroll-link {
-    margin-top: 16px;
+    margin-top: 25px;
   }
 }
 
@@ -4786,7 +4794,10 @@ body .a2a_kit {
 
 @media screen and (max-width: 782px) {
   .session-table .session-date-title {
-    font-size: 22px;
+    margin-left: -50px;
+    padding-top: 6px;
+    font-size: 20px;
+    text-align: center;
   }
 }
 
@@ -4802,7 +4813,7 @@ body .a2a_kit {
   .session-table .timeline-header {
     margin-top: 20px;
     padding-bottom: 12px;
-    width: 170vw;
+    width: 150vw;
   }
 }
 
@@ -4833,20 +4844,19 @@ body .a2a_kit {
 
 @media screen and (max-width: 782px) {
   .session-table .timeline-header .room .room-inner {
-    padding-top: 14px;
-    padding-bottom: 15px;
-    font-size: 14px;
+    padding: 14px 25px 15px;
+    font-size: 18px;
+    text-align: left;
   }
 }
 
 .session-table .timeline-header .room .room-inner span {
   display: block;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 @media screen and (max-width: 782px) {
   .session-table .timeline-header .room .room-inner span {
-    padding-right: .5em;
     display: inline;
   }
 }
@@ -4870,7 +4880,7 @@ body .a2a_kit {
 @media screen and (max-width: 782px) {
   .session-table .timeline-wrapper .timeline-times {
     margin-right: -15px;
-    padding-top: 77px;
+    padding-top: 70px;
   }
 }
 
@@ -4903,7 +4913,7 @@ body .a2a_kit {
 
 @media screen and (max-width: 782px) {
   .session-table .timeline-wrapper .session-items-wrapper::before {
-    left: calc(85vw - 2px);
+    left: calc(75vw - 2px);
   }
 }
 
@@ -4919,7 +4929,7 @@ body .a2a_kit {
 @media screen and (max-width: 782px) {
   .session-table .timeline-wrapper .timeline-body {
     padding-right: 15px;
-    width: 170vw;
+    width: 150vw;
     top: -77px;
   }
 }
@@ -5086,6 +5096,7 @@ body .a2a_kit {
 
 .session-table .session-items .card .sponsor .sponsors a {
   margin-top: 20px;
+  padding: 28px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5102,19 +5113,23 @@ body .a2a_kit {
 
 @media screen and (max-width: 782px) {
   .session-table .session-items .card .sponsor .sponsors a {
+    padding: 5px 0;
     min-height: 50px;
+  }
+}
+
+.session-table .session-items .card .sponsor .sponsors span {
+  max-width: 130px;
+}
+
+@media screen and (max-width: 782px) {
+  .session-table .session-items .card .sponsor .sponsors span {
+    max-width: 80px;
   }
 }
 
 .session-table .session-items .card .sponsor .sponsors img {
   display: block;
-  max-width: 130px;
-}
-
-@media screen and (max-width: 782px) {
-  .session-table .session-items .card .sponsor .sponsors img {
-    max-width: 80px;
-  }
 }
 
 .session-table .session-items .card .sponsor .sponsor-prefix {
@@ -5292,6 +5307,7 @@ body .a2a_kit {
 @media screen and (max-width: 782px) {
   .session-table-note {
     margin-top: -4px;
+    padding: 25px 25px 50px 50px;
     display: block;
   }
 }

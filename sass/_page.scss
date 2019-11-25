@@ -665,6 +665,9 @@
 		background-color: #f2ad5c;
 		position: relative;
 		z-index: 1;
+		@media screen and ( max-width: 782px ) {
+			padding-top: 93px;
+		}
 		&::before,
 		&::after {
 			content: '';
@@ -710,7 +713,7 @@
 		z-index: 2;
 		@media screen and ( max-width: 782px ) {
 			margin: 0 auto;
-			padding: 0;
+			padding: 0 0 0 25px;
 			display: block;
 		}
 		&::before {
@@ -723,8 +726,8 @@
 			height: 76px;
 			background-color: #fff;
 			@media screen and ( max-width: 782px ) {
-				right: 90px;
-				bottom: 25px;
+				right: 114px;
+				bottom: 9px;
 				height: 50px;
 			}
 		}
@@ -734,7 +737,7 @@
 			position: relative;
 			z-index: 2;
 			@media screen and ( max-width: 782px ) {
-				width: 216px;
+				width: 261px;
 				height: auto;
 			}
 		}
@@ -746,7 +749,7 @@
 		position: relative;
 		z-index: 2;
 		@media screen and ( max-width: 782px ) {
-			padding-top: 42px;
+			padding: 32px 25px 0;
 			max-width: none;
 		}
 		.item {
@@ -769,12 +772,14 @@
 		position: relative;
 		z-index: 2;
 		@media screen and ( max-width: 782px ) {
+			margin-top: 20px;
+			padding: 0 25px;
 			display: block;
 		}
 		.scroll-link {
 			& + .scroll-link {
 				@media screen and ( max-width: 782px ) {
-					margin-top: 16px;
+					margin-top: 25px;
 				}
 			}
 			a {
