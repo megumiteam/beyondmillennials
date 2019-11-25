@@ -539,6 +539,9 @@ body .a2a_kit {
 		@media screen and ( max-width: 782px ) {
 			margin: 0;
 		}
+		&.only {
+			justify-content: flex-start;
+		}
 	}
 	li {
 		box-sizing: border-box;
