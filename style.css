@@ -1262,7 +1262,7 @@ body.is-popup {
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: 15;
+  z-index: 31;
   padding: 0 56px;
   width: 100%;
   max-width: 760px;
@@ -1353,7 +1353,7 @@ body.is-popup {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 14;
+  z-index: 30;
   background-color: rgba(60, 140, 180, 0.9);
   opacity: 0;
   pointer-events: none;
