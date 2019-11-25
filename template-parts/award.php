@@ -22,7 +22,7 @@
 				$link  = get_field( 'mu_award_logo_link' );
 				$size = 'full'; // (thumbnail, medium, large, full or custom size)
 				if ( $image && $link ) {
-					echo '<div class="award-logo"><span>Sponsored By</span><a href="' . $link . '" target="_blank" rel="noopener">' . wp_get_attachment_image( $image, $size ) . '</a></div>';
+					echo '<div class="award-logo"><span class="logo-prefix">Sponsored By</span><a href="' . $link . '" target="_blank" rel="noopener"><span class="logo-wrap">' . wp_get_attachment_image( $image, $size ) . '</span></a></div>';
 				}
 			?>
 		</div>
@@ -55,30 +55,30 @@
 					<?php endforeach; wp_reset_postdata(); ?>
 				</ul>
 			</div>
-			<?php endif; ?>
+		<?php endif; ?>
 		</section>
 
 	</div>
 </div>
 
+<?php
+	$normal = get_posts(array(
+			'post_type' => 'speaker',
+			'posts_per_page' => -1,
+			'orderby' => 'menu_order',
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'speaker_type',
+					'field'    => 'slug',
+					'terms'    => 'advisory-board-members'
+				)
+			)
+		));
+	if ( $normal ) :
+?>
 <div class="award-content advisory-board">
 	<div class="award-content-inner">
 		<section class="speakers-lists">
-			<?php
-				$normal = get_posts(array(
-						'post_type' => 'speaker',
-						'posts_per_page' => -1,
-						'orderby' => 'menu_order',
-						'tax_query' => array(
-							array(
-								'taxonomy' => 'speaker_type',
-								'field'    => 'slug',
-								'terms'    => 'advisory-board-members'
-							)
-						)
-					));
-				if ( $normal ) :
-			?>
 			<h3 class="speakers-subtitle">ADVISORY BOARD</h3>
 			<div class="speakers-list medium">
 				<ul>
@@ -91,29 +91,29 @@
 					<?php endforeach; wp_reset_postdata(); ?>
 				</ul>
 			</div>
-			<?php endif; ?>
 		</section>
 	</div>
 </div>
+<?php endif; ?>
 
+<?php
+	$keynote = get_posts(array(
+			'post_type' => 'speaker',
+			'posts_per_page' => -1,
+			'orderby' => 'menu_order',
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'speaker_type',
+					'field'    => 'slug',
+					'terms'    => 'readers',
+				),
+			)
+		));
+	if ( $keynote ) :
+?>
 <div class="award-content readers">
 	<div class="award-content-inner">
 		<section class="speakers-lists">
-			<?php
-				$keynote = get_posts(array(
-						'post_type' => 'speaker',
-						'posts_per_page' => -1,
-						'orderby' => 'menu_order',
-						'tax_query' => array(
-							array(
-								'taxonomy' => 'speaker_type',
-								'field'    => 'slug',
-								'terms'    => 'readers',
-							),
-						)
-					));
-				if ( $keynote ) :
-			?>
 			<h3 class="speakers-subtitle">READERS</h3>
 			<div class="speakers-list medium">
 				<ul>
@@ -126,7 +126,7 @@
 					<?php endforeach; wp_reset_postdata(); ?>
 				</ul>
 			</div>
-			<?php endif; ?>
 		</section>
 	</div>
 </div>
+<?php endif; ?>

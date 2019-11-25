@@ -3,6 +3,16 @@
 	position: relative;
 	z-index: 3;
 	overflow: hidden;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		z-index: 1;
+		left: 50%;
+		width: 50vw;
+		background-color: #f2ad5c;
+	}
 	.session-content-inner {
 		margin: 0 auto;
 		padding-top: 74px;
@@ -51,11 +61,13 @@
 
 	.session-header {
 		margin: 0 auto;
+		padding-bottom: 10px;
 		max-width: 912px;
 		position: relative;
 		z-index: 1;
 		@media screen and ( max-width: 782px ) {
 			margin: 0 25px;
+			padding-bottom: 6px;
 		}
 		&::before {
 			content: '';
@@ -89,8 +101,9 @@
 			}
 		}
 		.session-title {
-			margin-top: 16px;
+			margin-top: 32px;
 			padding: 0 76px;
+			line-height: 1.5;
 			font-weight: bold;
 			font-size: 35px;
 			position: relative;
@@ -105,8 +118,9 @@
 	}
 	.session-misc {
 		margin: 0 auto;
-		padding: 2px 76px 0;
+		padding: 0 76px;
 		display: flex;
+		align-items: center;
 		max-width: 760px;
 		background-color: #fff;
 		font-weight: bold;
@@ -115,25 +129,25 @@
 		z-index: 2;
 		@media screen and ( max-width: 782px ) {
 			margin: 0 25px;
-			padding: 6px 25px 0;
+			padding: 0 25px;
 			font-size: 12px;
 		}
 		.session-date {
-		}
-		.session-place {
-			padding-left: 37px;
+			padding-right: 37px;
+			line-height: 1.4;
 			position: relative;
 			z-index: 1;
 			&::before {
 				content: '';
 				position: absolute;
-				top: 50%;
-				left: 16px;
-				margin-top: -12px;
+				top: 0;
+				right: 21px;
+				bottom: 0;
 				width: 1px;
-				height: 25px;
 				background-color: #000;
 			}
+		}
+		.session-place {
 		}
 	}
 
@@ -353,18 +367,19 @@
 	.session-date-title {
 		text-align: left;
 		@media screen and ( max-width: 782px ) {
-			font-size: 22px;
+			margin-left: -50px;
+			padding-top: 6px;
+			font-size: 20px;
+			text-align: center;
 		}
 	}
 
 	.timeline-header {
 		margin-top: 32px;
-		padding-bottom: 13px;
 		display: flex;
 		@media screen and ( max-width: 782px ) {
 			margin-top: 20px;
-			padding-bottom: 12px;
-			width: 170vw;
+			width: 150vw;
 		}
 		.room {
 			width: 418px;
@@ -379,22 +394,20 @@
 			}
 			.room-inner {
 				margin-right: 2px;
-				padding: 30px 10px;
+				padding: 22px 76px 23px;
 				line-height: 1.2;
 				background-color: #ebebeb;
 				font-family: 'Montserrat', sans-serif;
 				font-weight: 600;
 				font-size: 26px;
+				text-align: left;
 				@media screen and ( max-width: 782px ) {
-					padding-top: 14px;
-					padding-bottom: 15px;
-					font-size: 14px;
+					padding: 14px 25px 15px;
+					font-size: 18px;
 				}
 				span {
 					display: block;
-					font-size: 14px;
 					@media screen and ( max-width: 782px ) {
-						padding-right: .5em;
 						display: inline;
 					}
 				}
@@ -414,7 +427,7 @@
 			padding-top: 107px;
 			@media screen and ( max-width: 782px ) {
 				margin-right: -15px;
-				padding-top: 77px;
+				padding-top: 70px;
 			}
 		}
 
@@ -439,7 +452,7 @@
 				width: 2px;
 				background-color: #f2ad5c;
 				@media screen and ( max-width: 782px ) {
-					left: calc(85vw - 2px);
+					left: calc(75vw - 2px);
 				}
 			}
 		}
@@ -451,7 +464,7 @@
 			top: -121px;
 			@media screen and ( max-width: 782px ) {
 				padding-right: 15px;
-				width: 170vw;
+				width: 150vw;
 				top: -77px;
 			}
 		}
@@ -583,6 +596,7 @@
 				.sponsors {
 					a {
 						margin-top: 20px;
+						padding: 28px 0;
 						display: flex;
 						justify-content: center;
 						align-items: center;
@@ -590,15 +604,18 @@
 						min-height: 76px;
 						background-color: #fff;
 						@media screen and ( max-width: 782px ) {
+							padding: 5px 0;
 							min-height: 50px;
 						}
 					}
-					img {
-						display: block;
+					span {
 						max-width: 130px;
 						@media screen and ( max-width: 782px ) {
 							max-width: 80px;
 						}
+					}
+					img {
+						display: block;
 					}
 				}
 				.sponsor-prefix {
@@ -659,6 +676,7 @@
 	padding: 65px 76px 55px;
 	@media screen and ( max-width: 782px ) {
 		margin-top: -4px;
+		padding: 25px 25px 50px 50px;
 		display: block;
 	}
 	span {

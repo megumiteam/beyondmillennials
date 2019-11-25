@@ -128,7 +128,6 @@
 			@media screen and ( max-width: 782px ) {
 				line-height: 1.857142857;
 				width: auto;
-				color: #fff;
 				font-size: 14px;
 			}
 			&[lang="en"] {
@@ -155,6 +154,14 @@
 			font-size: 20px;
 			text-align: center;
 			text-transform: none;
+		}
+	}
+
+	.speakers-list {
+		&.medium {
+			li {
+				margin-top: 25px;
+			}
 		}
 	}
 
@@ -500,7 +507,6 @@
 				line-height: 1.5;
 				color: #fff;
 				background-color: #000;
-				font-family: 'Heebo', sans-serif;
 				font-weight: 700;
 				text-decoration: none;
 				@media screen and ( max-width: 782px ) {
@@ -511,6 +517,7 @@
 				}
 			}
 			.session-title {
+				font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
 				font-size: 20px;
 				@media screen and ( max-width: 782px ) {
 					font-size: 16px;
@@ -519,6 +526,7 @@
 			.session-info {
 				padding-top: 2px;
 				display: flex;
+				font-family: 'Heebo', sans-serif;
 				font-size: 16px;
 				@media screen and ( max-width: 782px ) {
 					padding-top: 8px;
@@ -658,6 +666,16 @@
 	position: relative;
 	z-index: 3;
 	overflow: hidden;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		z-index: 1;
+		left: 50%;
+		width: 50vw;
+		background-color: #f2ad5c;
+	}
 	.timetable-content-inner {
 		margin: 0 auto;
 		padding-top: 198px;
@@ -665,6 +683,9 @@
 		background-color: #f2ad5c;
 		position: relative;
 		z-index: 1;
+		@media screen and ( max-width: 782px ) {
+			padding-top: 93px;
+		}
 		&::before,
 		&::after {
 			content: '';
@@ -710,7 +731,7 @@
 		z-index: 2;
 		@media screen and ( max-width: 782px ) {
 			margin: 0 auto;
-			padding: 0;
+			padding: 0 0 0 25px;
 			display: block;
 		}
 		&::before {
@@ -723,8 +744,8 @@
 			height: 76px;
 			background-color: #fff;
 			@media screen and ( max-width: 782px ) {
-				right: 90px;
-				bottom: 25px;
+				right: 114px;
+				bottom: 9px;
 				height: 50px;
 			}
 		}
@@ -734,7 +755,7 @@
 			position: relative;
 			z-index: 2;
 			@media screen and ( max-width: 782px ) {
-				width: 216px;
+				width: 261px;
 				height: auto;
 			}
 		}
@@ -746,7 +767,7 @@
 		position: relative;
 		z-index: 2;
 		@media screen and ( max-width: 782px ) {
-			padding-top: 42px;
+			padding: 32px 25px 0;
 			max-width: none;
 		}
 		.item {
@@ -769,12 +790,14 @@
 		position: relative;
 		z-index: 2;
 		@media screen and ( max-width: 782px ) {
+			margin-top: 20px;
+			padding: 0 25px;
 			display: block;
 		}
 		.scroll-link {
 			& + .scroll-link {
 				@media screen and ( max-width: 782px ) {
-					margin-top: 16px;
+					margin-top: 25px;
 				}
 			}
 			a {
@@ -1121,40 +1144,27 @@
 
 	.tickets-embed {
 		margin: 76px auto 0;
-		padding-top: 597px;
+		padding-top: 405px;
 		max-width: 912px;
 		position: relative;
 		z-index: 1;
-		@media screen and ( max-width: 1110px ) {
-			margin: 50px 25px 0;
-			padding-top: 617px;
-		}
 		@media screen and ( max-width: 670px ) {
-			padding-top: 617px;
 		}
 		@media screen and ( max-width: 640px ) {
-			padding-top: 637px;
 		}
 		@media screen and ( max-width: 630px ) {
-			padding-top: 657px;
 		}
 		@media screen and ( max-width: 600px ) {
-			padding-top: 727px;
 		}
 		@media screen and ( max-width: 542px ) {
-			padding-top: 739px;
 		}
 		@media screen and ( max-width: 462px ) {
-			padding-top: 747px;
 		}
 		@media screen and ( max-width: 434px ) {
-			padding-top: 770px;
 		}
 		@media screen and ( max-width: 418px ) {
-			padding-top: 780px;
 		}
 		@media screen and ( max-width: 396px ) {
-			padding-top: 790px;
 		}
 		iframe {
 			position: absolute;
@@ -1604,7 +1614,7 @@
 				flex-wrap: wrap;
 				justify-content: center;
 			}
-			span {
+			.logo-prefix {
 				margin-bottom: 8px;
 				display: block;
 				font-family: 'Heebo', sans-serif;
@@ -1616,10 +1626,24 @@
 					text-align: center;
 				}
 			}
-			a, img {
-				display: block;
+			a {
+				padding: 27px 0;
+				display: flex;
+				justify-content: center;
+				width: 265px;
+				background-color: #fff;
 				@media screen and ( max-width: 782px ) {
-					max-width: 175px;
+					width: 173px;
+				}
+			}
+			.logo-wrap {
+				display: block;
+				max-width: 130px;
+				@media screen and ( max-width: 782px ) {
+					max-width: 105px;
+				}
+				img {
+					display: block;
 				}
 			}
 		}

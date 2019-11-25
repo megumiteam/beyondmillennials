@@ -37,9 +37,10 @@
 			if ( empty( $list_type ) ) {
 				$list_type = 'small';
 			}
+			$list_type_count = count($sponsor_item);
 		?>
 		<div class="sponsor-list <?php echo $list_type; ?>">
-			<ul>
+			<ul<?php if ( $list_type_count === 1 ) { echo ' class="only"'; } ?>>
 				<?php foreach ( $sponsor_item as $post ) : setup_postdata( $post ); ?>
 				<li>
 					<a href="<?php the_field( 'mu_sponsor_link_url' ); ?>" target="_blank" rel="noopener"><?php the_post_thumbnail( 'full' ); ?></a>
