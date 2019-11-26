@@ -1,7 +1,7 @@
 <div class="image curtain-action brick is-shrink">
 	<div class="curtain-content"><?php
 		if ( has_post_thumbnail() ) {
-			the_post_thumbnail( 'speakers_detail' );
+			the_post_thumbnail( 'full' );
 		}
 	?></div>
 	<span></span>
@@ -16,7 +16,7 @@
 		<div class="speakers-header">
 			<div class="image"><?php
 				if ( has_post_thumbnail() ) {
-					the_post_thumbnail( 'speakers_detail' );
+					the_post_thumbnail( 'full' );
 				}
 			?></div>
 			<div class="name-ja"><?php the_title(); ?></div>
