@@ -5416,7 +5416,7 @@ body .a2a_kit {
   }
 }
 
-.top-hero .top-hero-image-pc img {
+.top-hero .top-hero-image-pc > img {
   width: auto;
   max-width: none;
   width: 100%;
@@ -5428,11 +5428,20 @@ body .a2a_kit {
 }
 
 @media screen and (max-width: 782px) {
-  .top-hero .top-hero-image-pc img {
+  .top-hero .top-hero-image-pc > img {
     left: auto;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
+}
+
+.top-hero .top-hero-image-pc .top-hero-image-pc-person {
+  position: absolute;
+  top: 152px;
+  left: 50%;
+  margin-left: -683px;
+  width: 1366px;
+  z-index: 2;
 }
 
 .top-hero .top-hero-image-sp {

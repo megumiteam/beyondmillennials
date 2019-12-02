@@ -5,11 +5,12 @@
 			<div class="top-hero-image loading">
 				<?php
 					$pc_image    = get_field( 'mashing-up_image', 'option' );
+					$pc_image_bg = get_field( 'mashing-up_image_bg', 'option' );
 					$sp_image    = get_field( 'mashing-up_mobile_image', 'option' );
 					$sp_image_bg = get_field( 'mashing-up_mobile_image_bg', 'option' );
 
 				?>
-				<?php if ( $pc_image ) : ?><div class="top-hero-image-pc"><img src="<?php echo $pc_image; ?>" alt=""></div><?php endif; ?>
+				<?php if ( $pc_image && $pc_image_bg ) : ?><div class="top-hero-image-pc"><img src="<?php echo $pc_image_bg; ?>" alt=""><span class="top-hero-image-pc-person"><img src="<?php echo $pc_image; ?>" alt=""></span></div><?php endif; ?>
 				<?php if ( $sp_image && $sp_image_bg ) : ?><div class="top-hero-image-sp">
 					<div class="top-hero-image-sp-bg"><img src="<?php echo $sp_image_bg; ?>" alt=""></div>
 					<img src="<?php echo $sp_image; ?>" alt="">

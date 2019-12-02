@@ -32,7 +32,7 @@
 		@media screen and ( max-width: 782px ) {
 			display: none;
 		}
-		img {
+		& > img {
 			width: auto;
 			max-width: none;
 			width: 100%;
@@ -44,6 +44,14 @@
 				left: auto;
 				transform: translateX(0);
 			}
+		}
+		.top-hero-image-pc-person {
+			position: absolute;
+			top: 152px;
+			left: 50%;
+			margin-left: -683px;
+			width: 1366px;
+			z-index: 2;
 		}
 	}
 	.top-hero-image-sp {
