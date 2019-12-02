@@ -5439,7 +5439,8 @@ body .a2a_kit {
   position: absolute;
   top: 152px;
   left: 50%;
-  margin-left: -683px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 1366px;
   z-index: 2;
 }
