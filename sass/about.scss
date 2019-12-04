@@ -111,20 +111,6 @@
 						padding-bottom: 18px;
 					}
 				}
-				.text-en {
-					@media screen and ( max-width: 782px ) {
-						font-family: 'Heebo', sans-serif;
-						font-weight: 400;
-					}
-					p {
-						padding-bottom: 32px;
-						&:last-child {
-							@media screen and ( max-width: 782px ) {
-								padding-bottom: 0;
-							}
-						}
-					}
-				}
 			}
 
 			.about-textbox-image {

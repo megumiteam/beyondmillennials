@@ -42,7 +42,7 @@ iframe, video, object{
 	top: 0;
 	right: 0;
 	left: 0;
-	z-index: 3;
+	z-index: 20;
 	background-color: #fff;
 	transition: all 400ms cubic-bezier(0.42, 0, 0.58, 1);
 	@media screen and ( min-width: 783px ) {
@@ -91,6 +91,12 @@ iframe, video, object{
 			}
 			&.is-show {
 				background-color: transparent;
+				.header-logo {
+					display: block;
+				}
+				.header-nav-logo {
+					display: none;
+				}
 			}
 		}
 		&.is-show {
@@ -130,7 +136,7 @@ iframe, video, object{
 			padding-top: 13px;
 			background-color: transparent;
 		}
-		a, img {
+		a, svg {
 			display: block;
 		}
 		a {
@@ -138,6 +144,18 @@ iframe, video, object{
 			width: 215px;
 			@media screen and ( max-width: 782px ) {
 				width: 59px;
+			}
+		}
+		svg {
+			display: block;
+			@media screen and ( max-width: 782px ) {
+				display: none;
+			}
+			& + svg {
+				display: none;
+				@media screen and ( max-width: 782px ) {
+					display: block;
+				}
 			}
 		}
 	}
@@ -154,13 +172,13 @@ iframe, video, object{
 			z-index: 1;
 			@media screen and ( max-width: 782px ) {
 				padding-top: 75px;
+				padding-bottom: 50px;
 				display: none;
 			}
 		}
 		.header-nav-logo {
 			padding-top: 18px;
 			padding-right: 42px;
-			padding-bottom: 12px;
 			width: 90px;
 			@media screen and ( max-width: 782px ) {
 				margin: 0 auto;
@@ -180,7 +198,7 @@ iframe, video, object{
 				margin: 0;
 				padding-top: 15px;
 				width: 100%;
-				background-color: transparent;
+				background-color: #fff;
 				a, img {
 					display: block;
 				}
@@ -289,37 +307,38 @@ iframe, video, object{
 
 	.header-nav-toggle {
 		position: absolute;
-		top: 18px;
-		right: 25px;
+		top: 3px;
+		right: 15px;
 		z-index: 5;
-		padding: 14px 25px 0 0;
+		padding: 44px 45px 0 0;
 		display: none;
 		@media screen and ( max-width: 782px ) {
 			display: block;
 		}
 		span {
 			position: absolute;
+			left: 10px;
 			width: 25px;
 			height: 2px;
 			background-color: #000;
 			transition: all 200ms ease-out;
 			&.nav-01 {
-				top: 0;
+				top: 15px;
 			}
 			&.nav-02 {
-				top: 6px;
+				top: 21px;
 			}
 			&.nav-03 {
-				top: 12px;
+				top: 27px;
 			}
 		}
 		&.is-show {
 			span {
 				&.nav-01 {
-					top: 8px;
+					top: 23px;
 				}
 				&.nav-03 {
-					top: 8px;
+					top: 23px;
 				}
 			}
 		}
@@ -672,7 +691,7 @@ body.is-nav-show {
 	position: fixed;
 	right: 76px;
 	bottom: 50px;
-	z-index: 2;
+	z-index: 10;
 	transition: all 400ms cubic-bezier(0.42, 0, 0.58, 1);
 	@media screen and ( max-width: 782px ) {
 		right: auto;

@@ -7,7 +7,6 @@ jQuery(function($) {
 	var scroll = $(window).scrollTop();
 
 	var header = $( '.header' );
-	var fixed_flag = false;
 
 	if ( header.length > 0 ) {
 		var startPos = 0;
@@ -182,10 +181,19 @@ jQuery(function($) {
 	}
 
 
+	var pagetop = $( '.scrolltop' );
+	$( window ).on('load scroll', function(){
+		if ( pagetop.length > 0 && scroll >= $( window ).height() ) {
+			pagetop.addClass( 'is-show' );
+		} else {
+			pagetop.removeClass( 'is-show' );
+		}
+});
+
+
 	var toppage = $( '.blocks' );
 	if ( toppage.length > 0 ) {
 		var blocks  = toppage.find( '.block' );
-		var pagetop = $( '.scrolltop' );
 		var current_url = location.pathname;
 
 		$( window ).on('load scroll', function(){
@@ -204,11 +212,6 @@ jQuery(function($) {
 							$(this).addClass( 'is-inview' );
 						}
 					}
-				}
-				if ( pagetop.length > 0 && scroll >= $( window ).height() ) {
-					pagetop.addClass( 'is-show' );
-				} else {
-					pagetop.removeClass( 'is-show' );
 				}
 			});
 
@@ -240,6 +243,9 @@ jQuery(function($) {
 			$(this).on('click', function(){
 				var scrolled = $( window ).scrollTop();
 				$( 'body' ).css({ 'top' : -scrolled }).addClass( 'is-popup' );
+				if ( $(this).hasClass( 'is-game-changer' ) ) {
+					$( 'body' ).addClass( 'is-game-changer' );
+				}
 				var popup_clone = $(this).find( '.popup-content' ).clone();
 				popup_container.append( popup_clone );
 				a2a.init_all();
@@ -275,7 +281,7 @@ jQuery(function($) {
 		var reset_pos = parseInt( $( 'body' ).css( 'top' ), 10 );
 		$( 'body, html' ).animate({ scrollTop : -1*reset_pos }, 1, 'linear' );
 
-		$( 'body' ).removeClass( 'is-popup' ).removeAttr( 'style' );
+		$( 'body' ).removeClass( 'is-popup is-game-changer' ).removeAttr( 'style' );
 		$( '.popups' ).find( '.is-show' ).removeClass( 'is-show' );
 		popup_container.empty();
 	}
@@ -306,15 +312,6 @@ jQuery(function($) {
 	}
 
 
-	var en_toggle = $( '.lead-en-toggle' );
-	if ( en_toggle.length > 0 ) {
-		en_toggle.on('click', function(){
-			$(this).toggleClass( 'is-show' );
-			$(this).next().slideToggle();
-		});
-	}
-
-
 	var session_card = $( '.session-items' );
 	if ( session_card.length > 0 ) {
 
@@ -336,30 +333,29 @@ jQuery(function($) {
 	}
 
 	// topでスピーカーを開く 12月ローンチではコメントアウト
-	var top_speakers = $( '.top-speakers' );
-	if ( top_speakers.length > 0 ) {
-		var url_hash = location.hash;
-		var top_speaker_diff = 94;
-		if ( $( window ).width() < 793 ) {
-			top_speaker_diff = 59;
-		}
-
-		if ( url_hash.length > 0 ) {
-			$( window ).on('load', function(){
-				var top_speaker_pos = $( url_hash ).offset().top - top_speaker_diff;
-				$( 'body, html' ).animate({ scrollTop : top_speaker_diff }, 1, 'swing' ).promise().done(function(){
-					$( url_hash ).trigger( 'click' );
-					$( 'body' ).css({ 'top' : -top_speaker_pos });
-				});
-			});
-		}
-	}
+	// var top_speakers = $( '.top-speakers' );
+	// var url_hash = location.hash;
+	// if ( top_speakers.length > 0 ) {
+	// 	var top_speaker_diff = 94;
+	// 	if ( $( window ).width() < 793 ) {
+	// 		top_speaker_diff = 59;
+	// 	}
+	//
+	// 	if ( url_hash.length > 0 ) {
+	// 		$( window ).on('load', function(){
+	// 			var top_speaker_pos = $( url_hash ).offset().top - top_speaker_diff;
+	// 			$( 'body, html' ).animate({ scrollTop : top_speaker_diff }, 1, 'swing' ).promise().done(function(){
+	// 				$( url_hash ).trigger( 'click' );
+	// 				$( 'body' ).css({ 'top' : -top_speaker_pos });
+	// 			});
+	// 		});
+	// 	}
+	// }
 	// topでスピーカーを開く 12月ローンチではコメントアウト ここまで
 
 	var speakers = $( '.speakers-content' );
+	var url_hash = location.hash;
 	if ( speakers.length > 0 ) {
-		var url_hash = location.hash;
-
 		var speaker_diff = 94;
 		if ( $( window ).width() < 793 ) {
 			speaker_diff = 59;
@@ -410,4 +406,3 @@ jQuery(function($) {
 	}
 
 });
-

@@ -6,10 +6,8 @@
 		<section class="session-lead">
 			<?php
 				$lead_ja = get_field( 'mu_session_lead_ja', $post->ID );
-				$lead_en = get_field( 'mu_session_lead_en', $post->ID );
 			?>
-			<?php if ( $lead_ja ) : ?><div class="item" lang="ja"><?php echo $lead_ja; ?></div><?php endif; ?>
-			<?php if ( $lead_en ) : ?><div class="item" lang="en"><?php echo $lead_en; ?></div><?php endif; ?>
+			<?php if ( $lead_ja ) : ?><div class="item"><?php echo $lead_ja; ?></div><?php endif; ?>
 		</section>
 
 		<?php
@@ -95,18 +93,13 @@
 								}
 							}
 						?></div>
-						<div class="title" lang="ja">
-							<a href="<?php the_permalink(); ?>">
-								<span lang="ja"><?php the_title(); ?></span>
-								<span lang="en"><?php the_field( 'mu_session_title_en' ); ?></span>
-							</a>
+						<div class="title">
+							<a href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a>
 						</div>
 						<div class="lead"><?php
 							$lead_ja = get_field( 'mu_session_summary_ja' );
 							echo mb_strimwidth( wp_strip_all_tags( $lead_ja ), 0, 214, '…', 'UTF-8' );
 						?></div>
-						<div class="lead-en-toggle">ENGLISH</div>
-						<div class="lead-en"><?php the_field( 'mu_session_summary_en' ); ?></div>
 					</div>
 					<?php
 						$sponsors = get_field( 'mu_session_sponsor' );
@@ -123,7 +116,7 @@
 										$image = get_the_title( $sponsor->ID );
 									}
 								?>
-								<a href="<?php echo $link; ?>" target="_blank"><?php echo $image; ?></a>
+								<a href="<?php echo $link; ?>" target="_blank" rel="noopener"><?php echo $image; ?></a>
 							<?php endforeach; ?>
 						</div>
 					</div>
