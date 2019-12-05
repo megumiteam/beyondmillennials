@@ -704,15 +704,15 @@ body .a2a_kit {
 		display: none;
 		top: -100%;
 		background-image:
-			radial-gradient(circle, #fae259 20%, transparent 20%),
-			radial-gradient(circle, transparent 10%, #fae259 15%, transparent 20%),
-			radial-gradient(circle, #fae259 20%, transparent 20%),
-			radial-gradient(circle, #fae259 20%, transparent 20%),
-			radial-gradient(circle, transparent 10%, #fae259 15%, transparent 20%),
-			radial-gradient(circle, #fae259 20%, transparent 20%),
-			radial-gradient(circle, #fae259 20%, transparent 20%),
-			radial-gradient(circle, #fae259 20%, transparent 20%),
-			radial-gradient(circle, #fae259 20%, transparent 20%);
+			radial-gradient(circle, #fff 20%, transparent 20%),
+			radial-gradient(circle, transparent 10%, #fff 15%, transparent 20%),
+			radial-gradient(circle, #fff 20%, transparent 20%),
+			radial-gradient(circle, #fff 20%, transparent 20%),
+			radial-gradient(circle, transparent 10%, #fff 15%, transparent 20%),
+			radial-gradient(circle, #fff 20%, transparent 20%),
+			radial-gradient(circle, #fff 20%, transparent 20%),
+			radial-gradient(circle, #fff 20%, transparent 20%),
+			radial-gradient(circle, #fff 20%, transparent 20%);
 		background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
 	}
 
@@ -720,19 +720,19 @@ body .a2a_kit {
 		display: none;
 		bottom: -100%;
 		background-image:
-			radial-gradient(circle, #fae259 20%, transparent 20%),
-			radial-gradient(circle, #fae259 20%, transparent 20%),
-			radial-gradient(circle, transparent 10%, #fae259 15%, transparent 20%),
-			radial-gradient(circle, #fae259 20%, transparent 20%),
-			radial-gradient(circle, #fae259 20%, transparent 20%),
-			radial-gradient(circle, #fae259 20%, transparent 20%),
-			radial-gradient(circle, #fae259 20%, transparent 20%);
+			radial-gradient(circle, #fff 20%, transparent 20%),
+			radial-gradient(circle, #fff 20%, transparent 20%),
+			radial-gradient(circle, transparent 10%, #fff 15%, transparent 20%),
+			radial-gradient(circle, #fff 20%, transparent 20%),
+			radial-gradient(circle, #fff 20%, transparent 20%),
+			radial-gradient(circle, #fff 20%, transparent 20%),
+			radial-gradient(circle, #fff 20%, transparent 20%);
 		background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
 	}
 
 	&:active{
 		transform: scale(0.9);
-		background-color: darken(#fae259, 5%);
+		background-color: darken(#fff, 5%);
 		box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
 	}
 
