@@ -2149,6 +2149,12 @@ body .a2a_kit {
   }
 }
 
+@media screen and (max-width: 320px) {
+  .speakers-content .page-title {
+    padding-left: 25px;
+  }
+}
+
 .speakers-content .page-title::before {
   content: '';
   position: absolute;
@@ -3515,6 +3521,12 @@ body .a2a_kit {
   max-width: 912px;
   position: relative;
   z-index: 1;
+}
+
+@media screen and (max-width: 782px) {
+  .tickets-content .tickets-embed {
+    margin: 40px 25px;
+  }
 }
 
 .tickets-content .tickets-embed iframe {
