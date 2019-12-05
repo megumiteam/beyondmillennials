@@ -81,6 +81,9 @@
 			display: block;
 			width: 319px;
 		}
+		@media screen and ( max-width: 320px ) {
+			padding-left: 25px;
+		}
 		&::before {
 			content: '';
 			position: absolute;
