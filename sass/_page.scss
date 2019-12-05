@@ -1148,23 +1148,8 @@
 		max-width: 912px;
 		position: relative;
 		z-index: 1;
-		@media screen and ( max-width: 670px ) {
-		}
-		@media screen and ( max-width: 640px ) {
-		}
-		@media screen and ( max-width: 630px ) {
-		}
-		@media screen and ( max-width: 600px ) {
-		}
-		@media screen and ( max-width: 542px ) {
-		}
-		@media screen and ( max-width: 462px ) {
-		}
-		@media screen and ( max-width: 434px ) {
-		}
-		@media screen and ( max-width: 418px ) {
-		}
-		@media screen and ( max-width: 396px ) {
+		@media screen and ( max-width: 782px ) {
+			margin: 40px 25px;
 		}
 		iframe {
 			position: absolute;
