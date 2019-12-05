@@ -1877,21 +1877,21 @@ body .a2a_kit {
 .js-bubble a:before {
   display: none;
   top: -100%;
-  background-image: radial-gradient(circle, #fae259 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fae259 15%, transparent 20%), radial-gradient(circle, #fae259 20%, transparent 20%), radial-gradient(circle, #fae259 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fae259 15%, transparent 20%), radial-gradient(circle, #fae259 20%, transparent 20%), radial-gradient(circle, #fae259 20%, transparent 20%), radial-gradient(circle, #fae259 20%, transparent 20%), radial-gradient(circle, #fae259 20%, transparent 20%);
+  background-image: radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fff 15%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fff 15%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%);
   background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
 }
 
 .js-bubble a:after {
   display: none;
   bottom: -100%;
-  background-image: radial-gradient(circle, #fae259 20%, transparent 20%), radial-gradient(circle, #fae259 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fae259 15%, transparent 20%), radial-gradient(circle, #fae259 20%, transparent 20%), radial-gradient(circle, #fae259 20%, transparent 20%), radial-gradient(circle, #fae259 20%, transparent 20%), radial-gradient(circle, #fae259 20%, transparent 20%);
+  background-image: radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fff 15%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%);
   background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
 }
 
 .js-bubble a:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
-  background-color: #f9de40;
+  background-color: #f2f2f2;
   -webkit-box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
           box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
 }
@@ -2146,6 +2146,12 @@ body .a2a_kit {
     padding: 0;
     display: block;
     width: 319px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .speakers-content .page-title {
+    padding-left: 25px;
   }
 }
 
@@ -3515,6 +3521,12 @@ body .a2a_kit {
   max-width: 912px;
   position: relative;
   z-index: 1;
+}
+
+@media screen and (max-width: 782px) {
+  .tickets-content .tickets-embed {
+    margin: 40px 25px;
+  }
 }
 
 .tickets-content .tickets-embed iframe {
@@ -4955,14 +4967,14 @@ body .a2a_kit {
   display: flex;
   width: 100%;
   position: relative;
-  top: -121px;
+  top: -107px;
 }
 
 @media screen and (max-width: 782px) {
   .session-table .timeline-wrapper .timeline-body {
     padding-right: 15px;
     width: 150vw;
-    top: -77px;
+    top: -70px;
   }
 }
 
