@@ -3521,6 +3521,7 @@ body .a2a_kit {
   max-width: 912px;
   position: relative;
   z-index: 1;
+  overflow-y: scroll;
 }
 
 @media screen and (max-width: 782px) {
