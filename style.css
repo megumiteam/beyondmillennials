@@ -1721,26 +1721,6 @@ body .a2a_kit {
   }
 }
 
-.sponsor-list.large li a {
-  min-height: 280px;
-}
-
-@media screen and (max-width: 782px) {
-  .sponsor-list.large li a {
-    min-height: 155px;
-  }
-}
-
-.sponsor-list.large li img {
-  max-width: 320px;
-}
-
-@media screen and (max-width: 782px) {
-  .sponsor-list.large li img {
-    max-width: 178px;
-  }
-}
-
 .sponsor-list.medium {
   padding-bottom: 42px;
 }
@@ -1781,26 +1761,6 @@ body .a2a_kit {
   }
 }
 
-.sponsor-list.medium li a {
-  min-height: 170px;
-}
-
-@media screen and (max-width: 782px) {
-  .sponsor-list.medium li a {
-    min-height: 85px;
-  }
-}
-
-.sponsor-list.medium li img {
-  max-width: 190px;
-}
-
-@media screen and (max-width: 782px) {
-  .sponsor-list.medium li img {
-    max-width: 98px;
-  }
-}
-
 @media screen and (max-width: 782px) {
   .sponsor-list.small {
     margin-top: 0;
@@ -1834,26 +1794,6 @@ body .a2a_kit {
   }
   .sponsor-list.small li:nth-child(1), .sponsor-list.small li:nth-child(2) {
     margin-top: 0;
-  }
-}
-
-.sponsor-list.small li a {
-  min-height: 118px;
-}
-
-@media screen and (max-width: 782px) {
-  .sponsor-list.small li a {
-    min-height: 85px;
-  }
-}
-
-.sponsor-list.small li img {
-  max-width: 113px;
-}
-
-@media screen and (max-width: 782px) {
-  .sponsor-list.small li img {
-    min-width: 98px;
   }
 }
 
@@ -4117,7 +4057,6 @@ body .a2a_kit {
 }
 
 .award-content .award-lead-wrapper .award-logo a {
-  padding: 27px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4136,17 +4075,17 @@ body .a2a_kit {
 
 .award-content .award-lead-wrapper .award-logo .logo-wrap {
   display: block;
-  max-width: 130px;
-}
-
-@media screen and (max-width: 782px) {
-  .award-content .award-lead-wrapper .award-logo .logo-wrap {
-    max-width: 105px;
-  }
 }
 
 .award-content .award-lead-wrapper .award-logo .logo-wrap img {
   display: block;
+  width: 265px;
+}
+
+@media screen and (max-width: 782px) {
+  .award-content .award-lead-wrapper .award-logo .logo-wrap img {
+    width: 173px;
+  }
 }
 
 .award-content .speakers-subtitle {
