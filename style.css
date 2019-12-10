@@ -1662,12 +1662,6 @@ body .a2a_kit {
   }
 }
 
-.sponsor-list ul.only {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
 .sponsor-list li {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
