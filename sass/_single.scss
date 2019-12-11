@@ -358,6 +358,8 @@
 .session-table {
 	margin-top: 54px;
 	padding-left: 76px;
+	overflow-x: scroll;
+	overflow-y: hidden;
 	@media screen and ( max-width: 782px ) {
 		margin-top: 12px;
 		padding-left: 50px;
@@ -428,9 +430,11 @@
 
 		.timeline-times {
 			padding-top: 107px;
+			width: 836px;
 			@media screen and ( max-width: 782px ) {
 				margin-right: -15px;
 				padding-top: 70px;
+				width: auto;
 			}
 		}
 
@@ -439,7 +443,7 @@
 			top: 0;
 			left: 0;
 			z-index: 1;
-			width: 100%;
+			width: 836px;
 			height: 100%;
 			@media screen and ( max-width: 782px ) {
 				width: calc(100% + 15px);
@@ -519,6 +523,8 @@
 			position: absolute;
 			left: 20px;
 			right: 20px;
+			border-top: 1px solid #fff;
+			border-bottom: 1px solid #fff;
 			background-color: #f2ad5c;
 			overflow-y: auto;
 			@media screen and ( max-width: 782px ) {
@@ -526,7 +532,7 @@
 				left: 25px;
 			}
 			.card-inner {
-				padding: 38px 56px 89px;
+				padding: 20px 56px;
 				@media screen and ( max-width: 782px ) {
 					padding: 10px 25px 48px;
 				}
