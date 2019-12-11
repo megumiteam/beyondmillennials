@@ -4992,6 +4992,16 @@ body .a2a_kit {
   }
 }
 
+.session-table .session-items .card::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background-color: #fff;
+}
+
 .session-table .session-items .card .card-inner {
   padding: 20px 56px;
 }
