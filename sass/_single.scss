@@ -214,10 +214,13 @@
 					@media screen and ( max-width: 782px ) {
 						display: block;
 					}
+					a, img {
+						display: block;
+					}
 					a {
 						margin-left: 20px;
+						border: 1px solid #000;
 						max-width: 157px;
-						display: block;
 						@media screen and ( max-width: 782px ) {
 							margin: 0 auto;
 						}
@@ -523,9 +526,9 @@
 				left: 25px;
 			}
 			.card-inner {
-				padding: 76px 56px 89px;
+				padding: 38px 56px 89px;
 				@media screen and ( max-width: 782px ) {
-					padding: 22px 25px 48px;
+					padding: 10px 25px 48px;
 				}
 			}
 			.time {

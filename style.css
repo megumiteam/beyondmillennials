@@ -4566,10 +4566,14 @@ body .a2a_kit {
   }
 }
 
+.session-detail-content .session-main .session-footer .session-sponsor .sponsors a, .session-detail-content .session-main .session-footer .session-sponsor .sponsors img {
+  display: block;
+}
+
 .session-detail-content .session-main .session-footer .session-sponsor .sponsors a {
   margin-left: 20px;
+  border: 1px solid #000;
   max-width: 157px;
-  display: block;
 }
 
 @media screen and (max-width: 782px) {
@@ -4981,12 +4985,12 @@ body .a2a_kit {
 }
 
 .session-table .session-items .card .card-inner {
-  padding: 76px 56px 89px;
+  padding: 38px 56px 89px;
 }
 
 @media screen and (max-width: 782px) {
   .session-table .session-items .card .card-inner {
-    padding: 22px 25px 48px;
+    padding: 10px 25px 48px;
   }
 }
 
