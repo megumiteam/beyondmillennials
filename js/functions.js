@@ -323,7 +323,7 @@ jQuery(function($) {
 				$(this).find( '.card' ).each(function(){
 					time = $(this).data( 'time' );
 
-					top = $(this).parents( '.timeline-wrapper' ).find( '.time-' + time ).position().top;
+					top = $(this).parents( '.timeline-wrapper' ).find( '.time-' + time ).position().top - 1;
 					$(this).css({ 'top' : top });
 				});
 
