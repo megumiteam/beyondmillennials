@@ -4981,12 +4981,12 @@ body .a2a_kit {
 }
 
 .session-table .session-items .card .card-inner {
-  padding: 76px 56px 89px;
+  padding: 38px 56px 89px;
 }
 
 @media screen and (max-width: 782px) {
   .session-table .session-items .card .card-inner {
-    padding: 22px 25px 48px;
+    padding: 10px 25px 48px;
   }
 }
 
