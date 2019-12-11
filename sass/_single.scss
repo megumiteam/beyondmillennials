@@ -382,6 +382,8 @@
 	.timeline-header {
 		margin-top: 32px;
 		display: flex;
+		position: relative;
+		z-index: 2;
 		@media screen and ( max-width: 782px ) {
 			margin-top: 20px;
 			width: 150vw;
@@ -469,6 +471,7 @@
 			width: 100%;
 			position: relative;
 			top: -107px;
+			z-index: 1;
 			@media screen and ( max-width: 782px ) {
 				padding-right: 15px;
 				width: 150vw;
@@ -527,9 +530,6 @@
 			@media screen and ( max-width: 782px ) {
 				right: 25px;
 				left: 25px;
-			}
-			&:first-child {
-				border-top-color: transparent;
 			}
 			.card-inner {
 				padding: 20px 56px;

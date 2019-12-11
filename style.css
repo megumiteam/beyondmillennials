@@ -4793,6 +4793,8 @@ body .a2a_kit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  z-index: 2;
 }
 
 @media screen and (max-width: 782px) {
@@ -4910,6 +4912,7 @@ body .a2a_kit {
   width: 100%;
   position: relative;
   top: -107px;
+  z-index: 1;
 }
 
 @media screen and (max-width: 782px) {
@@ -4987,10 +4990,6 @@ body .a2a_kit {
     right: 25px;
     left: 25px;
   }
-}
-
-.session-table .session-items .card:first-child {
-  border-top-color: transparent;
 }
 
 .session-table .session-items .card .card-inner {
