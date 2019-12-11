@@ -4566,10 +4566,14 @@ body .a2a_kit {
   }
 }
 
+.session-detail-content .session-main .session-footer .session-sponsor .sponsors a, .session-detail-content .session-main .session-footer .session-sponsor .sponsors img {
+  display: block;
+}
+
 .session-detail-content .session-main .session-footer .session-sponsor .sponsors a {
   margin-left: 20px;
+  border: 1px solid #000;
   max-width: 157px;
-  display: block;
 }
 
 @media screen and (max-width: 782px) {
