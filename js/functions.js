@@ -13,7 +13,7 @@ jQuery(function($) {
 
 		$( window ).on('load scroll', function(){
 			if ( windowWidth > 782 ) {
-				scroll = window.scrollY;
+				scroll = $( window ).scrollTop();
 				if ( scroll > startPos ) {
 					$( '.header' ).removeClass( 'is-show' );
 				} else {

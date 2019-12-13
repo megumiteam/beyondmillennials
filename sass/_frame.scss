@@ -123,6 +123,7 @@ iframe, video, object{
 		display: flex;
 		flex-wrap: wrap;
 		max-width: 1064px;
+		height: 76px;
 		@media screen and ( max-width: 782px ) {
 			height: 50px;
 			background-color: transparent;
@@ -148,6 +149,8 @@ iframe, video, object{
 		}
 		svg {
 			display: block;
+			width: 215px;
+			height: 110px;
 			@media screen and ( max-width: 782px ) {
 				display: none;
 			}
@@ -155,6 +158,7 @@ iframe, video, object{
 				display: none;
 				@media screen and ( max-width: 782px ) {
 					display: block;
+					height: auto;
 				}
 			}
 		}
@@ -185,7 +189,7 @@ iframe, video, object{
 				padding: 13px 0 0;
 				width: 59px;
 			}
-			a, img {
+			a, img, svg {
 				display: block;
 			}
 			@media screen and ( max-width: 782px ) {
@@ -199,13 +203,14 @@ iframe, video, object{
 				padding-top: 15px;
 				width: 100%;
 				background-color: #fff;
-				a, img {
-					display: block;
-				}
 				a {
 					margin: 0 auto;
 					width: 118px;
 				}
+			}
+			svg {
+				width: 90px;
+				height: 46px;
 			}
 		}
 		ul {
