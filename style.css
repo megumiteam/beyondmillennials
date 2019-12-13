@@ -187,6 +187,7 @@ iframe, video, object {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-width: 1064px;
+  height: 76px;
 }
 
 @media screen and (max-width: 782px) {
@@ -225,6 +226,8 @@ iframe, video, object {
 
 .header .header-logo svg {
   display: block;
+  width: 215px;
+  height: 110px;
 }
 
 @media screen and (max-width: 782px) {
@@ -240,6 +243,7 @@ iframe, video, object {
 @media screen and (max-width: 782px) {
   .header .header-logo svg + svg {
     display: block;
+    height: auto;
   }
 }
 
@@ -287,7 +291,7 @@ iframe, video, object {
   }
 }
 
-.header .header-nav .header-nav-logo a, .header .header-nav .header-nav-logo img {
+.header .header-nav .header-nav-logo a, .header .header-nav .header-nav-logo img, .header .header-nav .header-nav-logo svg {
   display: block;
 }
 
@@ -304,13 +308,15 @@ iframe, video, object {
     width: 100%;
     background-color: #fff;
   }
-  .header .header-nav .header-nav-logo a, .header .header-nav .header-nav-logo img {
-    display: block;
-  }
   .header .header-nav .header-nav-logo a {
     margin: 0 auto;
     width: 118px;
   }
+}
+
+.header .header-nav .header-nav-logo svg {
+  width: 90px;
+  height: 46px;
 }
 
 .header .header-nav ul {
