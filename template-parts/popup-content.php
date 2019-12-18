@@ -93,7 +93,7 @@
 				// ゲームチェンジャーまたはアドバイザリーボード
 				$shares_path = '/award/';
 			} else {
-				$shares_path = '/speaker/';
+				$shares_path = '/speakers/';
 			}
 		?>
 		<div class="footer-shares">

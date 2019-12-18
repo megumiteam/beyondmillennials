@@ -372,6 +372,25 @@ jQuery(function($) {
 		}
 	}
 
+	var award = $( '.award-content' );
+	var url_hash = location.hash;
+	if ( award.length > 0 ) {
+		var award_diff = 94;
+		if ( $( window ).width() < 793 ) {
+			award_diff = 59;
+		}
+
+		if ( url_hash.length > 0 ) {
+			$( window ).on('load', function(){
+				var award_pos = $( url_hash ).offset().top - award_diff;
+				$( 'body, html' ).animate({ scrollTop : award_pos }, 1, 'swing' ).promise().done(function(){
+					$( url_hash ).trigger( 'click' );
+					$( 'body' ).css({ 'top' : -award_pos });
+				});
+			});
+		}
+	}
+
 	if ( navigator.userAgent.match( /MSIE 10/i ) || navigator.userAgent.match( /Trident\/7\./ ) || navigator.userAgent.match( /Edge\/12\./ ) ) {
 		document.addEventListener( 'mousewheel', function(e) {
 				e.preventDefault();
