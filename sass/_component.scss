@@ -201,6 +201,23 @@ body.is-popup {
 
 .popup {
 	cursor: pointer;
+	&.is-game-changer {
+		position: relative;
+		z-index: 1;
+		.award-badge {
+			position: absolute;
+			top: -38px;
+			right: 0;
+			z-index: 2;
+			width: 147px;
+			height: 147px;
+			@media screen and ( max-width: 782px ) {
+				top: -23px;
+				width: 90px;
+				height: 90px;
+			}
+		}
+	}
 }
 
 .popup-container {
@@ -308,7 +325,6 @@ body .a2a_kit {
 	margin: 30px auto 0;
 	padding-bottom: 50px;
 	max-width: 1064px;
-	overflow: hidden;
 	position: relative;
 	z-index: 2;
 	@media screen and ( max-width: 782px ) {
@@ -417,7 +433,7 @@ body .a2a_kit {
 		li {
 			@media screen and ( max-width: 782px ) {
 				margin-top: 25px;
-				padding: 0 50px;
+				padding: 0 25px;
 				width: 100%;
 			}
 		}
