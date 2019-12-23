@@ -16,14 +16,14 @@
 	.session-content-inner {
 		margin: 0 auto;
 		padding-top: 74px;
-		padding-bottom: 76px;
+		padding-bottom: 45px;
 		max-width: 1064px;
 		background-color: #f2ad5c;
 		position: relative;
 		z-index: 1;
 		@media screen and ( max-width: 782px ) {
 			padding-top: 95px;
-			padding-bottom: 50px;
+			padding-bottom: 30px;
 		}
 		&::before,
 		&::after {
@@ -323,11 +323,22 @@
 		}
 	}
 
+	.award-anchor {
+		padding-top: 25px;
+		font-weight: bold;
+		font-size: 30px;
+		text-align: center;
+		@media screen and ( max-width: 782px ) {
+			padding-top: 10px;
+			font-size: 20px;
+		}
+	}
+
 	.session-anchor {
-		padding-top: 76px;
+		padding-top: 30px;
 		@media screen and ( max-width: 782px ) {
 			margin: 0 25px;
-			padding-top: 25px;
+			padding-top: 20px;
 		}
 		a {
 			margin: 0 auto;

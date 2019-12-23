@@ -138,6 +138,10 @@
 
 				</div>
 
+				<div class="award-anchor">
+					<a href="<?php echo home_url( '/award/' ); ?>">AWARDについてはこちら</a>
+				</div>
+
 				<div class="session-anchor">
 					<div class="session-link js-bubble"><a href="<?php echo home_url( '/timetable/' ); ?>">TIMETABLE</a></div>
 				</div>

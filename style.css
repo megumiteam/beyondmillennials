@@ -4297,7 +4297,7 @@ body .a2a_kit {
 .session-detail-content .session-content-inner {
   margin: 0 auto;
   padding-top: 74px;
-  padding-bottom: 76px;
+  padding-bottom: 45px;
   max-width: 1064px;
   background-color: #f2ad5c;
   position: relative;
@@ -4307,7 +4307,7 @@ body .a2a_kit {
 @media screen and (max-width: 782px) {
   .session-detail-content .session-content-inner {
     padding-top: 95px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
   }
 }
 
@@ -4722,14 +4722,28 @@ body .a2a_kit {
   }
 }
 
+.session-detail-content .award-anchor {
+  padding-top: 25px;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+}
+
+@media screen and (max-width: 782px) {
+  .session-detail-content .award-anchor {
+    padding-top: 10px;
+    font-size: 20px;
+  }
+}
+
 .session-detail-content .session-anchor {
-  padding-top: 76px;
+  padding-top: 30px;
 }
 
 @media screen and (max-width: 782px) {
   .session-detail-content .session-anchor {
     margin: 0 25px;
-    padding-top: 25px;
+    padding-top: 20px;
   }
 }
 
