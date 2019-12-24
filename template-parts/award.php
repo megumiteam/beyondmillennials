@@ -48,7 +48,27 @@
 				<ul>
 					<?php foreach ( $keynote as $post ) : setup_postdata( $post ); ?>
 					<li>
+						<?php
+							$award_badge = '';
+							$badge_set   = '';
+
+							if ( has_term( 'award-grandprix', 'speaker_type', $post->ID ) ) {
+								$badge_obj = get_term_by( 'slug', 'award-grandprix', 'speaker_type' );
+								$badge_id  = get_field( 'award_image', 'speaker_type_' . $badge_obj->term_id );
+								$badge_alt = get_field( 'award_label', 'speaker_type_' . $badge_obj->term_id );
+								$badge_set = wp_get_attachment_image_src( $badge_id, 'full' );
+							} elseif ( has_term( 'award-panasonic', 'speaker_type', $post->ID ) ) {
+								$badge_obj = get_term_by( 'slug', 'award-panasonic', 'speaker_type' );
+								$badge_id  = get_field( 'award_image', 'speaker_type_' . $badge_obj->term_id );
+								$badge_alt = get_field( 'award_label', 'speaker_type_' . $badge_obj->term_id );
+								$badge_set = wp_get_attachment_image_src( $badge_id, 'full' );
+							}
+							if ( $badge_set ) {
+								$award_badge = '<div class="award-badge"><img src="' . $badge_set[0] .'" alt="' . $badge_alt . '"></div>';
+							}
+						?>
 						<div class="popup is-game-changer" id="<?php echo $post->post_name; ?>">
+							<?php echo $award_badge; ?>
 							<?php include( 'popup-content.php' ); ?>
 						</div>
 					</li>

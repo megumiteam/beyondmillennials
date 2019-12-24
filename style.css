@@ -1265,6 +1265,28 @@ body.is-popup {
   cursor: pointer;
 }
 
+.popup.is-game-changer {
+  position: relative;
+  z-index: 1;
+}
+
+.popup.is-game-changer .award-badge {
+  position: absolute;
+  top: -38px;
+  right: 0;
+  z-index: 2;
+  width: 147px;
+  height: 147px;
+}
+
+@media screen and (max-width: 782px) {
+  .popup.is-game-changer .award-badge {
+    top: -23px;
+    width: 90px;
+    height: 90px;
+  }
+}
+
 .popup-container {
   position: fixed;
   top: 50%;
@@ -1387,7 +1409,6 @@ body .a2a_kit {
   margin: 30px auto 0;
   padding-bottom: 50px;
   max-width: 1064px;
-  overflow: hidden;
   position: relative;
   z-index: 2;
 }
@@ -1525,7 +1546,7 @@ body .a2a_kit {
 @media screen and (max-width: 782px) {
   .speakers-list.large li {
     margin-top: 25px;
-    padding: 0 50px;
+    padding: 0 25px;
     width: 100%;
   }
 }
@@ -4297,7 +4318,7 @@ body .a2a_kit {
 .session-detail-content .session-content-inner {
   margin: 0 auto;
   padding-top: 74px;
-  padding-bottom: 76px;
+  padding-bottom: 45px;
   max-width: 1064px;
   background-color: #f2ad5c;
   position: relative;
@@ -4307,7 +4328,7 @@ body .a2a_kit {
 @media screen and (max-width: 782px) {
   .session-detail-content .session-content-inner {
     padding-top: 95px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
   }
 }
 
@@ -4722,14 +4743,28 @@ body .a2a_kit {
   }
 }
 
+.session-detail-content .award-anchor {
+  padding-top: 25px;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+}
+
+@media screen and (max-width: 782px) {
+  .session-detail-content .award-anchor {
+    padding-top: 10px;
+    font-size: 20px;
+  }
+}
+
 .session-detail-content .session-anchor {
-  padding-top: 76px;
+  padding-top: 30px;
 }
 
 @media screen and (max-width: 782px) {
   .session-detail-content .session-anchor {
     margin: 0 25px;
-    padding-top: 25px;
+    padding-top: 20px;
   }
 }
 
