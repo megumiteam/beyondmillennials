@@ -4488,7 +4488,7 @@ body .a2a_kit {
 
 .session-detail-content .session-main {
   margin: 0 auto;
-  padding: 0 76px;
+  padding: 0 76px 76px;
   max-width: 760px;
   background-color: #fff;
   position: relative;
@@ -4498,7 +4498,7 @@ body .a2a_kit {
 @media screen and (max-width: 782px) {
   .session-detail-content .session-main {
     margin: 0 25px;
-    padding: 0 25px;
+    padding: 0 25px 25px;
   }
 }
 
@@ -4615,7 +4615,6 @@ body .a2a_kit {
 
 .session-detail-content .session-main .session-speaker {
   margin-top: 58px;
-  border-bottom: 1px solid #000;
 }
 
 @media screen and (max-width: 782px) {
@@ -4647,12 +4646,13 @@ body .a2a_kit {
 }
 
 .session-detail-content .session-main .related-session {
-  margin-top: 70px;
+  padding-top: 70px;
+  border-top: 1px solid #000;
 }
 
 @media screen and (max-width: 782px) {
   .session-detail-content .session-main .related-session {
-    margin-top: 0;
+    padding-top: 0;
   }
 }
 
@@ -4672,18 +4672,11 @@ body .a2a_kit {
 }
 
 .session-detail-content .session-main .related-session .related-session-list {
-  padding-bottom: 76px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-@media screen and (max-width: 782px) {
-  .session-detail-content .session-main .related-session .related-session-list {
-    padding-bottom: 25px;
-  }
 }
 
 .session-detail-content .session-main .related-session .related-session-list .item {
@@ -4757,14 +4750,24 @@ body .a2a_kit {
   }
 }
 
-.session-detail-content .session-anchor {
+.session-detail-content .award-anchor + .session-anchor {
   padding-top: 30px;
+}
+
+@media screen and (max-width: 782px) {
+  .session-detail-content .award-anchor + .session-anchor {
+    padding-top: 20px;
+  }
+}
+
+.session-detail-content .session-anchor {
+  padding-top: 76px;
 }
 
 @media screen and (max-width: 782px) {
   .session-detail-content .session-anchor {
     margin: 0 25px;
-    padding-top: 20px;
+    padding-top: 25px;
   }
 }
 

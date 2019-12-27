@@ -153,14 +153,14 @@
 
 	.session-main {
 		margin: 0 auto;
-		padding: 0 76px;
+		padding: 0 76px 76px;
 		max-width: 760px;
 		background-color: #fff;
 		position: relative;
 		z-index: 2;
 		@media screen and ( max-width: 782px ) {
 			margin: 0 25px;
-			padding: 0 25px;
+			padding: 0 25px 25px;
 		}
 		.session-body {
 			padding-top: 12px;
@@ -234,7 +234,6 @@
 
 		.session-speaker {
 			margin-top: 58px;
-			border-bottom: 1px solid #000;
 			@media screen and ( max-width: 782px ) {
 				margin-top: 0;
 			}
@@ -258,9 +257,10 @@
 		}
 
 		.related-session {
-			margin-top: 70px;
+			padding-top: 70px;
+			border-top: 1px solid #000;
 			@media screen and ( max-width: 782px ) {
-				margin-top: 0;
+				padding-top: 0;
 			}
 			.related-session-title {
 				font-family: 'Montserrat', sans-serif;
@@ -274,12 +274,8 @@
 				}
 			}
 			.related-session-list {
-				padding-bottom: 76px;
 				display: flex;
 				flex-wrap: wrap;
-				@media screen and ( max-width: 782px ) {
-					padding-bottom: 25px;
-				}
 				.item {
 					margin-top: 36px;
 					padding: 24px 40px;
@@ -332,13 +328,19 @@
 			padding-top: 10px;
 			font-size: 20px;
 		}
+		& + .session-anchor {
+			padding-top: 30px;
+			@media screen and ( max-width: 782px ) {
+				padding-top: 20px;
+			}
+		}
 	}
 
 	.session-anchor {
-		padding-top: 30px;
+		padding-top: 76px;
 		@media screen and ( max-width: 782px ) {
 			margin: 0 25px;
-			padding-top: 20px;
+			padding-top: 25px;
 		}
 		a {
 			margin: 0 auto;
