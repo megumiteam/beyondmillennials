@@ -22,7 +22,7 @@
     "gulp-util": "^3.0.8",
     "jshint": "^2.10.2",
     "jslint": "^0.12.1",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "through2": "^3.0.1"
   }
 }
